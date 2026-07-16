@@ -1,0 +1,555 @@
+{
+  "metric_family": "numeric",
+  "plot_tab": "ALL",
+  "plot_tab_variant": "prefix",
+  "plots": [
+    {
+      "metadata": {
+        "metric_label": "ALL.f1"
+      },
+      "data": {
+        "points": [
+          {
+            "category": "prediction.extractor/llm=gpt_oss_20b_in_process",
+            "display_category": "extractor/llm=gpt_oss_20b_in_process",
+            "series": "dataset.references.file=",
+            "display_series": "file=",
+            "run_dirs": [
+              "428_organism_trends_with_chunking/evaluate/multiruns/2026-05-04_12-59-50/0",
+              "428_organism_trends_with_chunking/evaluate/multiruns/2026-05-04_12-59-50/1",
+              "428_organism_trends_with_chunking/evaluate/multiruns/2026-05-04_12-59-50/2"
+            ],
+            "samples": [
+              0.2731411229135053,
+              0.2650231124807396,
+              0.2795698924731183
+            ]
+          },
+          {
+            "category": "prediction.extractor/llm=gpt_oss_20b_in_process",
+            "display_category": "extractor/llm=gpt_oss_20b_in_process",
+            "series": "dataset.references.file=../external/organism_trends/Referenz_Wald_korrigiert_angepasst.csv",
+            "display_series": "file=../external/organism_trends/Referenz_Wald_korrigiert_angepasst.csv",
+            "run_dirs": [
+              "544_organism_trends_wald_corrected/evaluate/multiruns/2026-07-16_13-44-31/0",
+              "544_organism_trends_wald_corrected/evaluate/multiruns/2026-07-16_13-44-31/1",
+              "544_organism_trends_wald_corrected/evaluate/multiruns/2026-07-16_13-44-31/2"
+            ],
+            "samples": [
+              0.2549923195084486,
+              0.24960998439937598,
+              0.26127527216174184
+            ]
+          },
+          {
+            "category": "prediction.extractor/llm=mistral_small_3_24b_in_process",
+            "display_category": "extractor/llm=mistral_small_3_24b_in_process",
+            "series": "dataset.references.file=",
+            "display_series": "file=",
+            "run_dirs": [
+              "428_organism_trends_with_chunking/evaluate/multiruns/2026-05-04_12-59-50/10",
+              "428_organism_trends_with_chunking/evaluate/multiruns/2026-05-04_12-59-50/11",
+              "428_organism_trends_with_chunking/evaluate/multiruns/2026-05-04_12-59-50/9"
+            ],
+            "samples": [
+              0.20481927710843373,
+              0.20440881763527052,
+              0.2026342451874367
+            ]
+          },
+          {
+            "category": "prediction.extractor/llm=mistral_small_3_24b_in_process",
+            "display_category": "extractor/llm=mistral_small_3_24b_in_process",
+            "series": "dataset.references.file=../external/organism_trends/Referenz_Wald_korrigiert_angepasst.csv",
+            "display_series": "file=../external/organism_trends/Referenz_Wald_korrigiert_angepasst.csv",
+            "run_dirs": [
+              "544_organism_trends_wald_corrected/evaluate/multiruns/2026-07-16_13-44-31/10",
+              "544_organism_trends_wald_corrected/evaluate/multiruns/2026-07-16_13-44-31/11",
+              "544_organism_trends_wald_corrected/evaluate/multiruns/2026-07-16_13-44-31/9"
+            ],
+            "samples": [
+              0.18825910931174086,
+              0.18787878787878787,
+              0.18590398365679264
+            ]
+          },
+          {
+            "category": "prediction.extractor/llm=gemma3_27b_in_process",
+            "display_category": "extractor/llm=gemma3_27b_in_process",
+            "series": "dataset.references.file=",
+            "display_series": "file=",
+            "run_dirs": [
+              "428_organism_trends_with_chunking/evaluate/multiruns/2026-05-04_12-59-50/3",
+              "428_organism_trends_with_chunking/evaluate/multiruns/2026-05-04_12-59-50/4",
+              "428_organism_trends_with_chunking/evaluate/multiruns/2026-05-04_12-59-50/5"
+            ],
+            "samples": [
+              0.20987654320987653,
+              0.20497512437810947,
+              0.20461384152457376
+            ]
+          },
+          {
+            "category": "prediction.extractor/llm=gemma3_27b_in_process",
+            "display_category": "extractor/llm=gemma3_27b_in_process",
+            "series": "dataset.references.file=../external/organism_trends/Referenz_Wald_korrigiert_angepasst.csv",
+            "display_series": "file=../external/organism_trends/Referenz_Wald_korrigiert_angepasst.csv",
+            "run_dirs": [
+              "544_organism_trends_wald_corrected/evaluate/multiruns/2026-07-16_13-44-31/3",
+              "544_organism_trends_wald_corrected/evaluate/multiruns/2026-07-16_13-44-31/4",
+              "544_organism_trends_wald_corrected/evaluate/multiruns/2026-07-16_13-44-31/5"
+            ],
+            "samples": [
+              0.19294605809128632,
+              0.18856569709127385,
+              0.18806875631951467
+            ]
+          },
+          {
+            "category": "prediction.extractor/llm=qwen3_30b_in_process",
+            "display_category": "extractor/llm=qwen3_30b_in_process",
+            "series": "dataset.references.file=",
+            "display_series": "file=",
+            "run_dirs": [
+              "428_organism_trends_with_chunking/evaluate/multiruns/2026-05-04_12-59-50/6",
+              "428_organism_trends_with_chunking/evaluate/multiruns/2026-05-04_12-59-50/7",
+              "428_organism_trends_with_chunking/evaluate/multiruns/2026-05-04_12-59-50/8"
+            ],
+            "samples": [
+              0.5066666666666666,
+              0.4843750000000001,
+              0.4906666666666667
+            ]
+          },
+          {
+            "category": "prediction.extractor/llm=qwen3_30b_in_process",
+            "display_category": "extractor/llm=qwen3_30b_in_process",
+            "series": "dataset.references.file=../external/organism_trends/Referenz_Wald_korrigiert_angepasst.csv",
+            "display_series": "file=../external/organism_trends/Referenz_Wald_korrigiert_angepasst.csv",
+            "run_dirs": [
+              "544_organism_trends_wald_corrected/evaluate/multiruns/2026-07-16_13-44-31/6",
+              "544_organism_trends_wald_corrected/evaluate/multiruns/2026-07-16_13-44-31/7",
+              "544_organism_trends_wald_corrected/evaluate/multiruns/2026-07-16_13-44-31/8"
+            ],
+            "samples": [
+              0.47956403269754766,
+              0.4574468085106382,
+              0.4632152588555859
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "metadata": {
+        "metric_label": "ALL.precision"
+      },
+      "data": {
+        "points": [
+          {
+            "category": "prediction.extractor/llm=gpt_oss_20b_in_process",
+            "display_category": "extractor/llm=gpt_oss_20b_in_process",
+            "series": "dataset.references.file=",
+            "display_series": "file=",
+            "run_dirs": [
+              "428_organism_trends_with_chunking/evaluate/multiruns/2026-05-04_12-59-50/0",
+              "428_organism_trends_with_chunking/evaluate/multiruns/2026-05-04_12-59-50/1",
+              "428_organism_trends_with_chunking/evaluate/multiruns/2026-05-04_12-59-50/2"
+            ],
+            "samples": [
+              0.16544117647058823,
+              0.16104868913857678,
+              0.16977611940298507
+            ]
+          },
+          {
+            "category": "prediction.extractor/llm=gpt_oss_20b_in_process",
+            "display_category": "extractor/llm=gpt_oss_20b_in_process",
+            "series": "dataset.references.file=../external/organism_trends/Referenz_Wald_korrigiert_angepasst.csv",
+            "display_series": "file=../external/organism_trends/Referenz_Wald_korrigiert_angepasst.csv",
+            "run_dirs": [
+              "544_organism_trends_wald_corrected/evaluate/multiruns/2026-07-16_13-44-31/0",
+              "544_organism_trends_wald_corrected/evaluate/multiruns/2026-07-16_13-44-31/1",
+              "544_organism_trends_wald_corrected/evaluate/multiruns/2026-07-16_13-44-31/2"
+            ],
+            "samples": [
+              0.15257352941176472,
+              0.149812734082397,
+              0.15671641791044777
+            ]
+          },
+          {
+            "category": "prediction.extractor/llm=mistral_small_3_24b_in_process",
+            "display_category": "extractor/llm=mistral_small_3_24b_in_process",
+            "series": "dataset.references.file=",
+            "display_series": "file=",
+            "run_dirs": [
+              "428_organism_trends_with_chunking/evaluate/multiruns/2026-05-04_12-59-50/10",
+              "428_organism_trends_with_chunking/evaluate/multiruns/2026-05-04_12-59-50/11",
+              "428_organism_trends_with_chunking/evaluate/multiruns/2026-05-04_12-59-50/9"
+            ],
+            "samples": [
+              0.11577752553916004,
+              0.11551528878822197,
+              0.11467889908256881
+            ]
+          },
+          {
+            "category": "prediction.extractor/llm=mistral_small_3_24b_in_process",
+            "display_category": "extractor/llm=mistral_small_3_24b_in_process",
+            "series": "dataset.references.file=../external/organism_trends/Referenz_Wald_korrigiert_angepasst.csv",
+            "display_series": "file=../external/organism_trends/Referenz_Wald_korrigiert_angepasst.csv",
+            "run_dirs": [
+              "544_organism_trends_wald_corrected/evaluate/multiruns/2026-07-16_13-44-31/10",
+              "544_organism_trends_wald_corrected/evaluate/multiruns/2026-07-16_13-44-31/11",
+              "544_organism_trends_wald_corrected/evaluate/multiruns/2026-07-16_13-44-31/9"
+            ],
+            "samples": [
+              0.10556186152099886,
+              0.10532276330690826,
+              0.10435779816513761
+            ]
+          },
+          {
+            "category": "prediction.extractor/llm=gemma3_27b_in_process",
+            "display_category": "extractor/llm=gemma3_27b_in_process",
+            "series": "dataset.references.file=",
+            "display_series": "file=",
+            "run_dirs": [
+              "428_organism_trends_with_chunking/evaluate/multiruns/2026-05-04_12-59-50/3",
+              "428_organism_trends_with_chunking/evaluate/multiruns/2026-05-04_12-59-50/4",
+              "428_organism_trends_with_chunking/evaluate/multiruns/2026-05-04_12-59-50/5"
+            ],
+            "samples": [
+              0.11901983663943991,
+              0.11573033707865168,
+              0.11564625850340136
+            ]
+          },
+          {
+            "category": "prediction.extractor/llm=gemma3_27b_in_process",
+            "display_category": "extractor/llm=gemma3_27b_in_process",
+            "series": "dataset.references.file=../external/organism_trends/Referenz_Wald_korrigiert_angepasst.csv",
+            "display_series": "file=../external/organism_trends/Referenz_Wald_korrigiert_angepasst.csv",
+            "run_dirs": [
+              "544_organism_trends_wald_corrected/evaluate/multiruns/2026-07-16_13-44-31/3",
+              "544_organism_trends_wald_corrected/evaluate/multiruns/2026-07-16_13-44-31/4",
+              "544_organism_trends_wald_corrected/evaluate/multiruns/2026-07-16_13-44-31/5"
+            ],
+            "samples": [
+              0.10851808634772463,
+              0.10561797752808989,
+              0.1054421768707483
+            ]
+          },
+          {
+            "category": "prediction.extractor/llm=qwen3_30b_in_process",
+            "display_category": "extractor/llm=qwen3_30b_in_process",
+            "series": "dataset.references.file=",
+            "display_series": "file=",
+            "run_dirs": [
+              "428_organism_trends_with_chunking/evaluate/multiruns/2026-05-04_12-59-50/6",
+              "428_organism_trends_with_chunking/evaluate/multiruns/2026-05-04_12-59-50/7",
+              "428_organism_trends_with_chunking/evaluate/multiruns/2026-05-04_12-59-50/8"
+            ],
+            "samples": [
+              0.36538461538461536,
+              0.34572490706319703,
+              0.35384615384615387
+            ]
+          },
+          {
+            "category": "prediction.extractor/llm=qwen3_30b_in_process",
+            "display_category": "extractor/llm=qwen3_30b_in_process",
+            "series": "dataset.references.file=../external/organism_trends/Referenz_Wald_korrigiert_angepasst.csv",
+            "display_series": "file=../external/organism_trends/Referenz_Wald_korrigiert_angepasst.csv",
+            "run_dirs": [
+              "544_organism_trends_wald_corrected/evaluate/multiruns/2026-07-16_13-44-31/6",
+              "544_organism_trends_wald_corrected/evaluate/multiruns/2026-07-16_13-44-31/7",
+              "544_organism_trends_wald_corrected/evaluate/multiruns/2026-07-16_13-44-31/8"
+            ],
+            "samples": [
+              0.3384615384615385,
+              0.31970260223048325,
+              0.3269230769230769
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "metadata": {
+        "metric_label": "ALL.recall"
+      },
+      "data": {
+        "points": [
+          {
+            "category": "prediction.extractor/llm=gpt_oss_20b_in_process",
+            "display_category": "extractor/llm=gpt_oss_20b_in_process",
+            "series": "dataset.references.file=",
+            "display_series": "file=",
+            "run_dirs": [
+              "428_organism_trends_with_chunking/evaluate/multiruns/2026-05-04_12-59-50/0",
+              "428_organism_trends_with_chunking/evaluate/multiruns/2026-05-04_12-59-50/1",
+              "428_organism_trends_with_chunking/evaluate/multiruns/2026-05-04_12-59-50/2"
+            ],
+            "samples": [
+              0.782608695652174,
+              0.7478260869565218,
+              0.7913043478260869
+            ]
+          },
+          {
+            "category": "prediction.extractor/llm=gpt_oss_20b_in_process",
+            "display_category": "extractor/llm=gpt_oss_20b_in_process",
+            "series": "dataset.references.file=../external/organism_trends/Referenz_Wald_korrigiert_angepasst.csv",
+            "display_series": "file=../external/organism_trends/Referenz_Wald_korrigiert_angepasst.csv",
+            "run_dirs": [
+              "544_organism_trends_wald_corrected/evaluate/multiruns/2026-07-16_13-44-31/0",
+              "544_organism_trends_wald_corrected/evaluate/multiruns/2026-07-16_13-44-31/1",
+              "544_organism_trends_wald_corrected/evaluate/multiruns/2026-07-16_13-44-31/2"
+            ],
+            "samples": [
+              0.7757009345794392,
+              0.7476635514018691,
+              0.7850467289719626
+            ]
+          },
+          {
+            "category": "prediction.extractor/llm=mistral_small_3_24b_in_process",
+            "display_category": "extractor/llm=mistral_small_3_24b_in_process",
+            "series": "dataset.references.file=",
+            "display_series": "file=",
+            "run_dirs": [
+              "428_organism_trends_with_chunking/evaluate/multiruns/2026-05-04_12-59-50/10",
+              "428_organism_trends_with_chunking/evaluate/multiruns/2026-05-04_12-59-50/11",
+              "428_organism_trends_with_chunking/evaluate/multiruns/2026-05-04_12-59-50/9"
+            ],
+            "samples": [
+              0.8869565217391304,
+              0.8869565217391304,
+              0.8695652173913043
+            ]
+          },
+          {
+            "category": "prediction.extractor/llm=mistral_small_3_24b_in_process",
+            "display_category": "extractor/llm=mistral_small_3_24b_in_process",
+            "series": "dataset.references.file=../external/organism_trends/Referenz_Wald_korrigiert_angepasst.csv",
+            "display_series": "file=../external/organism_trends/Referenz_Wald_korrigiert_angepasst.csv",
+            "run_dirs": [
+              "544_organism_trends_wald_corrected/evaluate/multiruns/2026-07-16_13-44-31/10",
+              "544_organism_trends_wald_corrected/evaluate/multiruns/2026-07-16_13-44-31/11",
+              "544_organism_trends_wald_corrected/evaluate/multiruns/2026-07-16_13-44-31/9"
+            ],
+            "samples": [
+              0.8691588785046729,
+              0.8691588785046729,
+              0.8504672897196262
+            ]
+          },
+          {
+            "category": "prediction.extractor/llm=gemma3_27b_in_process",
+            "display_category": "extractor/llm=gemma3_27b_in_process",
+            "series": "dataset.references.file=",
+            "display_series": "file=",
+            "run_dirs": [
+              "428_organism_trends_with_chunking/evaluate/multiruns/2026-05-04_12-59-50/3",
+              "428_organism_trends_with_chunking/evaluate/multiruns/2026-05-04_12-59-50/4",
+              "428_organism_trends_with_chunking/evaluate/multiruns/2026-05-04_12-59-50/5"
+            ],
+            "samples": [
+              0.8869565217391304,
+              0.8956521739130435,
+              0.8869565217391304
+            ]
+          },
+          {
+            "category": "prediction.extractor/llm=gemma3_27b_in_process",
+            "display_category": "extractor/llm=gemma3_27b_in_process",
+            "series": "dataset.references.file=../external/organism_trends/Referenz_Wald_korrigiert_angepasst.csv",
+            "display_series": "file=../external/organism_trends/Referenz_Wald_korrigiert_angepasst.csv",
+            "run_dirs": [
+              "544_organism_trends_wald_corrected/evaluate/multiruns/2026-07-16_13-44-31/3",
+              "544_organism_trends_wald_corrected/evaluate/multiruns/2026-07-16_13-44-31/4",
+              "544_organism_trends_wald_corrected/evaluate/multiruns/2026-07-16_13-44-31/5"
+            ],
+            "samples": [
+              0.8691588785046729,
+              0.8785046728971962,
+              0.8691588785046729
+            ]
+          },
+          {
+            "category": "prediction.extractor/llm=qwen3_30b_in_process",
+            "display_category": "extractor/llm=qwen3_30b_in_process",
+            "series": "dataset.references.file=",
+            "display_series": "file=",
+            "run_dirs": [
+              "428_organism_trends_with_chunking/evaluate/multiruns/2026-05-04_12-59-50/6",
+              "428_organism_trends_with_chunking/evaluate/multiruns/2026-05-04_12-59-50/7",
+              "428_organism_trends_with_chunking/evaluate/multiruns/2026-05-04_12-59-50/8"
+            ],
+            "samples": [
+              0.8260869565217391,
+              0.808695652173913,
+              0.8
+            ]
+          },
+          {
+            "category": "prediction.extractor/llm=qwen3_30b_in_process",
+            "display_category": "extractor/llm=qwen3_30b_in_process",
+            "series": "dataset.references.file=../external/organism_trends/Referenz_Wald_korrigiert_angepasst.csv",
+            "display_series": "file=../external/organism_trends/Referenz_Wald_korrigiert_angepasst.csv",
+            "run_dirs": [
+              "544_organism_trends_wald_corrected/evaluate/multiruns/2026-07-16_13-44-31/6",
+              "544_organism_trends_wald_corrected/evaluate/multiruns/2026-07-16_13-44-31/7",
+              "544_organism_trends_wald_corrected/evaluate/multiruns/2026-07-16_13-44-31/8"
+            ],
+            "samples": [
+              0.822429906542056,
+              0.8037383177570093,
+              0.794392523364486
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "metadata": {
+        "metric_label": "ALL.support"
+      },
+      "data": {
+        "points": [
+          {
+            "category": "prediction.extractor/llm=gpt_oss_20b_in_process",
+            "display_category": "extractor/llm=gpt_oss_20b_in_process",
+            "series": "dataset.references.file=",
+            "display_series": "file=",
+            "run_dirs": [
+              "428_organism_trends_with_chunking/evaluate/multiruns/2026-05-04_12-59-50/0",
+              "428_organism_trends_with_chunking/evaluate/multiruns/2026-05-04_12-59-50/1",
+              "428_organism_trends_with_chunking/evaluate/multiruns/2026-05-04_12-59-50/2"
+            ],
+            "samples": [
+              115,
+              115,
+              115
+            ]
+          },
+          {
+            "category": "prediction.extractor/llm=gpt_oss_20b_in_process",
+            "display_category": "extractor/llm=gpt_oss_20b_in_process",
+            "series": "dataset.references.file=../external/organism_trends/Referenz_Wald_korrigiert_angepasst.csv",
+            "display_series": "file=../external/organism_trends/Referenz_Wald_korrigiert_angepasst.csv",
+            "run_dirs": [
+              "544_organism_trends_wald_corrected/evaluate/multiruns/2026-07-16_13-44-31/0",
+              "544_organism_trends_wald_corrected/evaluate/multiruns/2026-07-16_13-44-31/1",
+              "544_organism_trends_wald_corrected/evaluate/multiruns/2026-07-16_13-44-31/2"
+            ],
+            "samples": [
+              107,
+              107,
+              107
+            ]
+          },
+          {
+            "category": "prediction.extractor/llm=mistral_small_3_24b_in_process",
+            "display_category": "extractor/llm=mistral_small_3_24b_in_process",
+            "series": "dataset.references.file=",
+            "display_series": "file=",
+            "run_dirs": [
+              "428_organism_trends_with_chunking/evaluate/multiruns/2026-05-04_12-59-50/10",
+              "428_organism_trends_with_chunking/evaluate/multiruns/2026-05-04_12-59-50/11",
+              "428_organism_trends_with_chunking/evaluate/multiruns/2026-05-04_12-59-50/9"
+            ],
+            "samples": [
+              115,
+              115,
+              115
+            ]
+          },
+          {
+            "category": "prediction.extractor/llm=mistral_small_3_24b_in_process",
+            "display_category": "extractor/llm=mistral_small_3_24b_in_process",
+            "series": "dataset.references.file=../external/organism_trends/Referenz_Wald_korrigiert_angepasst.csv",
+            "display_series": "file=../external/organism_trends/Referenz_Wald_korrigiert_angepasst.csv",
+            "run_dirs": [
+              "544_organism_trends_wald_corrected/evaluate/multiruns/2026-07-16_13-44-31/10",
+              "544_organism_trends_wald_corrected/evaluate/multiruns/2026-07-16_13-44-31/11",
+              "544_organism_trends_wald_corrected/evaluate/multiruns/2026-07-16_13-44-31/9"
+            ],
+            "samples": [
+              107,
+              107,
+              107
+            ]
+          },
+          {
+            "category": "prediction.extractor/llm=gemma3_27b_in_process",
+            "display_category": "extractor/llm=gemma3_27b_in_process",
+            "series": "dataset.references.file=",
+            "display_series": "file=",
+            "run_dirs": [
+              "428_organism_trends_with_chunking/evaluate/multiruns/2026-05-04_12-59-50/3",
+              "428_organism_trends_with_chunking/evaluate/multiruns/2026-05-04_12-59-50/4",
+              "428_organism_trends_with_chunking/evaluate/multiruns/2026-05-04_12-59-50/5"
+            ],
+            "samples": [
+              115,
+              115,
+              115
+            ]
+          },
+          {
+            "category": "prediction.extractor/llm=gemma3_27b_in_process",
+            "display_category": "extractor/llm=gemma3_27b_in_process",
+            "series": "dataset.references.file=../external/organism_trends/Referenz_Wald_korrigiert_angepasst.csv",
+            "display_series": "file=../external/organism_trends/Referenz_Wald_korrigiert_angepasst.csv",
+            "run_dirs": [
+              "544_organism_trends_wald_corrected/evaluate/multiruns/2026-07-16_13-44-31/3",
+              "544_organism_trends_wald_corrected/evaluate/multiruns/2026-07-16_13-44-31/4",
+              "544_organism_trends_wald_corrected/evaluate/multiruns/2026-07-16_13-44-31/5"
+            ],
+            "samples": [
+              107,
+              107,
+              107
+            ]
+          },
+          {
+            "category": "prediction.extractor/llm=qwen3_30b_in_process",
+            "display_category": "extractor/llm=qwen3_30b_in_process",
+            "series": "dataset.references.file=",
+            "display_series": "file=",
+            "run_dirs": [
+              "428_organism_trends_with_chunking/evaluate/multiruns/2026-05-04_12-59-50/6",
+              "428_organism_trends_with_chunking/evaluate/multiruns/2026-05-04_12-59-50/7",
+              "428_organism_trends_with_chunking/evaluate/multiruns/2026-05-04_12-59-50/8"
+            ],
+            "samples": [
+              115,
+              115,
+              115
+            ]
+          },
+          {
+            "category": "prediction.extractor/llm=qwen3_30b_in_process",
+            "display_category": "extractor/llm=qwen3_30b_in_process",
+            "series": "dataset.references.file=../external/organism_trends/Referenz_Wald_korrigiert_angepasst.csv",
+            "display_series": "file=../external/organism_trends/Referenz_Wald_korrigiert_angepasst.csv",
+            "run_dirs": [
+              "544_organism_trends_wald_corrected/evaluate/multiruns/2026-07-16_13-44-31/6",
+              "544_organism_trends_wald_corrected/evaluate/multiruns/2026-07-16_13-44-31/7",
+              "544_organism_trends_wald_corrected/evaluate/multiruns/2026-07-16_13-44-31/8"
+            ],
+            "samples": [
+              107,
+              107,
+              107
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
