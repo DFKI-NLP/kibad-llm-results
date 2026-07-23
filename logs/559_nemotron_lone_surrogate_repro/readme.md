@@ -1,0 +1,69 @@
+# 559_nemotron_lone_surrogate_repro
+
+Attempts to reproduce the `UnicodeEncodeError` lone-surrogate crash described in issue
+[#555](https://github.com/DFKI-NLP/kibad-llm/issues/555) live on the cluster, on top of the fix
+added in PR [#559](https://github.com/DFKI-NLP/kibad-llm/pull/559) (`LoneSurrogateError` raised at
+the end of `extract_from_text`). Both prior occurrences of the bug happened with
+`nemotron_nano_3_30b_in_process` and `seed=7331` on the 100-PDF dev set, so both attempts here
+reuse that exact setup, pinned to the fix commit.
+
+## Prediction
+
+**Attempt 1 — single seed, matching the original standalone rerun that first hit the bug:**
+
+```sh
+./run_in_process.sh -t "2-00:00:00" -pa "H100-SLT,H100-Trails,H100,H200,B200" -ng 2 -sr \
+  -r 865104bf111404cd728b94505579e8377a92616d \
+  -u "-m kibad_llm.predict \
+  name=559_nemotron_lone_surrogate_repro \
+  experiment/predict=faktencheck_core_fields_schema_with_chunking \
+  pdf_directory=/ds/text/kiba-d/dev-set-100 \
+  extractor/llm=nemotron_nano_3_30b_in_process \
+  extractor.llm.vllm_kwargs.tensor_parallel_size=2 \
+  pdf_reader_num_proc=200 \
+  seed=7331"
+```
+
+Result location: `logs/559_nemotron_lone_surrogate_repro/predict/runs/2026-07-14_14-25-40`
+
+Completed cleanly after ~11h35m. No `UnicodeEncodeError`/`LoneSurrogateError` was raised.
+
+**Attempt 2 — full multirun with all three original seeds, matching the original
+[251_nemotron_faktencheck_core](../251_nemotron_faktencheck_core) conditions:**
+
+```sh
+./run_in_process.sh -t "2-00:00:00" -pa "H100-SLT,H100-Trails,H100,H200,B200" -ng 2 -sr \
+  -r 865104bf111404cd728b94505579e8377a92616d \
+  -u "-m kibad_llm.predict \
+  name=559_nemotron_lone_surrogate_repro \
+  experiment/predict=faktencheck_core_fields_schema_with_chunking \
+  pdf_directory=/ds/text/kiba-d/dev-set-100 \
+  extractor/llm=nemotron_nano_3_30b_in_process \
+  extractor.llm.vllm_kwargs.tensor_parallel_size=2 \
+  pdf_reader_num_proc=200 \
+  seed=42,1337,7331 \
+  --multirun"
+```
+
+Result location: `logs/559_nemotron_lone_surrogate_repro/predict/multiruns/2026-07-16_14-22-34`
+
+All three seeds completed cleanly (~11.4-11.6h extraction time each). No
+`UnicodeEncodeError`/`LoneSurrogateError` was raised for any seed.
+
+## Outcome
+
+Neither live attempt reproduced the bug, even though both reused the exact model, dataset, and
+seed(s) that triggered the two prior occurrences documented in
+[251_nemotron_faktencheck_core](../251_nemotron_faktencheck_core) and issue #555. This supports
+Arne's assessment in the issue that the underlying cause (the model occasionally emitting a
+malformed `\uXXXX` escape that `json.loads` accepts as a lone surrogate) is a rare, nondeterministic
+event tied to specific generation output rather than something reliably reproducible on demand with
+a fixed seed.
+
+Given this, we rely on the self-contained minimal reproduction Arne included directly in
+[issue #555](https://github.com/DFKI-NLP/kibad-llm/issues/555#issue-body) (a `json.loads` call that
+accepts an unpaired `\uXXXX` escape, followed by `Dataset.map` failing on the resulting lone
+surrogate) as the reference reproduction for this bug, rather than a live cluster capture.
+
+No prediction outputs from either run were copied into `data/results/predictions/`, since this
+experiment's purpose was crash reproduction, not F1 evaluation.
