@@ -23,7 +23,7 @@ attempts here reuse that exact setup, pinned to the fix commit.
   seed=7331"
 ```
 
-Result location: `logs/559_nemotron_lone_surrogate_repro/predict/runs/2026-07-14_14-25-40`
+Result location: `logs/559_nemotron_lone_surrogate_repro/predict/runs/2026-07-14_14-25-40` (this is **not persisted**)
 
 Completed cleanly after ~11h35m. No `UnicodeEncodeError` was raised. This run did a fresh, uncached
 PDF conversion (`time_pdf_conversion` ≈ 1228 s ≈ 20 min), so the cold-cache condition was covered
@@ -46,7 +46,7 @@ here.
   --multirun"
 ```
 
-Result location: `logs/559_nemotron_lone_surrogate_repro/predict/multiruns/2026-07-16_14-22-34`
+Result location: `logs/559_nemotron_lone_surrogate_repro/predict/multiruns/2026-07-16_14-22-34` (this is **not persisted**)
 
 All three seeds completed cleanly (~11.4-11.6h extraction time each). No `UnicodeEncodeError` was
 raised for any seed. These runs reused the PDF conversion cached by Attempt 1 (`time_pdf_conversion`
