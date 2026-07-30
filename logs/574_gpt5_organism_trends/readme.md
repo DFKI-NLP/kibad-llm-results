@@ -1,12 +1,12 @@
 # 574_gpt5_organism_trends
 
-GPT-5 on the Organism trends schema, dev set (`/ds/text/kiba-d/dev-set-Wald-WVC`), re-run after the
-#533 fix (model pinned to `gpt-5-2025-08-07`, `max_output_tokens` raised from 8192 to 32768). This is
-the cheap validation on the organism-trends schema (the dev counterpart of
-[574_gpt5_organism_trends_testset](../574_gpt5_organism_trends_testset)), run before the expensive
-test set. Best setup (with chunking) taken from
+GPT-5 on the Organism trends schema, dev set (`/ds/text/kiba-d/dev-set-Wald-WVC`). Re-run after the
+[#533](https://github.com/DFKI-NLP/kibad-llm/issues/533) fix: model pinned to `gpt-5-2025-08-07`,
+`max_output_tokens` raised from 8192 to 32768. This is the dev counterpart of
+[574_gpt5_organism_trends_testset](../574_gpt5_organism_trends_testset) on the organism-trends
+schema, a cheaper check before the test-set run. Best setup (with chunking) as in
 [428_organism_trends_with_chunking](../428_organism_trends_with_chunking). Single seed, since the
-random seed does not change anything on the OpenAI side.
+seed does not change anything on the OpenAI side.
 
 ## Prediction
 

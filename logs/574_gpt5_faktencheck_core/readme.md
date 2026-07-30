@@ -1,17 +1,18 @@
 # 574_gpt5_faktencheck_core
 
-GPT-5 on the Faktencheck core schema, dev set, re-run after the #533 fix (model pinned to
-`gpt-5-2025-08-07`, `max_output_tokens` raised from 8192 to 32768). GPT-5 was previously dropped
-from the core experiments because about 20 percent of chunks failed with JSONDecodeError or
-MissingResponseContentError (see [519_faktencheck_core](../519_faktencheck_core)), which I traced to
-output-budget truncation (reasoning tokens and the visible answer share `max_output_tokens`). This
-dev run is the cheap validation that the larger
-budget removes those truncation errors before I spend on the test-set runs.
+GPT-5 on the Faktencheck core schema, dev set. Re-run after the
+[#533](https://github.com/DFKI-NLP/kibad-llm/issues/533) fix: model pinned to `gpt-5-2025-08-07` and
+`max_output_tokens` raised from 8192 to 32768.
 
-Best setup (with chunking) taken from
+GPT-5 was dropped from the core experiments in [519_faktencheck_core](../519_faktencheck_core)
+because about 20% of the chunks failed (JSONDecodeError or MissingResponseContentError). These come
+from output-budget truncation: reasoning tokens and the visible answer share `max_output_tokens`.
+This run checks on the dev set that the larger budget removes them before we spend on the test set.
+
+Best setup (with chunking) as in
 [397_faktencheck_core_v1_for_chunking](../397_faktencheck_core_v1_for_chunking) and
-[519_faktencheck_core](../519_faktencheck_core). Single seed, since the random seed does not change
-anything on the OpenAI side and I want to keep costs down.
+[519_faktencheck_core](../519_faktencheck_core). Single seed, since the seed does not change anything
+on the OpenAI side.
 
 ## Prediction
 
@@ -76,47 +77,27 @@ result location: `logs/574_gpt5_faktencheck_core/evaluate/multiruns/2026-07-29_1
 }
 ```
 
-## Outcome
+## Insights
 
-The larger output budget resolves the truncation failures that #533 was about. The run completed on
-all 100 dev documents with no job crash. The earlier GPT-5 problem was never the whole job dying;
-individual requests for certain PDFs failed and were logged as per-chunk errors, and it is those
-per-chunk errors that I compare below.
-
-I compare against [519_faktencheck_core](../519_faktencheck_core), which ran GPT-5 on the same dev
-set with the same chunking config before the fix (floating `gpt-5` alias, `max_output_tokens` 8192).
-Its two GPT-5 seeds logged 336 and 350 errors out of 1654 chunks, an error rate of about 20 percent.
-After the fix, this run logged 61 errors out of 1655 chunks, 3.7 percent.
-
-By error type, before (519) to after (this run):
-
-- `MissingResponseContentError`: 123 to 127 before, **0 after**. This is the pure truncation failure
-  where reasoning consumed the whole budget and left no visible answer. The larger budget removes it
-  completely.
-- `JSONDecodeError`: about 194 before, **36 after**. This is the important remaining error, because
-  we cannot recover from it: if the result JSON is broken we cannot use the output at all. The larger
-  budget cuts it by roughly 80 percent, but a few chunks with very large outputs (tens of thousands
-  of characters) still overrun even the 32768 budget and produce truncated JSON. This is residual
-  truncation on outlier documents, not the systemic failure from before.
-- `ReasoningExtractionError`: about 28 before, 27 after. The budget does not affect this, as
-  expected, because it is not a truncation problem. GPT-5 sometimes returns a valid answer without a
-  reasoning summary even though `reasoning_options.summary=auto` is set. This is a non-breaking
-  error: the extractor logs it and moves the entry for that PDF from "without error" to "with error"
-  in the overview figures, and we lose the reasoning for analysis, but the extracted output is still
-  usable. I am reporting it separately as a new issue rather than handling it here, since #533 is
-  scoped to the truncation fix.
-
-For F1, this run scores ALL F1 0.696 (precision 0.583, recall 0.864) on the corrected reference over
-the five evaluated fields (flattened, micro, support 914). 519 scored ALL F1 0.712 and 0.711 for its
-two GPT-5 seeds on the same 914-support reference, so the fix gives a slightly lower F1, about 1.5
-points. The likely reason is that the fix recovers chunks that previously failed and contributed no
-predictions, which raises recall (0.864 vs 0.823) but lowers precision (0.583 vs 0.628) as the
-recovered chunks add some wrong predictions. 519 also used a different, floating model snapshot, so
-part of the gap can be version drift. I include these numbers for the record; the goal of this run
-was to validate the error fix, not to benchmark GPT-5 as a model.
-
-Recommendation: the fix in #574 removes the `MissingResponseContentError` truncation failures and
-cuts the total error rate from about 20 percent to 3.7 percent, so GPT-5 is safe to re-enable for the
-core experiments. The residual to track is the `JSONDecodeError` on outlier documents, since it is
-the one error we cannot recover from. The `ReasoningExtractionError` is non-breaking and lower
-priority.
+- The run went through for all 100 dev PDFs. As before the fix, the job itself never crashed; what
+  failed were single requests for some PDFs, which get logged as per-chunk errors.
+- The error rate dropped from about 20% to 3.7%. The same dev set and config in
+  [519_faktencheck_core](../519_faktencheck_core) (old 8192 budget) had 336 and 350 errors over 1654
+  chunks for its two GPT-5 seeds; here it is 61 over 1655.
+- `MissingResponseContentError` is gone: 123-127 before, 0 now. This was the pure truncation case,
+  where reasoning used up the whole budget and left no answer, and the larger budget removes it.
+- `JSONDecodeError` is the error that actually matters, since we cannot recover from it: a truncated
+  result JSON is unusable. It went from ~194 to 36. The remaining ones are outlier PDFs whose output
+  is large enough to still overrun even the 32768 budget.
+- `ReasoningExtractionError` stayed the same (~28 vs 27), as expected since it has nothing to do with
+  the budget: GPT-5 sometimes returns an answer with no reasoning summary although
+  `reasoning_options.summary=auto` is set. It is non-breaking: the entry is logged and moved from
+  "without error" to "with error" in the overview figures, and we lose the reasoning for analysis,
+  but the output stays usable. Tracked in [#575](https://github.com/DFKI-NLP/kibad-llm/issues/575).
+- Performance is slightly lower than before the fix: ALL F1 0.696 vs 0.712 and 0.711 for the two
+  GPT-5 seeds in 519 (same 914 support, corrected reference, flat micro). The model is identical, so
+  the only change is the budget: the fix recovers chunks that used to error out and return nothing,
+  which pushes recall up (0.864 vs 0.823) and precision down (0.583 vs 0.628).
+- Overall the fix removes the MissingResponseContentError failures and cuts the error rate about 5x,
+  so GPT-5 can go back into the core experiments. The one thing left to watch is the JSONDecodeError
+  on outlier PDFs.

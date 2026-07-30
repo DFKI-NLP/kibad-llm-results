@@ -1,12 +1,13 @@
 # 574_gpt5_faktencheck_core_testset
 
-GPT-5 on the Faktencheck core schema, true test set (`/ds/text/kiba-d/splits/test`), re-run after the
-#533 fix (model pinned to `gpt-5-2025-08-07`, `max_output_tokens` raised from 8192 to 32768). This
-re-fills the GPT-5 slot that was deleted from
+GPT-5 on the Faktencheck core schema, true test set (`/ds/text/kiba-d/splits/test`). Re-run after the
+[#533](https://github.com/DFKI-NLP/kibad-llm/issues/533) fix: model pinned to `gpt-5-2025-08-07`,
+`max_output_tokens` raised from 8192 to 32768. This is the test-set counterpart of the dev run
+[574_gpt5_faktencheck_core](../574_gpt5_faktencheck_core), which already confirmed the truncation
+errors are gone. It re-fills the GPT-5 slot that was deleted from
 [525_faktencheck_core_bestconfig_testset](../525_faktencheck_core_bestconfig_testset) for too many
-errors (the first seed alone cost about $195 and took about 59h). Single seed, since the random seed
-does not change anything on the OpenAI side. Run this only after the dev run
-[574_gpt5_faktencheck_core](../574_gpt5_faktencheck_core) confirms the truncation errors are gone.
+errors (the first seed alone cost about $195 and took about 59h). Single seed, since the seed does
+not change anything on the OpenAI side.
 
 ## Prediction
 
