@@ -95,9 +95,10 @@ result location: `logs/574_gpt5_faktencheck_core/evaluate/multiruns/2026-07-29_1
   "without error" to "with error" in the overview figures, and we lose the reasoning for analysis,
   but the output stays usable. Tracked in [#575](https://github.com/DFKI-NLP/kibad-llm/issues/575).
 - Performance is slightly lower than before the fix: ALL F1 0.696 vs 0.712 and 0.711 for the two
-  GPT-5 seeds in 519 (same 914 support, corrected reference, flat micro). The model is identical, so
-  the only change is the budget: the fix recovers chunks that used to error out and return nothing,
-  which pushes recall up (0.864 vs 0.823) and precision down (0.583 vs 0.628).
+  GPT-5 seeds in 519 (same 914 support, corrected reference, flat micro). The model is the same (the
+  `gpt-5` alias in 519 resolves to `gpt-5-2025-08-07`), so the only change is the budget: the fix
+  recovers chunks that used to error out and return nothing, which pushes recall up (0.864 vs 0.823)
+  and precision down (0.583 vs 0.628).
 - Overall the fix removes the MissingResponseContentError failures and cuts the error rate about 5x,
   so GPT-5 can go back into the core experiments. The one thing left to watch is the JSONDecodeError
   on outlier PDFs.
