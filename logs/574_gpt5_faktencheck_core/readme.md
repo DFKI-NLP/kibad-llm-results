@@ -2,9 +2,10 @@
 
 GPT-5 on the Faktencheck core schema, dev set, re-run after the #533 fix (model pinned to
 `gpt-5-2025-08-07`, `max_output_tokens` raised from 8192 to 32768). GPT-5 was previously dropped
-from the core experiments because roughly 16 to 20 percent of chunks failed with JSONDecodeError or
-MissingResponseContentError, which I traced to output-budget truncation (reasoning tokens and the
-visible answer share `max_output_tokens`). This dev run is the cheap validation that the larger
+from the core experiments because about 20 percent of chunks failed with JSONDecodeError or
+MissingResponseContentError (see [519_faktencheck_core](../519_faktencheck_core)), which I traced to
+output-budget truncation (reasoning tokens and the visible answer share `max_output_tokens`). This
+dev run is the cheap validation that the larger
 budget removes those truncation errors before I spend on the test-set runs.
 
 Best setup (with chunking) taken from
@@ -77,30 +78,45 @@ result location: `logs/574_gpt5_faktencheck_core/evaluate/multiruns/2026-07-29_1
 
 ## Outcome
 
-The larger output budget resolves the truncation failures that #533 was about. The run completed
-cleanly on all 100 dev documents with no job crash, whereas the earlier GPT-5 core runs died partway
-through.
+The larger output budget resolves the truncation failures that #533 was about. The run completed on
+all 100 dev documents with no job crash. The earlier GPT-5 problem was never the whole job dying;
+individual requests for certain PDFs failed and were logged as per-chunk errors, and it is those
+per-chunk errors that I compare below.
 
-Errors dropped sharply. Across 1655 chunks, 1594 were clean and 61 carried an error, an error rate of
-3.7 percent, down from the roughly 16 to 20 percent seen before the fix. Most importantly,
-`MissingResponseContentError`, the pure truncation failure where reasoning consumed the whole budget
-and left no visible answer, no longer occurs at all (0 occurrences).
+I compare against [519_faktencheck_core](../519_faktencheck_core), which ran GPT-5 on the same dev
+set with the same chunking config before the fix (floating `gpt-5` alias, `max_output_tokens` 8192).
+Its two GPT-5 seeds logged 336 and 350 errors out of 1654 chunks, an error rate of about 20 percent.
+After the fix, this run logged 61 errors out of 1655 chunks, 3.7 percent.
 
-The remaining 61 errors split into two groups:
+By error type, before (519) to after (this run):
 
-- `JSONDecodeError` (36): a small number of chunks with very large outputs (tens of thousands of
-  characters) still overrun even the 32768 budget and produce truncated JSON. This is residual
+- `MissingResponseContentError`: 123 to 127 before, **0 after**. This is the pure truncation failure
+  where reasoning consumed the whole budget and left no visible answer. The larger budget removes it
+  completely.
+- `JSONDecodeError`: about 194 before, **36 after**. This is the important remaining error, because
+  we cannot recover from it: if the result JSON is broken we cannot use the output at all. The larger
+  budget cuts it by roughly 80 percent, but a few chunks with very large outputs (tens of thousands
+  of characters) still overrun even the 32768 budget and produce truncated JSON. This is residual
   truncation on outlier documents, not the systemic failure from before.
-- `ReasoningExtractionError` (27): these are not a truncation problem. GPT-5 sometimes returns a
-  valid answer without a reasoning summary even though `reasoning_options.summary=auto` is set, and
-  the extractor currently treats a missing summary as a hard failure. Raising the token budget does
-  not affect this. I am reporting it separately as a new, unrelated finding rather than handling it
-  here, since #533 is scoped to the truncation fix.
+- `ReasoningExtractionError`: about 28 before, 27 after. The budget does not affect this, as
+  expected, because it is not a truncation problem. GPT-5 sometimes returns a valid answer without a
+  reasoning summary even though `reasoning_options.summary=auto` is set. This is a non-breaking
+  error: the extractor logs it and moves the entry for that PDF from "without error" to "with error"
+  in the overview figures, and we lose the reasoning for analysis, but the extracted output is still
+  usable. I am reporting it separately as a new issue rather than handling it here, since #533 is
+  scoped to the truncation fix.
 
-For completeness, F1 on the corrected reference over the five evaluated fields (flattened, micro) is
-ALL F1 0.696 (precision 0.583, recall 0.864). I include these numbers only for the record. The goal
-of this run was to validate the error fix, not to benchmark GPT-5 as a model.
+For F1, this run scores ALL F1 0.696 (precision 0.583, recall 0.864) on the corrected reference over
+the five evaluated fields (flattened, micro, support 914). 519 scored ALL F1 0.712 and 0.711 for its
+two GPT-5 seeds on the same 914-support reference, so the fix gives a slightly lower F1, about 1.5
+points. The likely reason is that the fix recovers chunks that previously failed and contributed no
+predictions, which raises recall (0.864 vs 0.823) but lowers precision (0.583 vs 0.628) as the
+recovered chunks add some wrong predictions. 519 also used a different, floating model snapshot, so
+part of the gap can be version drift. I include these numbers for the record; the goal of this run
+was to validate the error fix, not to benchmark GPT-5 as a model.
 
-Recommendation: the fix in #574 removes the truncation crashes and cuts the error rate by roughly
-five times, so GPT-5 is safe to re-enable for the core experiments. The residual
-`ReasoningExtractionError` should be tracked as a separate issue.
+Recommendation: the fix in #574 removes the `MissingResponseContentError` truncation failures and
+cuts the total error rate from about 20 percent to 3.7 percent, so GPT-5 is safe to re-enable for the
+core experiments. The residual to track is the `JSONDecodeError` on outlier documents, since it is
+the one error we cannot recover from. The `ReasoningExtractionError` is non-breaking and lower
+priority.
