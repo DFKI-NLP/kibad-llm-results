@@ -8,7 +8,7 @@ GPT-5 on the Faktencheck core schema, true test set (`/ds/text/kiba-d/splits/tes
 [525_faktencheck_core_bestconfig_testset](../525_faktencheck_core_bestconfig_testset) for too many
 errors (the first seed alone cost about $195 and took about 59h). Single seed, since the seed is not
 part of the OpenAI request: the Responses API has no `seed` parameter and
-`kibad_llm/llms/openai.py` drops it with a warning.
+`src/kibad_llm/llms/openai.py` drops it with a warning.
 
 ## Prediction
 

@@ -1,7 +1,7 @@
 # 574_gpt5_faktencheck_core
 
-GPT-5 on the Faktencheck core schema, 100-PDF dev set, with the current default setup
-(`faktencheck_core_fields_schema_with_chunking`) as in
+GPT-5 on the Faktencheck core schema, 100-PDF dev set, using
+`faktencheck_core_fields_schema_with_chunking`, as in
 [397_faktencheck_core_v1_for_chunking](../397_faktencheck_core_v1_for_chunking) and
 [519_faktencheck_core](../519_faktencheck_core).
 
@@ -15,7 +15,7 @@ with `JSONDecodeError` or `MissingResponseContentError` (see
 before we spend on the test set.
 
 Single seed, since the seed is not part of the OpenAI request: the Responses API has no `seed`
-parameter and `kibad_llm/llms/openai.py` drops it with a warning.
+parameter and `src/kibad_llm/llms/openai.py` drops it with a warning.
 
 ## Prediction
 
@@ -82,11 +82,14 @@ result location: `logs/574_gpt5_faktencheck_core/evaluate/multiruns/2026-07-29_1
 
 ## Outcome
 
-The job finished on all 100 dev PDFs. Comparison with the two GPT-5 runs in
+The job finished on all 100 dev PDFs. The tables below compare it with the two GPT-5 runs in
 [519_faktencheck_core](../519_faktencheck_core), which use the same dev set and setup with
-`max_output_tokens: 8192` (numbers from
-`logs/519_faktencheck_core/evaluate/multiruns/2026-06-16_14-57-41` and `.../2026-06-16_15-19-32`,
-jobs 3 and 4):
+`max_output_tokens: 8192`. The error counts come from
+`logs/519_faktencheck_core/evaluate/multiruns/2026-06-16_14-57-41`, the f1, precision and recall
+numbers from `.../2026-06-16_15-19-32`, jobs 3 and 4 in both cases. Support is the same in all three
+runs, since they use the same reference.
+
+### Error counts
 
 |                             | 519, seed 42 | 519, seed 1337 | 574, seed 42 |
 |:----------------------------|-------------:|---------------:|-------------:|
@@ -95,9 +98,44 @@ jobs 3 and 4):
 | JSONDecodeError             |          193 |            195 |           36 |
 | MissingResponseContentError |          123 |            127 |            0 |
 | ReasoningExtractionError    |           26 |             30 |           27 |
-| ALL precision               |        0.628 |          0.622 |        0.583 |
-| ALL recall                  |        0.823 |          0.829 |        0.864 |
-| ALL f1                      |        0.712 |          0.711 |        0.696 |
+
+### F1 per field
+
+| field                   | 519, seed 42 | 519, seed 1337 | 574, seed 42 |
+|:------------------------|-------------:|---------------:|-------------:|
+| habitat                 |        0.810 |          0.846 |        0.833 |
+| ecosystem_type.category |        0.810 |          0.799 |        0.783 |
+| biodiversity_level      |        0.705 |          0.689 |        0.700 |
+| taxa.species_group      |        0.678 |          0.678 |        0.657 |
+| ecosystem_type.term     |        0.623 |          0.605 |        0.592 |
+| ALL                     |        0.712 |          0.711 |        0.696 |
+
+### Precision per field
+
+| field                   | 519, seed 42 | 519, seed 1337 | 574, seed 42 |
+|:------------------------|-------------:|---------------:|-------------:|
+| habitat                 |        0.736 |          0.767 |        0.741 |
+| ecosystem_type.category |        0.747 |          0.713 |        0.677 |
+| biodiversity_level      |        0.633 |          0.612 |        0.596 |
+| taxa.species_group      |        0.573 |          0.573 |        0.545 |
+| ecosystem_type.term     |        0.542 |          0.523 |        0.469 |
+| ALL                     |        0.628 |          0.622 |        0.583 |
+
+### Recall per field
+
+| field                   | 519, seed 42 | 519, seed 1337 | 574, seed 42 |
+|:------------------------|-------------:|---------------:|-------------:|
+| habitat                 |        0.899 |          0.942 |        0.952 |
+| ecosystem_type.category |        0.886 |          0.907 |        0.929 |
+| biodiversity_level      |        0.795 |          0.788 |        0.848 |
+| taxa.species_group      |        0.831 |          0.831 |        0.826 |
+| ecosystem_type.term     |        0.733 |          0.717 |        0.800 |
+| ALL                     |        0.823 |          0.829 |        0.864 |
+
+Errors drop from 336 and 350 to 61, while ALL f1 goes from 0.712 and 0.711 to 0.696: recall is
+higher (0.864 vs 0.823 and 0.829) and precision lower (0.583 vs 0.628 and 0.622). Per field, recall
+is higher than in both 519 runs except for `taxa.species_group`, and precision is lower than in both
+except for `habitat`, where it falls between the two 519 seeds.
 
 `JSONDecodeError` is the remaining error that matters, since a broken result JSON cannot be used. We
 did not look into the 36 remaining cases. `ReasoningExtractionError` is non-breaking: the entry is
@@ -105,7 +143,6 @@ counted as "with error" in the overview figures and we lose the reasoning for an
 output can still be used. It is tracked in
 [#575](https://github.com/DFKI-NLP/kibad-llm/issues/575).
 
-The two runs are four months apart (519 predictions at commit `81d3de54`, this run at `aab5b527`).
-The resolved run configs differ in `max_output_tokens` and in the model string, where `gpt-5`
-resolves to `gpt-5-2025-08-07` (see
-[#533](https://github.com/DFKI-NLP/kibad-llm/issues/533#issuecomment-4969298705)).
+The budget increase removed `MissingResponseContentError` (123 and 127 in 519, 0 here) and reduced
+`JSONDecodeError` from 193 and 195 to 36, which is what the change was meant to do. The test set and
+organism-trends runs follow with the same config.

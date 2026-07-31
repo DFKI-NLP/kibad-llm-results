@@ -8,7 +8,7 @@ from [549_organism_trends_bestconfig_testset](../549_organism_trends_bestconfig_
 errors. Best setup (with chunking) as in
 [428_organism_trends_with_chunking](../428_organism_trends_with_chunking). Single seed, since the
 seed is not part of the OpenAI request: the Responses API has no `seed` parameter and
-`kibad_llm/llms/openai.py` drops it with a warning.
+`src/kibad_llm/llms/openai.py` drops it with a warning.
 
 ## Prediction
 
