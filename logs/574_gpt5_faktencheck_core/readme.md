@@ -14,8 +14,7 @@ with `JSONDecodeError` or `MissingResponseContentError` (see
 [#574](https://github.com/DFKI-NLP/kibad-llm/pull/574). This run measures the effect on the dev set
 before we spend on the test set.
 
-Single seed, since the seed is not part of the OpenAI request: the Responses API has no `seed`
-parameter and `src/kibad_llm/llms/openai.py` drops it with a warning.
+We use a single seed to limit cost.
 
 ## Prediction
 

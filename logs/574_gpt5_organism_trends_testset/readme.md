@@ -6,9 +6,8 @@ the [#533](https://github.com/DFKI-NLP/kibad-llm/issues/533) fix: model pinned t
 [574_gpt5_organism_trends](../574_gpt5_organism_trends). It re-fills the GPT-5 slot that was deleted
 from [549_organism_trends_bestconfig_testset](../549_organism_trends_bestconfig_testset) for too many
 errors. Best setup (with chunking) as in
-[428_organism_trends_with_chunking](../428_organism_trends_with_chunking). Single seed, since the
-seed is not part of the OpenAI request: the Responses API has no `seed` parameter and
-`src/kibad_llm/llms/openai.py` drops it with a warning.
+[428_organism_trends_with_chunking](../428_organism_trends_with_chunking). We use a single seed to
+limit cost.
 
 ## Prediction
 

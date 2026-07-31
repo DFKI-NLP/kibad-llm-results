@@ -5,9 +5,8 @@ GPT-5 on the Organism trends schema, dev set (`/ds/text/kiba-d/dev-set-Wald-WVC`
 `max_output_tokens` raised from 8192 to 32768. This is the dev counterpart of
 [574_gpt5_organism_trends_testset](../574_gpt5_organism_trends_testset) on the organism-trends
 schema, a cheaper check before the test-set run. Best setup (with chunking) as in
-[428_organism_trends_with_chunking](../428_organism_trends_with_chunking). Single seed, since the
-seed is not part of the OpenAI request: the Responses API has no `seed` parameter and
-`src/kibad_llm/llms/openai.py` drops it with a warning.
+[428_organism_trends_with_chunking](../428_organism_trends_with_chunking). We use a single seed to
+limit cost.
 
 ## Prediction
 
