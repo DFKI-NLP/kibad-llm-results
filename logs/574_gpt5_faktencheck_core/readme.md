@@ -1,18 +1,21 @@
 # 574_gpt5_faktencheck_core
 
-GPT-5 on the Faktencheck core schema, dev set. Re-run after the
-[#533](https://github.com/DFKI-NLP/kibad-llm/issues/533) fix: model pinned to `gpt-5-2025-08-07` and
-`max_output_tokens` raised from 8192 to 32768.
-
-GPT-5 was dropped from the core experiments in [519_faktencheck_core](../519_faktencheck_core)
-because about 20% of the chunks failed (JSONDecodeError or MissingResponseContentError). These come
-from output-budget truncation: reasoning tokens and the visible answer share `max_output_tokens`.
-This run checks on the dev set that the larger budget removes them before we spend on the test set.
-
-Best setup (with chunking) as in
+GPT-5 on the Faktencheck core schema, 100-PDF dev set, with the current default setup
+(`faktencheck_core_fields_schema_with_chunking`) as in
 [397_faktencheck_core_v1_for_chunking](../397_faktencheck_core_v1_for_chunking) and
-[519_faktencheck_core](../519_faktencheck_core). Single seed, since the seed does not change anything
-on the OpenAI side.
+[519_faktencheck_core](../519_faktencheck_core).
+
+**Motivation**: GPT-5 was dropped from the core experiments because about 20% of the chunks failed
+with `JSONDecodeError` or `MissingResponseContentError` (see
+[519_faktencheck_core](../519_faktencheck_core)). Reasoning tokens and the visible answer share
+`max_output_tokens`, so the budget was raised from 8192 to 32768, the same change as for Nemotron in
+[#523](https://github.com/DFKI-NLP/kibad-llm/issues/523). The model was also pinned to
+`gpt-5-2025-08-07`. See [#533](https://github.com/DFKI-NLP/kibad-llm/issues/533) and
+[#574](https://github.com/DFKI-NLP/kibad-llm/pull/574). This run measures the effect on the dev set
+before we spend on the test set.
+
+Single seed, since the seed is not part of the OpenAI request: the Responses API has no `seed`
+parameter and `kibad_llm/llms/openai.py` drops it with a warning.
 
 ## Prediction
 
@@ -77,28 +80,32 @@ result location: `logs/574_gpt5_faktencheck_core/evaluate/multiruns/2026-07-29_1
 }
 ```
 
-## Insights
+## Outcome
 
-- The run went through for all 100 dev PDFs. As before the fix, the job itself never crashed; what
-  failed were single requests for some PDFs, which get logged as per-chunk errors.
-- The error rate dropped from about 20% to 3.7%. The same dev set and config in
-  [519_faktencheck_core](../519_faktencheck_core) (old 8192 budget) had 336 and 350 errors over 1654
-  chunks for its two GPT-5 seeds; here it is 61 over 1655.
-- `MissingResponseContentError` is gone: 123-127 before, 0 now. This was the pure truncation case,
-  where reasoning used up the whole budget and left no answer, and the larger budget removes it.
-- `JSONDecodeError` is the error that actually matters, since we cannot recover from it: a truncated
-  result JSON is unusable. It went from ~194 to 36. The remaining ones are outlier PDFs whose output
-  is large enough to still overrun even the 32768 budget.
-- `ReasoningExtractionError` stayed the same (~28 vs 27), as expected since it has nothing to do with
-  the budget: GPT-5 sometimes returns an answer with no reasoning summary although
-  `reasoning_options.summary=auto` is set. It is non-breaking: the entry is logged and moved from
-  "without error" to "with error" in the overview figures, and we lose the reasoning for analysis,
-  but the output stays usable. Tracked in [#575](https://github.com/DFKI-NLP/kibad-llm/issues/575).
-- Performance is slightly lower than before the fix: ALL F1 0.696 vs 0.712 and 0.711 for the two
-  GPT-5 seeds in 519 (same 914 support, corrected reference, flat micro). The model is the same (the
-  `gpt-5` alias in 519 resolves to `gpt-5-2025-08-07`), so the only change is the budget: the fix
-  recovers chunks that used to error out and return nothing, which pushes recall up (0.864 vs 0.823)
-  and precision down (0.583 vs 0.628).
-- Overall the fix removes the MissingResponseContentError failures and cuts the error rate about 5x,
-  so GPT-5 can go back into the core experiments. The one thing left to watch is the JSONDecodeError
-  on outlier PDFs.
+The job finished on all 100 dev PDFs. Comparison with the two GPT-5 runs in
+[519_faktencheck_core](../519_faktencheck_core), which use the same dev set and setup with
+`max_output_tokens: 8192` (numbers from
+`logs/519_faktencheck_core/evaluate/multiruns/2026-06-16_14-57-41` and `.../2026-06-16_15-19-32`,
+jobs 3 and 4):
+
+|                             | 519, seed 42 | 519, seed 1337 | 574, seed 42 |
+|:----------------------------|-------------:|---------------:|-------------:|
+| chunks                      |         1654 |           1654 |         1655 |
+| with_error                  |          336 |            350 |           61 |
+| JSONDecodeError             |          193 |            195 |           36 |
+| MissingResponseContentError |          123 |            127 |            0 |
+| ReasoningExtractionError    |           26 |             30 |           27 |
+| ALL precision               |        0.628 |          0.622 |        0.583 |
+| ALL recall                  |        0.823 |          0.829 |        0.864 |
+| ALL f1                      |        0.712 |          0.711 |        0.696 |
+
+`JSONDecodeError` is the remaining error that matters, since a broken result JSON cannot be used. We
+did not look into the 36 remaining cases. `ReasoningExtractionError` is non-breaking: the entry is
+counted as "with error" in the overview figures and we lose the reasoning for analysis, but the
+output can still be used. It is tracked in
+[#575](https://github.com/DFKI-NLP/kibad-llm/issues/575).
+
+The two runs are four months apart (519 predictions at commit `81d3de54`, this run at `aab5b527`).
+The resolved run configs differ in `max_output_tokens` and in the model string, where `gpt-5`
+resolves to `gpt-5-2025-08-07` (see
+[#533](https://github.com/DFKI-NLP/kibad-llm/issues/533#issuecomment-4969298705)).

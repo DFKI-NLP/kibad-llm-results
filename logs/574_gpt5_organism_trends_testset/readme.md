@@ -3,12 +3,12 @@
 GPT-5 on the Organism trends schema, true test set (`/ds/text/kiba-d/test-set-AuO-WVC`). Re-run after
 the [#533](https://github.com/DFKI-NLP/kibad-llm/issues/533) fix: model pinned to `gpt-5-2025-08-07`,
 `max_output_tokens` raised from 8192 to 32768. This is the test-set counterpart of the dev run
-[574_gpt5_organism_trends](../574_gpt5_organism_trends), which already confirmed the truncation
-errors are gone. It re-fills the GPT-5 slot that was deleted from
-[549_organism_trends_bestconfig_testset](../549_organism_trends_bestconfig_testset) for too many
+[574_gpt5_organism_trends](../574_gpt5_organism_trends). It re-fills the GPT-5 slot that was deleted
+from [549_organism_trends_bestconfig_testset](../549_organism_trends_bestconfig_testset) for too many
 errors. Best setup (with chunking) as in
 [428_organism_trends_with_chunking](../428_organism_trends_with_chunking). Single seed, since the
-seed does not change anything on the OpenAI side.
+seed is not part of the OpenAI request: the Responses API has no `seed` parameter and
+`kibad_llm/llms/openai.py` drops it with a warning.
 
 ## Prediction
 
