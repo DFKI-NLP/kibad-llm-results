@@ -1,0 +1,299 @@
+{
+  "metric_family": "numeric",
+  "plot_tab": "biodiversity_level",
+  "plot_tab_variant": "prefix",
+  "plots": [
+    {
+      "metadata": {
+        "metric_label": "biodiversity_level.f1"
+      },
+      "data": {
+        "points": [
+          {
+            "category": "prediction.extractor/llm=gpt_oss_20b_in_process",
+            "display_category": "extractor/llm=gpt_oss_20b_in_process",
+            "series": "__single__",
+            "display_series": "__single__",
+            "run_dirs": [
+              "525_faktencheck_core_bestconfig_testset/evaluate/multiruns/2026-07-13_15-08-10/0",
+              "525_faktencheck_core_bestconfig_testset/evaluate/multiruns/2026-07-13_15-08-10/1",
+              "525_faktencheck_core_bestconfig_testset/evaluate/multiruns/2026-07-13_15-08-10/2"
+            ],
+            "samples": [
+              0.4442493415276558,
+              0.44912280701754387,
+              0.45172719220549157
+            ]
+          },
+          {
+            "category": "prediction.extractor/llm=mistral_small_3_24b_in_process",
+            "display_category": "extractor/llm=mistral_small_3_24b_in_process",
+            "series": "__single__",
+            "display_series": "__single__",
+            "run_dirs": [
+              "525_faktencheck_core_bestconfig_testset/evaluate/multiruns/2026-07-13_15-08-10/10",
+              "525_faktencheck_core_bestconfig_testset/evaluate/multiruns/2026-07-13_15-08-10/11",
+              "525_faktencheck_core_bestconfig_testset/evaluate/multiruns/2026-07-13_15-08-10/9"
+            ],
+            "samples": [
+              0.424962852897474,
+              0.42105263157894735,
+              0.42401779095626385
+            ]
+          },
+          {
+            "category": "prediction.extractor/llm=gemma3_27b_in_process",
+            "display_category": "extractor/llm=gemma3_27b_in_process",
+            "series": "__single__",
+            "display_series": "__single__",
+            "run_dirs": [
+              "525_faktencheck_core_bestconfig_testset/evaluate/multiruns/2026-07-13_15-08-10/3",
+              "525_faktencheck_core_bestconfig_testset/evaluate/multiruns/2026-07-13_15-08-10/4",
+              "525_faktencheck_core_bestconfig_testset/evaluate/multiruns/2026-07-13_15-08-10/5"
+            ],
+            "samples": [
+              0.415153906866614,
+              0.4060031595576619,
+              0.40894568690095845
+            ]
+          },
+          {
+            "category": "prediction.extractor/llm=qwen3_30b_in_process",
+            "display_category": "extractor/llm=qwen3_30b_in_process",
+            "series": "__single__",
+            "display_series": "__single__",
+            "run_dirs": [
+              "525_faktencheck_core_bestconfig_testset/evaluate/multiruns/2026-07-13_15-08-10/6",
+              "525_faktencheck_core_bestconfig_testset/evaluate/multiruns/2026-07-13_15-08-10/7",
+              "525_faktencheck_core_bestconfig_testset/evaluate/multiruns/2026-07-13_15-08-10/8"
+            ],
+            "samples": [
+              0.4351005484460695,
+              0.4470588235294118,
+              0.45765765765765765
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "metadata": {
+        "metric_label": "biodiversity_level.precision"
+      },
+      "data": {
+        "points": [
+          {
+            "category": "prediction.extractor/llm=gpt_oss_20b_in_process",
+            "display_category": "extractor/llm=gpt_oss_20b_in_process",
+            "series": "__single__",
+            "display_series": "__single__",
+            "run_dirs": [
+              "525_faktencheck_core_bestconfig_testset/evaluate/multiruns/2026-07-13_15-08-10/0",
+              "525_faktencheck_core_bestconfig_testset/evaluate/multiruns/2026-07-13_15-08-10/1",
+              "525_faktencheck_core_bestconfig_testset/evaluate/multiruns/2026-07-13_15-08-10/2"
+            ],
+            "samples": [
+              0.3418918918918919,
+              0.34547908232118757,
+              0.3493150684931507
+            ]
+          },
+          {
+            "category": "prediction.extractor/llm=mistral_small_3_24b_in_process",
+            "display_category": "extractor/llm=mistral_small_3_24b_in_process",
+            "series": "__single__",
+            "display_series": "__single__",
+            "run_dirs": [
+              "525_faktencheck_core_bestconfig_testset/evaluate/multiruns/2026-07-13_15-08-10/10",
+              "525_faktencheck_core_bestconfig_testset/evaluate/multiruns/2026-07-13_15-08-10/11",
+              "525_faktencheck_core_bestconfig_testset/evaluate/multiruns/2026-07-13_15-08-10/9"
+            ],
+            "samples": [
+              0.3020063357972545,
+              0.29894736842105263,
+              0.30105263157894735
+            ]
+          },
+          {
+            "category": "prediction.extractor/llm=gemma3_27b_in_process",
+            "display_category": "extractor/llm=gemma3_27b_in_process",
+            "series": "__single__",
+            "display_series": "__single__",
+            "run_dirs": [
+              "525_faktencheck_core_bestconfig_testset/evaluate/multiruns/2026-07-13_15-08-10/3",
+              "525_faktencheck_core_bestconfig_testset/evaluate/multiruns/2026-07-13_15-08-10/4",
+              "525_faktencheck_core_bestconfig_testset/evaluate/multiruns/2026-07-13_15-08-10/5"
+            ],
+            "samples": [
+              0.3029953917050691,
+              0.2964244521337947,
+              0.30011723329425555
+            ]
+          },
+          {
+            "category": "prediction.extractor/llm=qwen3_30b_in_process",
+            "display_category": "extractor/llm=qwen3_30b_in_process",
+            "series": "__single__",
+            "display_series": "__single__",
+            "run_dirs": [
+              "525_faktencheck_core_bestconfig_testset/evaluate/multiruns/2026-07-13_15-08-10/6",
+              "525_faktencheck_core_bestconfig_testset/evaluate/multiruns/2026-07-13_15-08-10/7",
+              "525_faktencheck_core_bestconfig_testset/evaluate/multiruns/2026-07-13_15-08-10/8"
+            ],
+            "samples": [
+              0.3424460431654676,
+              0.34985835694050993,
+              0.35724331926863573
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "metadata": {
+        "metric_label": "biodiversity_level.recall"
+      },
+      "data": {
+        "points": [
+          {
+            "category": "prediction.extractor/llm=gpt_oss_20b_in_process",
+            "display_category": "extractor/llm=gpt_oss_20b_in_process",
+            "series": "__single__",
+            "display_series": "__single__",
+            "run_dirs": [
+              "525_faktencheck_core_bestconfig_testset/evaluate/multiruns/2026-07-13_15-08-10/0",
+              "525_faktencheck_core_bestconfig_testset/evaluate/multiruns/2026-07-13_15-08-10/1",
+              "525_faktencheck_core_bestconfig_testset/evaluate/multiruns/2026-07-13_15-08-10/2"
+            ],
+            "samples": [
+              0.6340852130325815,
+              0.6416040100250626,
+              0.6390977443609023
+            ]
+          },
+          {
+            "category": "prediction.extractor/llm=mistral_small_3_24b_in_process",
+            "display_category": "extractor/llm=mistral_small_3_24b_in_process",
+            "series": "__single__",
+            "display_series": "__single__",
+            "run_dirs": [
+              "525_faktencheck_core_bestconfig_testset/evaluate/multiruns/2026-07-13_15-08-10/10",
+              "525_faktencheck_core_bestconfig_testset/evaluate/multiruns/2026-07-13_15-08-10/11",
+              "525_faktencheck_core_bestconfig_testset/evaluate/multiruns/2026-07-13_15-08-10/9"
+            ],
+            "samples": [
+              0.7167919799498746,
+              0.7117794486215538,
+              0.7167919799498746
+            ]
+          },
+          {
+            "category": "prediction.extractor/llm=gemma3_27b_in_process",
+            "display_category": "extractor/llm=gemma3_27b_in_process",
+            "series": "__single__",
+            "display_series": "__single__",
+            "run_dirs": [
+              "525_faktencheck_core_bestconfig_testset/evaluate/multiruns/2026-07-13_15-08-10/3",
+              "525_faktencheck_core_bestconfig_testset/evaluate/multiruns/2026-07-13_15-08-10/4",
+              "525_faktencheck_core_bestconfig_testset/evaluate/multiruns/2026-07-13_15-08-10/5"
+            ],
+            "samples": [
+              0.6591478696741855,
+              0.6441102756892231,
+              0.6416040100250626
+            ]
+          },
+          {
+            "category": "prediction.extractor/llm=qwen3_30b_in_process",
+            "display_category": "extractor/llm=qwen3_30b_in_process",
+            "series": "__single__",
+            "display_series": "__single__",
+            "run_dirs": [
+              "525_faktencheck_core_bestconfig_testset/evaluate/multiruns/2026-07-13_15-08-10/6",
+              "525_faktencheck_core_bestconfig_testset/evaluate/multiruns/2026-07-13_15-08-10/7",
+              "525_faktencheck_core_bestconfig_testset/evaluate/multiruns/2026-07-13_15-08-10/8"
+            ],
+            "samples": [
+              0.5964912280701754,
+              0.6190476190476191,
+              0.6365914786967418
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "metadata": {
+        "metric_label": "biodiversity_level.support"
+      },
+      "data": {
+        "points": [
+          {
+            "category": "prediction.extractor/llm=gpt_oss_20b_in_process",
+            "display_category": "extractor/llm=gpt_oss_20b_in_process",
+            "series": "__single__",
+            "display_series": "__single__",
+            "run_dirs": [
+              "525_faktencheck_core_bestconfig_testset/evaluate/multiruns/2026-07-13_15-08-10/0",
+              "525_faktencheck_core_bestconfig_testset/evaluate/multiruns/2026-07-13_15-08-10/1",
+              "525_faktencheck_core_bestconfig_testset/evaluate/multiruns/2026-07-13_15-08-10/2"
+            ],
+            "samples": [
+              399,
+              399,
+              399
+            ]
+          },
+          {
+            "category": "prediction.extractor/llm=mistral_small_3_24b_in_process",
+            "display_category": "extractor/llm=mistral_small_3_24b_in_process",
+            "series": "__single__",
+            "display_series": "__single__",
+            "run_dirs": [
+              "525_faktencheck_core_bestconfig_testset/evaluate/multiruns/2026-07-13_15-08-10/10",
+              "525_faktencheck_core_bestconfig_testset/evaluate/multiruns/2026-07-13_15-08-10/11",
+              "525_faktencheck_core_bestconfig_testset/evaluate/multiruns/2026-07-13_15-08-10/9"
+            ],
+            "samples": [
+              399,
+              399,
+              399
+            ]
+          },
+          {
+            "category": "prediction.extractor/llm=gemma3_27b_in_process",
+            "display_category": "extractor/llm=gemma3_27b_in_process",
+            "series": "__single__",
+            "display_series": "__single__",
+            "run_dirs": [
+              "525_faktencheck_core_bestconfig_testset/evaluate/multiruns/2026-07-13_15-08-10/3",
+              "525_faktencheck_core_bestconfig_testset/evaluate/multiruns/2026-07-13_15-08-10/4",
+              "525_faktencheck_core_bestconfig_testset/evaluate/multiruns/2026-07-13_15-08-10/5"
+            ],
+            "samples": [
+              399,
+              399,
+              399
+            ]
+          },
+          {
+            "category": "prediction.extractor/llm=qwen3_30b_in_process",
+            "display_category": "extractor/llm=qwen3_30b_in_process",
+            "series": "__single__",
+            "display_series": "__single__",
+            "run_dirs": [
+              "525_faktencheck_core_bestconfig_testset/evaluate/multiruns/2026-07-13_15-08-10/6",
+              "525_faktencheck_core_bestconfig_testset/evaluate/multiruns/2026-07-13_15-08-10/7",
+              "525_faktencheck_core_bestconfig_testset/evaluate/multiruns/2026-07-13_15-08-10/8"
+            ],
+            "samples": [
+              399,
+              399,
+              399
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
