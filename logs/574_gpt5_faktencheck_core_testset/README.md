@@ -28,12 +28,25 @@ result location: `logs/574_gpt5_faktencheck_core_testset/predict/multiruns/2026-
 ## Evaluation
 
 Reference is `faktencheck-db-converted_2025-11-05.jsonl`, the default of
-`dataset/references/faktencheck_db_converted` and the same file that
-[525_faktencheck_core_bestconfig_testset](../525_faktencheck_core_bestconfig_testset) uses for this
-test set. The corrected reference `faktenscheck_core_corrected.jsonl` used in
-[574_gpt5_faktencheck_core](../574_gpt5_faktencheck_core) holds the 100 dev documents only and has
-no entry for any of the 500 test documents, so it does not apply here. The five-field subset is the
-same as in 525.
+`dataset/references/faktencheck_db_converted`, which is why the commands below carry no
+`dataset.references.file` override.
+[525_faktencheck_core_bestconfig_testset](../525_faktencheck_core_bestconfig_testset) used the same
+default and the same five fields on this test set, so the comparisons further down are like for
+like.
+
+The corrected reference `faktenscheck_core_corrected.jsonl` from the dev run does not apply here.
+It has 100 entries, all of them dev documents, and shares no id with the 500 test documents:
+
+```sh
+python3 -c "
+import json
+corrected = {json.loads(l)['zotitem_ptr_id'] for l in open('../interim/faktencheck-db/faktenscheck_core_corrected.jsonl')}
+test = {json.loads(l)['file_name'].rsplit('.', 1)[0] for l in open('predictions/574_gpt5_faktencheck_core_testset/2026-08-02_19-46-20/2026-08-02_19-46-21_037978/predictions.jsonl')}
+print(len(corrected), len(test), 'overlap:', len(corrected & test))
+"
+```
+
+100 reference entries, 500 test documents, overlap 0.
 
 ### F1, P, R
 
