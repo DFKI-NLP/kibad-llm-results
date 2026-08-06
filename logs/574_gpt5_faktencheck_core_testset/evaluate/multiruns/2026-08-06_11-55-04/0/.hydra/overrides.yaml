@@ -1,0 +1,4 @@
+- dataset.predictions.log=logs/574_gpt5_faktencheck_core_testset/predict/multiruns/2026-08-02_19-46-20/0
+- name=574_gpt5_faktencheck_core_testset
+- experiment/evaluate=prediction_errors
+- prediction_logs=logs/574_gpt5_faktencheck_core_testset/predict

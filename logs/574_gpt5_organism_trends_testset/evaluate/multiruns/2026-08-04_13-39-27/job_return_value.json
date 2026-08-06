@@ -1,0 +1,55 @@
+{
+  "dataset.predictions.log=logs/574_gpt5_organism_trends_testset/predict/multiruns/2026-08-03_09-54-45/0#name=574_gpt5_organism_trends_testset#experiment/evaluate=organism_trends_f1_micro#prediction_logs=logs/574_gpt5_organism_trends_testset/predict#dataset.references.file=../external/organism_trends/Weighted\\ Vote\\ Count\\ Agrar-\\ und\\ Offenland\\ Literatur\\ -\\ Sheet1.csv": {
+    "version": 2,
+    "type": "F1MicroMultipleFieldsMetric",
+    "data": {
+      "organism_trends": {
+        "precision": 0.12797281993204984,
+        "recall": 0.40213523131672596,
+        "f1": 0.19415807560137457,
+        "support": 281
+      },
+      "AVG": {
+        "precision": 0.12797281993204984,
+        "recall": 0.40213523131672596,
+        "f1": 0.19415807560137457,
+        "support": 281.0
+      },
+      "ALL": {
+        "precision": 0.12797281993204984,
+        "recall": 0.40213523131672596,
+        "f1": 0.19415807560137457,
+        "support": 281
+      }
+    },
+    "prediction": {
+      "job_return_value": {
+        "version": 1,
+        "output_file": "predictions/574_gpt5_organism_trends_testset/2026-08-03_09-54-45/2026-08-03_09-54-45_907708/predictions.jsonl",
+        "output_file_absolute": "/netscratch/asafari/kibad-llm/predictions/574_gpt5_organism_trends_testset/2026-08-03_09-54-45/2026-08-03_09-54-45_907708/predictions.jsonl",
+        "time_pdf_conversion": 7390.888682021003,
+        "time_extraction": 89901.44475176197,
+        "time_start": 1785743685,
+        "time_end": 1785841069,
+        "commit_hash": "aab5b527d40efad926c5ad46221a0d224ebd5a6d",
+        "branch": "issue-533-gpt5-max-output-tokens",
+        "is_dirty": true,
+        "slurm_job_id": "3240996"
+      },
+      "overrides": {
+        "name": "574_gpt5_organism_trends_testset",
+        "experiment/predict": "organism_trends_with_chunking",
+        "pdf_directory": "/ds/text/kiba-d/test-set-AuO-WVC",
+        "extractor/llm": "gpt_5",
+        "seed": "42"
+      }
+    },
+    "overrides": {
+      "dataset.predictions.log": "logs/574_gpt5_organism_trends_testset/predict/multiruns/2026-08-03_09-54-45/0",
+      "name": "574_gpt5_organism_trends_testset",
+      "experiment/evaluate": "organism_trends_f1_micro",
+      "prediction_logs": "logs/574_gpt5_organism_trends_testset/predict",
+      "dataset.references.file": "../external/organism_trends/Weighted\\ Vote\\ Count\\ Agrar-\\ und\\ Offenland\\ Literatur\\ -\\ Sheet1.csv"
+    }
+  }
+}

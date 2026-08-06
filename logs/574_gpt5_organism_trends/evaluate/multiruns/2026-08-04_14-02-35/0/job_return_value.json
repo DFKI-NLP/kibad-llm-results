@@ -1,0 +1,64 @@
+{
+  "version": 2,
+  "type": "F1MicroMultipleFieldsMetric",
+  "data": {
+    "organism_trends.Antwortvariable": {
+      "precision": 0.29793510324483774,
+      "recall": 0.7890625,
+      "f1": 0.4325481798715203,
+      "support": 128
+    },
+    "organism_trends.Hauptgruppe_RoteListen": {
+      "precision": 0.2824675324675325,
+      "recall": 0.8130841121495327,
+      "f1": 0.4192771084337349,
+      "support": 107
+    },
+    "organism_trends.Lebensraum": {
+      "precision": 0.25796178343949044,
+      "recall": 0.7941176470588235,
+      "f1": 0.389423076923077,
+      "support": 102
+    },
+    "organism_trends.Trend": {
+      "precision": 0.2160919540229885,
+      "recall": 0.7121212121212122,
+      "f1": 0.3315696649029982,
+      "support": 132
+    },
+    "AVG": {
+      "precision": 0.26361409329371227,
+      "recall": 0.7770963678323921,
+      "f1": 0.3932045075328326,
+      "support": 117.25
+    },
+    "ALL": {
+      "precision": 0.2600286532951289,
+      "recall": 0.7739872068230277,
+      "f1": 0.3892761394101876,
+      "support": 469
+    }
+  },
+  "prediction": {
+    "job_return_value": {
+      "version": 1,
+      "output_file": "predictions/574_gpt5_organism_trends/2026-08-03_02-30-39/2026-08-03_02-30-40_228402/predictions.jsonl",
+      "output_file_absolute": "/netscratch/asafari/kibad-llm/predictions/574_gpt5_organism_trends/2026-08-03_02-30-39/2026-08-03_02-30-40_228402/predictions.jsonl",
+      "time_pdf_conversion": 3857.385884772055,
+      "time_extraction": 70974.398901582,
+      "time_start": 1785717040,
+      "time_end": 1785791989,
+      "commit_hash": "aab5b527d40efad926c5ad46221a0d224ebd5a6d",
+      "branch": "issue-533-gpt5-max-output-tokens",
+      "is_dirty": true,
+      "slurm_job_id": "3240995"
+    },
+    "overrides": {
+      "name": "574_gpt5_organism_trends",
+      "experiment/predict": "organism_trends_with_chunking",
+      "pdf_directory": "/ds/text/kiba-d/dev-set-Wald-WVC",
+      "extractor/llm": "gpt_5",
+      "seed": "42"
+    }
+  }
+}
