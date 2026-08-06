@@ -163,7 +163,7 @@ for l in open('predictions/574_gpt5_faktencheck_core/2026-07-27_12-23-00/2026-07
 "
 ```
 
-The error rate is now at the level of the other models, so GPT-5 goes back into the test set
+The error rate is now at the level of the other models, so GPT-5 should go back into the test set
 experiments: [574_gpt5_faktencheck_core_testset](../574_gpt5_faktencheck_core_testset),
 [574_gpt5_organism_trends](../574_gpt5_organism_trends) and
 [574_gpt5_organism_trends_testset](../574_gpt5_organism_trends_testset).
