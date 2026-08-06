@@ -219,5 +219,5 @@ Notes
 - GPT-5 is second on the dev set as well, see
   [574_gpt5_organism_trends](../574_gpt5_organism_trends)
 
-This run fills the `gpt_5` slot deleted from 549. GPT-5 and Qwen3 end up close on flat ALL f1 from
-opposite directions, GPT-5 on recall and Qwen3 on precision.
+The `gpt_5` slot deleted from 549 should be filled with this run. GPT-5 and Qwen3 end up close on
+flat ALL f1 from opposite directions, GPT-5 on recall and Qwen3 on precision.

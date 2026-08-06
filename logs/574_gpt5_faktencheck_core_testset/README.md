@@ -155,4 +155,5 @@ Notes
 - Same high recall, low precision profile as on the dev set, see
   [574_gpt5_faktencheck_core](../574_gpt5_faktencheck_core)
 
-This run fills the `gpt_5` slot deleted from 525. GPT OSS and Qwen3 stay ahead on f1.
+The `gpt_5` slot deleted from 525 should be filled with this run. GPT OSS and Qwen3 stay ahead on
+f1.

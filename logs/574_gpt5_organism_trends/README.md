@@ -223,5 +223,5 @@ Notes
 - Precision second after Qwen3 (0.260 vs. 0.336 to 0.345), recall second after Gemma3 (0.774 vs.
   0.819 to 0.840)
 
-This adds a GPT-5 number on the organism trends dev set with chunking, which did not exist before.
-Qwen3 stays the best model here.
+There was no GPT-5 number on the organism trends dev set with chunking before, so this run should
+serve as the reference point for it. Qwen3 stays the best model here.
