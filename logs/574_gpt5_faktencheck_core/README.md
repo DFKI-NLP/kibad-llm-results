@@ -5,16 +5,17 @@ GPT-5 on the Faktencheck core schema, 100-PDF dev set, using
 [397_faktencheck_core_v1_for_chunking](../397_faktencheck_core_v1_for_chunking) and
 [519_faktencheck_core](../519_faktencheck_core).
 
-**Motivation**: GPT-5 was dropped from the core experiments because about 20% of the chunks failed
-with `JSONDecodeError` or `MissingResponseContentError` (see
-[519_faktencheck_core](../519_faktencheck_core)). Reasoning tokens and the visible answer share
-`max_output_tokens`, so the budget was raised from 8192 to 32768, the same change as for Nemotron in
-[#523](https://github.com/DFKI-NLP/kibad-llm/issues/523). The model was also pinned to
-`gpt-5-2025-08-07`. See [#533](https://github.com/DFKI-NLP/kibad-llm/issues/533) and
-[#574](https://github.com/DFKI-NLP/kibad-llm/pull/574). This run measures the effect on the dev set
-before we spend on the test set.
+**Motivation**: in [519_faktencheck_core](../519_faktencheck_core) about 20% of the GPT-5 chunks
+failed with `JSONDecodeError` or `MissingResponseContentError` (316 and 322 of 1654 for the two
+seeds), see [#533](https://github.com/DFKI-NLP/kibad-llm/issues/533). The `gpt_5` slot in
+[525_faktencheck_core_bestconfig_testset](../525_faktencheck_core_bestconfig_testset) was deleted
+for the same reason. Reasoning tokens and the visible answer share `max_output_tokens`, so the
+budget was raised from 8192 to 32768, the same raise that was made for Nemotron in
+[#523](https://github.com/DFKI-NLP/kibad-llm/issues/523), and the model was pinned to
+`gpt-5-2025-08-07`, see [#574](https://github.com/DFKI-NLP/kibad-llm/pull/574).
 
-We use a single seed to limit cost.
+We use a single seed to limit cost. The pin is for future runs, it does not change the model here:
+the `gpt-5` identifier used in 519 already resolved to `gpt-5-2025-08-07`.
 
 ## Prediction
 
@@ -81,12 +82,12 @@ result location: `logs/574_gpt5_faktencheck_core/evaluate/multiruns/2026-07-29_1
 
 ## Outcome
 
-The job finished on all 100 dev PDFs. The tables below compare it with the two GPT-5 runs in
-[519_faktencheck_core](../519_faktencheck_core), which use the same dev set and setup with
-`max_output_tokens: 8192`. The error counts come from
-`logs/519_faktencheck_core/evaluate/multiruns/2026-06-16_14-57-41`, the f1, precision and recall
-numbers from `.../2026-06-16_15-19-32`, jobs 3 and 4 in both cases. Support is the same in all three
-runs, since they use the same reference.
+All 100 dev PDFs processed.
+
+Comparing this run with the two GPT-5 runs in [519_faktencheck_core](../519_faktencheck_core), same
+dev set and setup, `max_output_tokens: 8192`. Error counts from
+`logs/519_faktencheck_core/evaluate/multiruns/2026-06-16_14-57-41`, f1, precision and recall from
+`.../2026-06-16_15-19-32`, jobs 3 and 4 in both. Same reference, so support is identical.
 
 ### Error counts
 
@@ -97,6 +98,8 @@ runs, since they use the same reference.
 | JSONDecodeError             |          193 |            195 |           36 |
 | MissingResponseContentError |          123 |            127 |            0 |
 | ReasoningExtractionError    |           26 |             30 |           27 |
+
+Chunk totals differ by one, eight of the 100 documents chunk differently between the runs.
 
 ### F1 per field
 
@@ -131,17 +134,36 @@ runs, since they use the same reference.
 | ecosystem_type.term     |        0.733 |          0.717 |        0.800 |
 | ALL                     |        0.823 |          0.829 |        0.864 |
 
-Errors drop from 336 and 350 to 61, while ALL f1 goes from 0.712 and 0.711 to 0.696: recall is
-higher (0.864 vs 0.823 and 0.829) and precision lower (0.583 vs 0.628 and 0.622). Per field, recall
-is higher than in both 519 runs except for `taxa.species_group`, and precision is lower than in both
-except for `habitat`, where it falls between the two 519 seeds.
+Notes
+- Errors down from 336 and 350 to 61
+- `MissingResponseContentError` gone (123 and 127 before, 0 now), `JSONDecodeError` down from 193
+  and 195 to 36. That is what the budget raise was for
+- ALL f1 slightly lower at 0.696 vs 0.712 and 0.711, on one seed against two
+- Recall up (0.864 vs 0.823 and 0.829), precision down (0.583 vs 0.628 and 0.622)
+- Per field, recall up against both 519 seeds except `taxa.species_group`, precision down against
+  both except `habitat`
+- `JSONDecodeError` is the error that matters, a broken result JSON is unusable. We did not look
+  into the 36 cases
+- `ReasoningExtractionError` is non-breaking, output still there for 25 of the 27. Tracked in
+  [#575](https://github.com/DFKI-NLP/kibad-llm/issues/575)
 
-`JSONDecodeError` is the remaining error that matters, since a broken result JSON cannot be used. We
-did not look into the 36 remaining cases. `ReasoningExtractionError` is non-breaking: the entry is
-counted as "with error" in the overview figures and we lose the reasoning for analysis, but the
-output can still be used. It is tracked in
-[#575](https://github.com/DFKI-NLP/kibad-llm/issues/575).
+The two exceptions are chunk 223 of `3WEEGFGW.pdf` and chunk 40 of `84QQ9F5S.pdf`, both from
+`dev-set-100`. They raised a `JSONDecodeError` on top of the `ReasoningExtractionError` and have no
+output, which is why 36 and not 34 chunks end up unusable. Found by scanning the committed
+predictions:
 
-The budget increase removed `MissingResponseContentError` (123 and 127 in 519, 0 here) and reduced
-`JSONDecodeError` from 193 and 195 to 36, which is what the change was meant to do. The test set and
-organism-trends runs follow with the same config.
+```sh
+python3 -c "
+import json
+for l in open('predictions/574_gpt5_faktencheck_core/2026-07-27_12-23-00/2026-07-27_12-23-04_547890/predictions.jsonl'):
+    d = json.loads(l)
+    for i, (err, out) in enumerate(zip(d['errors_list'], d['structured_with_metadata_list'])):
+        if err and 'ReasoningExtractionError' in str(err) and not out:
+            print(d['file_name'], i, err)
+"
+```
+
+The error rate is now at the level of the other models, so GPT-5 goes back into the test set
+experiments: [574_gpt5_faktencheck_core_testset](../574_gpt5_faktencheck_core_testset),
+[574_gpt5_organism_trends](../574_gpt5_organism_trends) and
+[574_gpt5_organism_trends_testset](../574_gpt5_organism_trends_testset).
