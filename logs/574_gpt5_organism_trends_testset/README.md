@@ -196,28 +196,68 @@ Notes
   types that break the result JSON
 - `ReasoningExtractionError` does not appear for the other models in 549
 
-### F1, P, R (flattened, ALL)
+### F1, P, R
 
-Base for the other models is the same `experiment/evaluate=organism_trends_f1_micro_flat` command
-run in [549_organism_trends_bestconfig_testset](../549_organism_trends_bestconfig_testset), result
-location `logs/549_organism_trends_bestconfig_testset/evaluate/multiruns/2026-07-13_14-58-27`.
-Support is 884 in all cases.
+Both variants below are the compound based ones, see
+[#422](https://github.com/DFKI-NLP/kibad-llm/pull/422) for the individual metric variants.
+
+#### full compounds
+
+Base for the other models is the same `experiment/evaluate=organism_trends_f1_micro` command run in
+[549_organism_trends_bestconfig_testset](../549_organism_trends_bestconfig_testset), result location
+`logs/549_organism_trends_bestconfig_testset/evaluate/multiruns/2026-07-13_14-59-03`. Support is 281
+in all cases.
 
 | model               | precision      | recall         | f1             |
 |:--------------------|:---------------|:---------------|:---------------|
-| qwen3_30b           | 0.438 to 0.462 | 0.412 to 0.439 | 0.426 to 0.450 |
-| gpt-5 (this run)    | 0.334          | 0.572          | 0.422          |
-| gpt_oss_20b         | 0.286 to 0.299 | 0.528 to 0.548 | 0.371 to 0.387 |
-| mistral_small_3_24b | 0.208 to 0.213 | 0.555 to 0.569 | 0.303 to 0.310 |
-| gemma3_27b          | 0.181 to 0.184 | 0.520 to 0.535 | 0.268 to 0.274 |
+| gpt-5 (this run)    | 0.128          | 0.402          | 0.194          |
+| qwen3_30b           | 0.134 to 0.164 | 0.181 to 0.224 | 0.154 to 0.190 |
+| gpt_oss_20b         | 0.066 to 0.080 | 0.214 to 0.267 | 0.100 to 0.123 |
+| mistral_small_3_24b | 0.033 to 0.039 | 0.185 to 0.221 | 0.056 to 0.066 |
+| gemma3_27b          | 0.009 to 0.011 | 0.053 to 0.068 | 0.016 to 0.019 |
 
 Notes
-- GPT-5 second on flat ALL f1 at 0.422, 0.004 below the worst Qwen3 seed and inside the Qwen3
-  spread of 0.426 to 0.450. One seed against three per model
-- Best recall of all models at 0.572, next is Mistral at 0.555 to 0.569
-- Precision second after Qwen3 (0.334 vs. 0.438 to 0.462)
-- GPT-5 is second on the dev set as well, see
+- Highest full compound ALL f1 at 0.194, above the three Qwen3 seeds at 0.154 to 0.190. One seed
+  against three per model
+- Best recall of all models at 0.402, next is GPT OSS at 0.214 to 0.267
+- Precision second after Qwen3 (0.128 vs. 0.134 to 0.164)
+- On the dev set GPT-5 is second behind Qwen3 on the same metric, see
   [574_gpt5_organism_trends](../574_gpt5_organism_trends)
+- On the flattened metric GPT-5 is second here instead, 0.422 against 0.426 to 0.450 for Qwen3
+  (`experiment/evaluate=organism_trends_f1_micro_flat` in 549, result location
+  `logs/549_organism_trends_bestconfig_testset/evaluate/multiruns/2026-07-13_14-58-27`), so the two
+  metrics order GPT-5 and Qwen3 differently
+
+#### `Antwortvariable` & `Trend` conditioned on base elements
+
+Base for the other models is the same
+`experiment/evaluate=organism_trends_f1_micro_conditional_variable_and_trend` command run in
+[549_organism_trends_bestconfig_testset](../549_organism_trends_bestconfig_testset), result location
+`logs/549_organism_trends_bestconfig_testset/evaluate/multiruns/2026-07-13_14-59-52`. Support varies
+per model, so it is listed in the table.
+
+| model               | precision      | recall         | f1             |    support |
+|:--------------------|:---------------|:---------------|:---------------|-----------:|
+| qwen3_30b           | 0.447 to 0.500 | 0.505 to 0.558 | 0.483 to 0.527 | 101 to 113 |
+| gemma3_27b          | 0.388 to 0.500 | 0.385 to 0.529 | 0.390 to 0.514 |   34 to 44 |
+| gpt-5 (this run)    | 0.391          | 0.734          | 0.510          |        154 |
+| gpt_oss_20b         | 0.386 to 0.414 | 0.566 to 0.586 | 0.466 to 0.484 | 106 to 129 |
+| mistral_small_3_24b | 0.323 to 0.344 | 0.525 to 0.590 | 0.400 to 0.435 |  99 to 107 |
+
+Notes
+- Support differs per model, this metric only scores base pairs that are in both prediction and
+  reference (`ignore_missing_entries: true`)
+- Spread is wide here, 34 to 154, GPT-5 at 154 and Gemma3 at 34 to 44, so the f1 values are not on
+  a common base and the order should be read with that in mind
+- GPT-5 f1 0.510 sits inside the Qwen3 spread of 0.483 to 0.527, on 154 entries against 101 to 113
+- Best recall of all models at 0.734, next are Mistral (0.525 to 0.590) and GPT OSS (0.566 to
+  0.586), whose seed ranges overlap
+- Precision 0.391 below Qwen3 (0.447 to 0.500), level with GPT OSS (0.386 to 0.414)
+- On the base elements GPT-5 and Qwen3 are level here, 0.347 against 0.325 to 0.365
+  (`experiment/evaluate=organism_trends_f1_micro_base_entries` in 549, result location
+  `logs/549_organism_trends_bestconfig_testset/evaluate/multiruns/2026-07-13_14-59-18`), unlike on
+  the dev set where GPT-5 is behind, see [574_gpt5_organism_trends](../574_gpt5_organism_trends)
 
 The `gpt_5` slot deleted from 549 should be filled with this run. GPT-5 and Qwen3 end up close on
-flat ALL f1 from opposite directions, GPT-5 on recall and Qwen3 on precision.
+full compound ALL f1 from opposite directions, GPT-5 on recall and Qwen3 on precision, and they stay
+close once the base elements match.
