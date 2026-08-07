@@ -1,0 +1,64 @@
+{
+  "version": 2,
+  "type": "F1MicroMultipleFieldsMetric",
+  "data": {
+    "organism_trends.Antwortvariable": {
+      "precision": 0.3634020618556701,
+      "recall": 0.592436974789916,
+      "f1": 0.4504792332268371,
+      "support": 238
+    },
+    "organism_trends.Hauptgruppe_RoteListen": {
+      "precision": 0.4056603773584906,
+      "recall": 0.602803738317757,
+      "f1": 0.4849624060150376,
+      "support": 214
+    },
+    "organism_trends.Lebensraum": {
+      "precision": 0.33766233766233766,
+      "recall": 0.5360824742268041,
+      "f1": 0.4143426294820717,
+      "support": 194
+    },
+    "organism_trends.Trend": {
+      "precision": 0.264,
+      "recall": 0.5546218487394958,
+      "f1": 0.35772357723577236,
+      "support": 238
+    },
+    "AVG": {
+      "precision": 0.3426811942191246,
+      "recall": 0.5714862590184933,
+      "f1": 0.4268769614899297,
+      "support": 221.0
+    },
+    "ALL": {
+      "precision": 0.3342140026420079,
+      "recall": 0.5723981900452488,
+      "f1": 0.4220183486238532,
+      "support": 884
+    }
+  },
+  "prediction": {
+    "job_return_value": {
+      "version": 1,
+      "output_file": "predictions/574_gpt5_organism_trends_testset/2026-08-03_09-54-45/2026-08-03_09-54-45_907708/predictions.jsonl",
+      "output_file_absolute": "/netscratch/asafari/kibad-llm/predictions/574_gpt5_organism_trends_testset/2026-08-03_09-54-45/2026-08-03_09-54-45_907708/predictions.jsonl",
+      "time_pdf_conversion": 7390.888682021003,
+      "time_extraction": 89901.44475176197,
+      "time_start": 1785743685,
+      "time_end": 1785841069,
+      "commit_hash": "aab5b527d40efad926c5ad46221a0d224ebd5a6d",
+      "branch": "issue-533-gpt5-max-output-tokens",
+      "is_dirty": true,
+      "slurm_job_id": "3240996"
+    },
+    "overrides": {
+      "name": "574_gpt5_organism_trends_testset",
+      "experiment/predict": "organism_trends_with_chunking",
+      "pdf_directory": "/ds/text/kiba-d/test-set-AuO-WVC",
+      "extractor/llm": "gpt_5",
+      "seed": "42"
+    }
+  }
+}

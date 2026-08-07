@@ -1,0 +1,5 @@
+- name=574_gpt5_faktencheck_core
+- experiment/predict=faktencheck_core_fields_schema_with_chunking
+- pdf_directory=/ds/text/kiba-d/dev-set-100
+- extractor/llm=gpt_5
+- seed=42

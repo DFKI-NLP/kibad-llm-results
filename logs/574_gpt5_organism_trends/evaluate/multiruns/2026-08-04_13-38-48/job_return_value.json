@@ -1,0 +1,39 @@
+{
+  "dataset.predictions.log=logs/574_gpt5_organism_trends/predict/multiruns/2026-08-03_02-30-39/0#name=574_gpt5_organism_trends#experiment/evaluate=prediction_errors#prediction_logs=logs/574_gpt5_organism_trends/predict": {
+    "version": 2,
+    "type": "ErrorCollector",
+    "data": {
+      "no_error": 2191,
+      "with_error": 246,
+      "ReasoningExtractionError": 246
+    },
+    "prediction": {
+      "job_return_value": {
+        "version": 1,
+        "output_file": "predictions/574_gpt5_organism_trends/2026-08-03_02-30-39/2026-08-03_02-30-40_228402/predictions.jsonl",
+        "output_file_absolute": "/netscratch/asafari/kibad-llm/predictions/574_gpt5_organism_trends/2026-08-03_02-30-39/2026-08-03_02-30-40_228402/predictions.jsonl",
+        "time_pdf_conversion": 3857.385884772055,
+        "time_extraction": 70974.398901582,
+        "time_start": 1785717040,
+        "time_end": 1785791989,
+        "commit_hash": "aab5b527d40efad926c5ad46221a0d224ebd5a6d",
+        "branch": "issue-533-gpt5-max-output-tokens",
+        "is_dirty": true,
+        "slurm_job_id": "3240995"
+      },
+      "overrides": {
+        "name": "574_gpt5_organism_trends",
+        "experiment/predict": "organism_trends_with_chunking",
+        "pdf_directory": "/ds/text/kiba-d/dev-set-Wald-WVC",
+        "extractor/llm": "gpt_5",
+        "seed": "42"
+      }
+    },
+    "overrides": {
+      "dataset.predictions.log": "logs/574_gpt5_organism_trends/predict/multiruns/2026-08-03_02-30-39/0",
+      "name": "574_gpt5_organism_trends",
+      "experiment/evaluate": "prediction_errors",
+      "prediction_logs": "logs/574_gpt5_organism_trends/predict"
+    }
+  }
+}

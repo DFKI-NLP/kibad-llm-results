@@ -1,0 +1,20 @@
+[2026-08-06 11:55:50,546][__main__][INFO] - Loading dataset with predictions and references ...
+[2026-08-06 11:55:50,547][__main__][INFO] - Dataset config: {'predictions': {'_target_': 'kibad_llm.dataset.prediction.load_with_metadata', 'log': 'logs/574_gpt5_faktencheck_core_testset/predict/multiruns/2026-08-02_19-46-20/0', 'file': None, 'id_key': 'file_name', 'process_id': {'_partial_': True, '_target_': 'kibad_llm.utils.path.strip_filename_extension'}, 'preprocess': {'_target_': 'kibad_llm.utils.dictionary.get', '_partial_': True, 'key': 'structured'}}, 'references': {'_target_': 'kibad_llm.dataset.json.read_and_preprocess', 'file': '/home/amir/DFKI/kibad-llm/data/interim/faktencheck-db/faktencheck-db-converted_2025-11-05.jsonl', 'id_key': 'zotitem_ptr_id'}, '_target_': 'kibad_llm.dataset.utils.merge_references_into_predictions'}
+[2026-08-06 11:55:50,549][kibad_llm.dataset.json][INFO] - Loading dataset from JSON file: predictions/574_gpt5_faktencheck_core_testset/2026-08-02_19-46-20/2026-08-02_19-46-21_037978/predictions.jsonl ...
+[2026-08-06 11:55:50,760][kibad_llm.dataset.json][INFO] - Apply preprocessing function to dataset: functools.partial(<function get at 0x7bab3d604f40>, key='structured') ...
+[2026-08-06 11:55:50,770][kibad_llm.dataset.json][INFO] - Loading dataset from JSON file: /home/amir/DFKI/kibad-llm/data/interim/faktencheck-db/faktencheck-db-converted_2025-11-05.jsonl ...
+[2026-08-06 11:55:50,863][__main__][INFO] - Instantiating metric ...
+[2026-08-06 11:55:50,863][__main__][INFO] - Metric config: {'_target_': 'kibad_llm.metrics.F1MicroMultipleFieldsMetric', 'fields': ['habitat', 'biodiversity_level', 'ecosystem_type.term', 'ecosystem_type.category', 'taxa.species_group'], 'format_as_markdown': True, 'sort_fields': True, 'flatten_dicts': True}
+[2026-08-06 11:55:50,866][__main__][INFO] - Computing metric ...
+[2026-08-06 11:55:51,047][kibad_llm.metric][INFO] - Evaluation results:
+| field                   |   precision |   recall |    f1 |   support |
+|:------------------------|------------:|---------:|------:|----------:|
+| biodiversity_level      |       0.316 |    0.689 | 0.433 |     399   |
+| ecosystem_type.category |       0.299 |    0.951 | 0.455 |     243   |
+| ecosystem_type.term     |       0.158 |    0.775 | 0.262 |     280   |
+| habitat                 |       0.493 |    0.913 | 0.64  |     564   |
+| taxa.species_group      |       0.344 |    0.796 | 0.48  |     555   |
+| AVG                     |       0.322 |    0.825 | 0.454 |     408.2 |
+| ALL                     |       0.314 |    0.823 | 0.455 |    2041   |
+[2026-08-06 11:55:51,051][kibad_llm.hydra_callbacks.save_job_return_value.SaveJobReturnValueCallback][INFO] - Saving job_return in /home/amir/DFKI/kibad-llm/logs/574_gpt5_faktencheck_core_testset/evaluate/multiruns/2026-08-06_11-55-50/0/job_return_value.json
+[2026-08-06 11:55:51,052][kibad_llm.hydra_callbacks.save_job_return_value.SaveJobReturnValueCallback][INFO] - Saving job_return in /home/amir/DFKI/kibad-llm/logs/574_gpt5_faktencheck_core_testset/evaluate/multiruns/2026-08-06_11-55-50/0/job_return_value.md

@@ -1,0 +1,40 @@
+{
+  "dataset.predictions.log=logs/574_gpt5_faktencheck_core/predict/multiruns/2026-07-27_12-23-00/0#name=574_gpt5_faktencheck_core#experiment/evaluate=prediction_errors#prediction_logs=logs/574_gpt5_faktencheck_core/predict": {
+    "version": 2,
+    "type": "ErrorCollector",
+    "data": {
+      "no_error": 1594,
+      "with_error": 61,
+      "JSONDecodeError": 36,
+      "ReasoningExtractionError": 27
+    },
+    "prediction": {
+      "job_return_value": {
+        "version": 1,
+        "output_file": "predictions/574_gpt5_faktencheck_core/2026-07-27_12-23-00/2026-07-27_12-23-04_547890/predictions.jsonl",
+        "output_file_absolute": "/netscratch/asafari/kibad-llm/predictions/574_gpt5_faktencheck_core/2026-07-27_12-23-00/2026-07-27_12-23-04_547890/predictions.jsonl",
+        "time_pdf_conversion": 2614.266789195128,
+        "time_extraction": 119344.04124086397,
+        "time_start": 1785147784,
+        "time_end": 1785270932,
+        "commit_hash": "aab5b527d40efad926c5ad46221a0d224ebd5a6d",
+        "branch": "issue-533-gpt5-max-output-tokens",
+        "is_dirty": false,
+        "slurm_job_id": "3225820"
+      },
+      "overrides": {
+        "name": "574_gpt5_faktencheck_core",
+        "experiment/predict": "faktencheck_core_fields_schema_with_chunking",
+        "pdf_directory": "/ds/text/kiba-d/dev-set-100",
+        "extractor/llm": "gpt_5",
+        "seed": "42"
+      }
+    },
+    "overrides": {
+      "dataset.predictions.log": "logs/574_gpt5_faktencheck_core/predict/multiruns/2026-07-27_12-23-00/0",
+      "name": "574_gpt5_faktencheck_core",
+      "experiment/evaluate": "prediction_errors",
+      "prediction_logs": "logs/574_gpt5_faktencheck_core/predict"
+    }
+  }
+}

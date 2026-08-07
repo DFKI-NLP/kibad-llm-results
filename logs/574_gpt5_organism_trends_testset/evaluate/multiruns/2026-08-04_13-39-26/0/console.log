@@ -1,0 +1,18 @@
+[2026-08-04 13:39:26,739][__main__][INFO] - Loading dataset with predictions and references ...
+[2026-08-04 13:39:26,739][__main__][INFO] - Dataset config: {'predictions': {'_target_': 'kibad_llm.dataset.prediction.load_with_metadata', 'log': 'logs/574_gpt5_organism_trends_testset/predict/multiruns/2026-08-03_09-54-45/0', 'file': None, 'id_key': 'file_name', 'process_id': {'_partial_': True, '_target_': 'kibad_llm.utils.path.strip_filename_extension'}, 'preprocess': {'_target_': 'kibad_llm.utils.dictionary.get', '_partial_': True, 'key': 'structured'}}, 'references': {'_target_': 'kibad_llm.dataset.csv.read_organism_trends', 'file': '../external/organism_trends/Weighted Vote Count Agrar- und Offenland Literatur - Sheet1.csv', 'columns': ['Hauptgruppe_RoteListen', 'Untergruppe_RoteListen', 'Lebensraum', 'Antwortvariable', 'Trend']}, '_target_': 'kibad_llm.dataset.utils.merge_references_into_predictions', 'allow_missing_references': True}
+[2026-08-04 13:39:26,742][kibad_llm.dataset.json][INFO] - Loading dataset from JSON file: predictions/574_gpt5_organism_trends_testset/2026-08-03_09-54-45/2026-08-03_09-54-45_907708/predictions.jsonl ...
+[2026-08-04 13:39:26,833][kibad_llm.dataset.json][INFO] - Apply preprocessing function to dataset: functools.partial(<function get at 0x78471d369080>, key='structured') ...
+[2026-08-04 13:39:26,973][__main__][INFO] - Instantiating metric ...
+[2026-08-04 13:39:26,974][__main__][INFO] - Metric config: {'_target_': 'kibad_llm.metrics.F1MicroMultipleFieldsMetric', 'fields': ['organism_trends.Antwortvariable', 'organism_trends.Hauptgruppe_RoteListen', 'organism_trends.Lebensraum', 'organism_trends.Trend'], 'format_as_markdown': True, 'sort_fields': True, 'ignore_subfields': {'organism_trends': ['Untergruppe_RoteListen']}, 'flatten_dicts': True}
+[2026-08-04 13:39:26,977][__main__][INFO] - Computing metric ...
+[2026-08-04 13:39:27,011][kibad_llm.metric][INFO] - Evaluation results:
+| field                                  |   precision |   recall |    f1 |   support |
+|:---------------------------------------|------------:|---------:|------:|----------:|
+| organism_trends.Antwortvariable        |       0.363 |    0.592 | 0.45  |       238 |
+| organism_trends.Hauptgruppe_RoteListen |       0.406 |    0.603 | 0.485 |       214 |
+| organism_trends.Lebensraum             |       0.338 |    0.536 | 0.414 |       194 |
+| organism_trends.Trend                  |       0.264 |    0.555 | 0.358 |       238 |
+| AVG                                    |       0.343 |    0.571 | 0.427 |       221 |
+| ALL                                    |       0.334 |    0.572 | 0.422 |       884 |
+[2026-08-04 13:39:27,012][kibad_llm.hydra_callbacks.save_job_return_value.SaveJobReturnValueCallback][INFO] - Saving job_return in /home/amir/DFKI/kibad-llm/logs/574_gpt5_organism_trends_testset/evaluate/multiruns/2026-08-04_13-39-26/0/job_return_value.json
+[2026-08-04 13:39:27,013][kibad_llm.hydra_callbacks.save_job_return_value.SaveJobReturnValueCallback][INFO] - Saving job_return in /home/amir/DFKI/kibad-llm/logs/574_gpt5_organism_trends_testset/evaluate/multiruns/2026-08-04_13-39-26/0/job_return_value.md
