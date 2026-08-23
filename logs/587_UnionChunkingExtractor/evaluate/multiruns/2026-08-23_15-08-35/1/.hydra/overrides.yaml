@@ -1,0 +1,4 @@
+- dataset.predictions.log=logs/587_UnionChunkingExtractor/predict/multiruns/2026-08-20_15-17-50/1
+- name=587_UnionChunkingExtractor
+- experiment/evaluate=prediction_errors
+- prediction_logs=logs/587_UnionChunkingExtractor/predict
