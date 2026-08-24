@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "output_file": "predictions/587_UnionChunkingExtractor/2026-08-23_15-04-56/2026-08-24_05-32-19_768179/predictions.jsonl",
+  "output_file_absolute": "/netscratch/hmeinhof/tmp/kiba-d_af215e32-86c3-480e-8b8c-8de9ccac6e98/repo/predictions/587_UnionChunkingExtractor/2026-08-23_15-04-56/2026-08-24_05-32-19_768179/predictions.jsonl",
+  "time_pdf_conversion": 0.007447864860296249,
+  "time_extraction": 25721.767202968244,
+  "time_start": 1787542339,
+  "time_end": 1787568147,
+  "commit_hash": "c34ce0ad98586dc5f9b9400270bf28569b541e59",
+  "branch": "commit/c34ce0ad9858",
+  "is_dirty": false,
+  "slurm_job_id": "3316092"
+}

@@ -1,6 +1,0 @@
-- dataset.predictions.log=logs/587_UnionChunkingExtractor/predict/multiruns/2026-08-20_15-17-50/2
-- name=587_UnionChunkingExtractor
-- experiment/evaluate=faktencheck_core_f1_micro_flat
-- dataset.references.file=../interim/faktencheck-db/faktenscheck_core_corrected.jsonl
-- metric.fields=[habitat,biodiversity_level,ecosystem_type.term,ecosystem_type.category,taxa.species_group]
-- prediction_logs=logs/587_UnionChunkingExtractor/predict
