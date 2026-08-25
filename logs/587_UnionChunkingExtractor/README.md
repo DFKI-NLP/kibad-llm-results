@@ -1,6 +1,9 @@
 # 587_UnionChunkingExtractor
 
-TODO: goal, motivation, hypothesis.
+This is the evaluation of the newly introduced UnionChunkingExtractor. 
+The schema used is a split version of faktencheck_core_v1, to make the evaluation comparable to previous evaluations, with focus on the introduction of the ChunkingExtractor.
+The expectation is for the UnionChunkingExtractor to perform about on par or better than the ChunkingExtractor. 
+In the future, the UnionChunkingExtractor is not supposed to do the same extractions as the ChunkingExtractor, just with less to extract per iteration. Instead it should allow us to extract even more, using bigger over-all schemas (in smaller sub-schemas), than the ChunkingExtractor.
 
 ## Prediction
 
@@ -102,4 +105,4 @@ result location: `logs/587_UnionChunkingExtractor/evaluate/multiruns/2026-08-25_
 
 ## Outcome
 
-TODO: result analysis, hypothesis evaluation, unexpected outcomes, recommendations.
+The performance is about the same as the ChunkingExtractor, which points towards the code being correct.
