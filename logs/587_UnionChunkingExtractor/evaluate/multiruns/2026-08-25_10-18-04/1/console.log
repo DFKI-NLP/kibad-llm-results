@@ -1,0 +1,23 @@
+[2026-08-25 10:18:04,948][__main__][INFO] - Loading dataset with predictions and references ...
+[2026-08-25 10:18:04,948][__main__][INFO] - Dataset config: {'predictions': {'_target_': 'kibad_llm.dataset.prediction.load_with_metadata', 'log': 'logs/587_UnionChunkingExtractor/predict/multiruns/2026-08-23_15-04-56/1', 'file': None, 'id_key': 'file_name', 'process_id': {'_partial_': True, '_target_': 'kibad_llm.utils.path.strip_filename_extension'}, 'preprocess': None}, '_target_': 'kibad_llm.dataset.utils.merge_references_into_predictions', 'references': {}, 'allow_missing_references': True}
+[2026-08-25 10:18:04,949][kibad_llm.dataset.json][INFO] - Loading dataset from JSON file: predictions/587_UnionChunkingExtractor/2026-08-23_15-04-56/2026-08-23_22-22-09_581469/predictions.jsonl ...
+[2026-08-25 10:18:05,032][__main__][INFO] - Instantiating metric ...
+[2026-08-25 10:18:05,032][__main__][INFO] - Metric config: {'_target_': 'kibad_llm.metrics.ErrorCollector', 'type_separator': ': ', 'show_errors': True}
+[2026-08-25 10:18:05,032][__main__][INFO] - Computing metric ...
+[2026-08-25 10:18:05,032][kibad_llm.metrics.errors][INFO] - Collected error (id=2RXMDX8I): JSONDecodeError: Unterminated string starting at: line 116 column 28 (char 12851)
+[2026-08-25 10:18:05,032][kibad_llm.metrics.errors][INFO] - Collected error (id=3E8X2AK3): JSONDecodeError: Unterminated string starting at: line 1 column 10267 (char 10266)
+[2026-08-25 10:18:05,032][kibad_llm.metrics.errors][INFO] - Collected error (id=3E8X2AK3): JSONDecodeError: Expecting ',' delimiter: line 306 column 1 (char 10621)
+[2026-08-25 10:18:05,032][kibad_llm.metrics.errors][INFO] - Collected error (id=3LGPK6BL): JSONDecodeError: Unterminated string starting at: line 156 column 28 (char 9524)
+[2026-08-25 10:18:05,032][kibad_llm.metrics.errors][INFO] - Collected error (id=3LGPK6BL): MissingResponseContentError: LLM response is missing content.
+[2026-08-25 10:18:05,032][kibad_llm.metrics.errors][INFO] - Collected error (id=3LGPK6BL): JSONDecodeError: Expecting ',' delimiter: line 568 column 1 (char 19046)
+[2026-08-25 10:18:05,032][kibad_llm.metrics.errors][INFO] - Collected error (id=6792YBL7): JSONDecodeError: Expecting value: line 485 column 1 (char 15418)
+[2026-08-25 10:18:05,032][kibad_llm.metrics.errors][INFO] - Collected error (id=6G2THNDX): JSONDecodeError: Expecting value: line 510 column 19 (char 14391)
+[2026-08-25 10:18:05,033][kibad_llm.metric][INFO] - Evaluation results:
+{
+  "no_error": 3302,
+  "with_error": 8,
+  "JSONDecodeError": 7,
+  "MissingResponseContentError": 1
+}
+[2026-08-25 10:18:05,035][kibad_llm.hydra_callbacks.save_job_return_value.SaveJobReturnValueCallback][INFO] - Saving job_return in /home/hugo/programming/kiba/UniChuEx/logs/587_UnionChunkingExtractor/evaluate/multiruns/2026-08-25_10-18-04/1/job_return_value.json
+[2026-08-25 10:18:05,036][kibad_llm.hydra_callbacks.save_job_return_value.SaveJobReturnValueCallback][INFO] - Saving job_return in /home/hugo/programming/kiba/UniChuEx/logs/587_UnionChunkingExtractor/evaluate/multiruns/2026-08-25_10-18-04/1/job_return_value.md

@@ -33,24 +33,72 @@ uv run -m kibad_llm.evaluate \
   --multirun
 ```
 
-result location: TODO
+result location: `logs/587_UnionChunkingExtractor/evaluate/multiruns/2026-08-25_10-15-25/`
 
-TODO: result table.
+![legend.svg](figures/faktencheck_core_f1_micro_flat-ALL/legend.svg)
+
+### F1
+
+![f1.svg](figures/faktencheck_core_f1_micro_flat-ALL/f1.svg)
+
+### Precision
+
+![precision.svg](figures/faktencheck_core_f1_micro_flat-ALL/precision.svg)
+
+### Recall
+
+![recall.svg](figures/faktencheck_core_f1_micro_flat-ALL/recall.svg)
+
+### F1 - biodiversity level
+
+![biodiversity_level.svg](figures/faktencheck_core_f1_micro_flat-f1/biodiversity_level.svg)
+
+### F1 - ecosystem type - category
+
+![ecosystem_type.category.svg](figures/faktencheck_core_f1_micro_flat-f1/ecosystem_type.category.svg)
+
+### F1 - ecosystem type - term
+
+![ecosystem_type.term.svg](figures/faktencheck_core_f1_micro_flat-f1/ecosystem_type.term.svg)
+
+### F1 - habitat
+
+![habitat.svg](figures/faktencheck_core_f1_micro_flat-f1/habitat.svg)
+
+### F1 - taxa - species group
+
+![taxa.species_group.svg](figures/faktencheck_core_f1_micro_flat-f1/taxa.species_group.svg)
 
 ### Errors
 
 ```sh
 uv run -m kibad_llm.evaluate \
-name=587_UnionChunkingExtractor \
-experiment/evaluate=prediction_errors \
-hydra.callbacks.save_job_return.multirun_show_file_contents=null \
-prediction_logs=logs/587_UnionChunkingExtractor/predict \
---multirun
+  name=587_UnionChunkingExtractor \
+  experiment/evaluate=prediction_errors \
+  hydra.callbacks.save_job_return.multirun_show_file_contents=null \
+  prediction_logs=logs/587_UnionChunkingExtractor/predict \
+  --multirun
 ```
 
-result location: TODO
+result location: `logs/587_UnionChunkingExtractor/evaluate/multiruns/2026-08-25_10-18-04`
 
-TODO: error counts.
+![legend.svg](figures/prediction_errors-total/legend.svg)
+
+### no error
+
+![no_error.svg](figures/prediction_errors-total/no_error.svg)
+
+### with error
+
+![with_error.svg](figures/prediction_errors-total/with_error.svg)
+
+### details - JSONDecodeError
+
+![JSONDecodeError.svg](figures/prediction_errors-details/JSONDecodeError.svg)
+
+### details - MissingResponseContentError
+
+![MissingResponseContentError.svg](figures/prediction_errors-details/MissingResponseContentError.svg)
 
 ## Outcome
 
