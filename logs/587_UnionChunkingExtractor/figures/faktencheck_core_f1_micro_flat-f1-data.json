@@ -1,0 +1,294 @@
+{
+  "metric_family": "numeric",
+  "plot_tab": "f1",
+  "plot_tab_variant": "suffix",
+  "plots": [
+    {
+      "metadata": {
+        "metric_label": "ALL.f1"
+      },
+      "data": {
+        "points": [
+          {
+            "category": "all",
+            "display_category": "all",
+            "series": "prediction.name=587_UnionChunkingExtractor",
+            "display_series": "name=587_UnionChunkingExtractor",
+            "run_dirs": [
+              "587_UnionChunkingExtractor/evaluate/multiruns/2026-08-25_10-15-25/0",
+              "587_UnionChunkingExtractor/evaluate/multiruns/2026-08-25_10-15-25/1",
+              "587_UnionChunkingExtractor/evaluate/multiruns/2026-08-25_10-15-25/2"
+            ],
+            "samples": [
+              0.6024691358024692,
+              0.6081754735792623,
+              0.6163583252190847
+            ]
+          },
+          {
+            "category": "all",
+            "display_category": "all",
+            "series": "prediction.name=397_faktencheck_core_v1_for_chunking",
+            "display_series": "name=397_faktencheck_core_v1_for_chunking",
+            "run_dirs": [
+              "397_faktencheck_core_v1_for_chunking/evaluate/multiruns/2026-04-10_16-17-05/35",
+              "397_faktencheck_core_v1_for_chunking/evaluate/multiruns/2026-04-10_16-17-05/36",
+              "397_faktencheck_core_v1_for_chunking/evaluate/multiruns/2026-04-10_16-17-05/37"
+            ],
+            "samples": [
+              0.6069333333333333,
+              0.6044303797468354,
+              0.6154639175257732
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "metadata": {
+        "metric_label": "AVG.f1"
+      },
+      "data": {
+        "points": [
+          {
+            "category": "all",
+            "display_category": "all",
+            "series": "prediction.name=587_UnionChunkingExtractor",
+            "display_series": "name=587_UnionChunkingExtractor",
+            "run_dirs": [
+              "587_UnionChunkingExtractor/evaluate/multiruns/2026-08-25_10-15-25/0",
+              "587_UnionChunkingExtractor/evaluate/multiruns/2026-08-25_10-15-25/1",
+              "587_UnionChunkingExtractor/evaluate/multiruns/2026-08-25_10-15-25/2"
+            ],
+            "samples": [
+              0.6079932467381994,
+              0.614825371452437,
+              0.6282271358362465
+            ]
+          },
+          {
+            "category": "all",
+            "display_category": "all",
+            "series": "prediction.name=397_faktencheck_core_v1_for_chunking",
+            "display_series": "name=397_faktencheck_core_v1_for_chunking",
+            "run_dirs": [
+              "397_faktencheck_core_v1_for_chunking/evaluate/multiruns/2026-04-10_16-17-05/35",
+              "397_faktencheck_core_v1_for_chunking/evaluate/multiruns/2026-04-10_16-17-05/36",
+              "397_faktencheck_core_v1_for_chunking/evaluate/multiruns/2026-04-10_16-17-05/37"
+            ],
+            "samples": [
+              0.6105767659513098,
+              0.609395342697802,
+              0.624783040519087
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "metadata": {
+        "metric_label": "biodiversity_level.f1"
+      },
+      "data": {
+        "points": [
+          {
+            "category": "all",
+            "display_category": "all",
+            "series": "prediction.name=587_UnionChunkingExtractor",
+            "display_series": "name=587_UnionChunkingExtractor",
+            "run_dirs": [
+              "587_UnionChunkingExtractor/evaluate/multiruns/2026-08-25_10-15-25/0",
+              "587_UnionChunkingExtractor/evaluate/multiruns/2026-08-25_10-15-25/1",
+              "587_UnionChunkingExtractor/evaluate/multiruns/2026-08-25_10-15-25/2"
+            ],
+            "samples": [
+              0.639240506329114,
+              0.6191950464396284,
+              0.6322188449848024
+            ]
+          },
+          {
+            "category": "all",
+            "display_category": "all",
+            "series": "prediction.name=397_faktencheck_core_v1_for_chunking",
+            "display_series": "name=397_faktencheck_core_v1_for_chunking",
+            "run_dirs": [
+              "397_faktencheck_core_v1_for_chunking/evaluate/multiruns/2026-04-10_16-17-05/35",
+              "397_faktencheck_core_v1_for_chunking/evaluate/multiruns/2026-04-10_16-17-05/36",
+              "397_faktencheck_core_v1_for_chunking/evaluate/multiruns/2026-04-10_16-17-05/37"
+            ],
+            "samples": [
+              0.6491803278688524,
+              0.6464646464646464,
+              0.6643835616438356
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "metadata": {
+        "metric_label": "ecosystem_type.category.f1"
+      },
+      "data": {
+        "points": [
+          {
+            "category": "all",
+            "display_category": "all",
+            "series": "prediction.name=587_UnionChunkingExtractor",
+            "display_series": "name=587_UnionChunkingExtractor",
+            "run_dirs": [
+              "587_UnionChunkingExtractor/evaluate/multiruns/2026-08-25_10-15-25/0",
+              "587_UnionChunkingExtractor/evaluate/multiruns/2026-08-25_10-15-25/1",
+              "587_UnionChunkingExtractor/evaluate/multiruns/2026-08-25_10-15-25/2"
+            ],
+            "samples": [
+              0.5894736842105264,
+              0.6312056737588653,
+              0.673758865248227
+            ]
+          },
+          {
+            "category": "all",
+            "display_category": "all",
+            "series": "prediction.name=397_faktencheck_core_v1_for_chunking",
+            "display_series": "name=397_faktencheck_core_v1_for_chunking",
+            "run_dirs": [
+              "397_faktencheck_core_v1_for_chunking/evaluate/multiruns/2026-04-10_16-17-05/35",
+              "397_faktencheck_core_v1_for_chunking/evaluate/multiruns/2026-04-10_16-17-05/36",
+              "397_faktencheck_core_v1_for_chunking/evaluate/multiruns/2026-04-10_16-17-05/37"
+            ],
+            "samples": [
+              0.5914396887159533,
+              0.6023166023166022,
+              0.6194029850746268
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "metadata": {
+        "metric_label": "ecosystem_type.term.f1"
+      },
+      "data": {
+        "points": [
+          {
+            "category": "all",
+            "display_category": "all",
+            "series": "prediction.name=587_UnionChunkingExtractor",
+            "display_series": "name=587_UnionChunkingExtractor",
+            "run_dirs": [
+              "587_UnionChunkingExtractor/evaluate/multiruns/2026-08-25_10-15-25/0",
+              "587_UnionChunkingExtractor/evaluate/multiruns/2026-08-25_10-15-25/1",
+              "587_UnionChunkingExtractor/evaluate/multiruns/2026-08-25_10-15-25/2"
+            ],
+            "samples": [
+              0.41684210526315796,
+              0.4340425531914894,
+              0.4266144814090019
+            ]
+          },
+          {
+            "category": "all",
+            "display_category": "all",
+            "series": "prediction.name=397_faktencheck_core_v1_for_chunking",
+            "display_series": "name=397_faktencheck_core_v1_for_chunking",
+            "run_dirs": [
+              "397_faktencheck_core_v1_for_chunking/evaluate/multiruns/2026-04-10_16-17-05/35",
+              "397_faktencheck_core_v1_for_chunking/evaluate/multiruns/2026-04-10_16-17-05/36",
+              "397_faktencheck_core_v1_for_chunking/evaluate/multiruns/2026-04-10_16-17-05/37"
+            ],
+            "samples": [
+              0.4716981132075472,
+              0.4,
+              0.42887473460721864
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "metadata": {
+        "metric_label": "habitat.f1"
+      },
+      "data": {
+        "points": [
+          {
+            "category": "all",
+            "display_category": "all",
+            "series": "prediction.name=587_UnionChunkingExtractor",
+            "display_series": "name=587_UnionChunkingExtractor",
+            "run_dirs": [
+              "587_UnionChunkingExtractor/evaluate/multiruns/2026-08-25_10-15-25/0",
+              "587_UnionChunkingExtractor/evaluate/multiruns/2026-08-25_10-15-25/1",
+              "587_UnionChunkingExtractor/evaluate/multiruns/2026-08-25_10-15-25/2"
+            ],
+            "samples": [
+              0.7857142857142856,
+              0.7865707434052758,
+              0.7840375586854459
+            ]
+          },
+          {
+            "category": "all",
+            "display_category": "all",
+            "series": "prediction.name=397_faktencheck_core_v1_for_chunking",
+            "display_series": "name=397_faktencheck_core_v1_for_chunking",
+            "run_dirs": [
+              "397_faktencheck_core_v1_for_chunking/evaluate/multiruns/2026-04-10_16-17-05/35",
+              "397_faktencheck_core_v1_for_chunking/evaluate/multiruns/2026-04-10_16-17-05/36",
+              "397_faktencheck_core_v1_for_chunking/evaluate/multiruns/2026-04-10_16-17-05/37"
+            ],
+            "samples": [
+              0.7568922305764411,
+              0.7772277227722773,
+              0.7889447236180905
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "metadata": {
+        "metric_label": "taxa.species_group.f1"
+      },
+      "data": {
+        "points": [
+          {
+            "category": "all",
+            "display_category": "all",
+            "series": "prediction.name=587_UnionChunkingExtractor",
+            "display_series": "name=587_UnionChunkingExtractor",
+            "run_dirs": [
+              "587_UnionChunkingExtractor/evaluate/multiruns/2026-08-25_10-15-25/0",
+              "587_UnionChunkingExtractor/evaluate/multiruns/2026-08-25_10-15-25/1",
+              "587_UnionChunkingExtractor/evaluate/multiruns/2026-08-25_10-15-25/2"
+            ],
+            "samples": [
+              0.6086956521739131,
+              0.603112840466926,
+              0.624505928853755
+            ]
+          },
+          {
+            "category": "all",
+            "display_category": "all",
+            "series": "prediction.name=397_faktencheck_core_v1_for_chunking",
+            "display_series": "name=397_faktencheck_core_v1_for_chunking",
+            "run_dirs": [
+              "397_faktencheck_core_v1_for_chunking/evaluate/multiruns/2026-04-10_16-17-05/35",
+              "397_faktencheck_core_v1_for_chunking/evaluate/multiruns/2026-04-10_16-17-05/36",
+              "397_faktencheck_core_v1_for_chunking/evaluate/multiruns/2026-04-10_16-17-05/37"
+            ],
+            "samples": [
+              0.5836734693877551,
+              0.6209677419354839,
+              0.6223091976516634
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

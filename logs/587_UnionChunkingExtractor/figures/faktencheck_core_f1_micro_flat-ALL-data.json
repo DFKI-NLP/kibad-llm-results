@@ -1,0 +1,171 @@
+{
+  "metric_family": "numeric",
+  "plot_tab": "ALL",
+  "plot_tab_variant": "prefix",
+  "plots": [
+    {
+      "metadata": {
+        "metric_label": "ALL.f1"
+      },
+      "data": {
+        "points": [
+          {
+            "category": "all",
+            "display_category": "all",
+            "series": "prediction.name=587_UnionChunkingExtractor",
+            "display_series": "name=587_UnionChunkingExtractor",
+            "run_dirs": [
+              "587_UnionChunkingExtractor/evaluate/multiruns/2026-08-25_10-15-25/0",
+              "587_UnionChunkingExtractor/evaluate/multiruns/2026-08-25_10-15-25/1",
+              "587_UnionChunkingExtractor/evaluate/multiruns/2026-08-25_10-15-25/2"
+            ],
+            "samples": [
+              0.6024691358024692,
+              0.6081754735792623,
+              0.6163583252190847
+            ]
+          },
+          {
+            "category": "all",
+            "display_category": "all",
+            "series": "prediction.name=397_faktencheck_core_v1_for_chunking",
+            "display_series": "name=397_faktencheck_core_v1_for_chunking",
+            "run_dirs": [
+              "397_faktencheck_core_v1_for_chunking/evaluate/multiruns/2026-04-10_16-17-05/35",
+              "397_faktencheck_core_v1_for_chunking/evaluate/multiruns/2026-04-10_16-17-05/36",
+              "397_faktencheck_core_v1_for_chunking/evaluate/multiruns/2026-04-10_16-17-05/37"
+            ],
+            "samples": [
+              0.6069333333333333,
+              0.6044303797468354,
+              0.6154639175257732
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "metadata": {
+        "metric_label": "ALL.precision"
+      },
+      "data": {
+        "points": [
+          {
+            "category": "all",
+            "display_category": "all",
+            "series": "prediction.name=587_UnionChunkingExtractor",
+            "display_series": "name=587_UnionChunkingExtractor",
+            "run_dirs": [
+              "587_UnionChunkingExtractor/evaluate/multiruns/2026-08-25_10-15-25/0",
+              "587_UnionChunkingExtractor/evaluate/multiruns/2026-08-25_10-15-25/1",
+              "587_UnionChunkingExtractor/evaluate/multiruns/2026-08-25_10-15-25/2"
+            ],
+            "samples": [
+              0.549054905490549,
+              0.5586080586080586,
+              0.5552631578947368
+            ]
+          },
+          {
+            "category": "all",
+            "display_category": "all",
+            "series": "prediction.name=397_faktencheck_core_v1_for_chunking",
+            "display_series": "name=397_faktencheck_core_v1_for_chunking",
+            "run_dirs": [
+              "397_faktencheck_core_v1_for_chunking/evaluate/multiruns/2026-04-10_16-17-05/35",
+              "397_faktencheck_core_v1_for_chunking/evaluate/multiruns/2026-04-10_16-17-05/36",
+              "397_faktencheck_core_v1_for_chunking/evaluate/multiruns/2026-04-10_16-17-05/37"
+            ],
+            "samples": [
+              0.5920915712799167,
+              0.5835030549898167,
+              0.5818713450292398
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "metadata": {
+        "metric_label": "ALL.recall"
+      },
+      "data": {
+        "points": [
+          {
+            "category": "all",
+            "display_category": "all",
+            "series": "prediction.name=587_UnionChunkingExtractor",
+            "display_series": "name=587_UnionChunkingExtractor",
+            "run_dirs": [
+              "587_UnionChunkingExtractor/evaluate/multiruns/2026-08-25_10-15-25/0",
+              "587_UnionChunkingExtractor/evaluate/multiruns/2026-08-25_10-15-25/1",
+              "587_UnionChunkingExtractor/evaluate/multiruns/2026-08-25_10-15-25/2"
+            ],
+            "samples": [
+              0.6673960612691466,
+              0.6673960612691466,
+              0.6925601750547046
+            ]
+          },
+          {
+            "category": "all",
+            "display_category": "all",
+            "series": "prediction.name=397_faktencheck_core_v1_for_chunking",
+            "display_series": "name=397_faktencheck_core_v1_for_chunking",
+            "run_dirs": [
+              "397_faktencheck_core_v1_for_chunking/evaluate/multiruns/2026-04-10_16-17-05/35",
+              "397_faktencheck_core_v1_for_chunking/evaluate/multiruns/2026-04-10_16-17-05/36",
+              "397_faktencheck_core_v1_for_chunking/evaluate/multiruns/2026-04-10_16-17-05/37"
+            ],
+            "samples": [
+              0.6225382932166302,
+              0.6269146608315098,
+              0.6531728665207878
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "metadata": {
+        "metric_label": "ALL.support"
+      },
+      "data": {
+        "points": [
+          {
+            "category": "all",
+            "display_category": "all",
+            "series": "prediction.name=587_UnionChunkingExtractor",
+            "display_series": "name=587_UnionChunkingExtractor",
+            "run_dirs": [
+              "587_UnionChunkingExtractor/evaluate/multiruns/2026-08-25_10-15-25/0",
+              "587_UnionChunkingExtractor/evaluate/multiruns/2026-08-25_10-15-25/1",
+              "587_UnionChunkingExtractor/evaluate/multiruns/2026-08-25_10-15-25/2"
+            ],
+            "samples": [
+              914,
+              914,
+              914
+            ]
+          },
+          {
+            "category": "all",
+            "display_category": "all",
+            "series": "prediction.name=397_faktencheck_core_v1_for_chunking",
+            "display_series": "name=397_faktencheck_core_v1_for_chunking",
+            "run_dirs": [
+              "397_faktencheck_core_v1_for_chunking/evaluate/multiruns/2026-04-10_16-17-05/35",
+              "397_faktencheck_core_v1_for_chunking/evaluate/multiruns/2026-04-10_16-17-05/36",
+              "397_faktencheck_core_v1_for_chunking/evaluate/multiruns/2026-04-10_16-17-05/37"
+            ],
+            "samples": [
+              914,
+              914,
+              914
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
