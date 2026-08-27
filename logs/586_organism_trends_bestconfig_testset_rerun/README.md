@@ -23,17 +23,10 @@ seed=42,1337,7331 \
 ```
 
 ```sh
-=============================================
->>> USING PARTITION H100-SLT,H100,H200,B200,A100-80GB
->>> MAX TIME 3-00:00:00
->>> SUBMITTED Wed Aug 19 03:29:50 PM CEST 2026
->>> UV_ARGS --cache-dir /netscratch/hennig/cache/uv -m kibad_llm.predict name=586_organism_trends_bestconfig_testset_rerun experiment/predict=organism_trends_with_chunking extractor/prompt_template=organism_trends_v1_with_chunking_AuO pdf_directory=/ds/text/kiba-d/test-set-AuO-WVC extractor/llm=gpt_oss_20b_in_process seed=42,1337,7331 --multirun
->>> JOB_NAME kiba-d_405e38a6-1db0-42b0-8f1e-66dd6d81689a
->>> GIT_REF (none; using current working tree)
-=============================================
+
 ```
 
-Saved to `logs/586_organism_trends_bestconfig_testset_rerun/predict/multiruns/XXX`
+Saved to `logs/586_organism_trends_bestconfig_testset_rerun/predict/multiruns/2026-08-24_16-41-13`
 
 ### gemma3_27b
 
@@ -52,14 +45,6 @@ seed=42,1337,7331 \
 ```
 
 ```sh
-=============================================
->>> USING PARTITION H100-SLT,H100,H200,B200,A100-80GB
->>> MAX TIME 3-00:00:00
->>> SUBMITTED Wed Aug 19 03:30:09 PM CEST 2026
->>> UV_ARGS --cache-dir /netscratch/hennig/cache/uv -m kibad_llm.predict name=586_organism_trends_bestconfig_testset_rerun experiment/predict=organism_trends_with_chunking extractor/prompt_template=organism_trends_v1_with_chunking_AuO pdf_directory=/ds/text/kiba-d/test-set-AuO-WVC extractor/llm=gemma3_27b_in_process seed=42,1337,7331 --multirun
->>> JOB_NAME kiba-d_e1d22455-687b-4773-9e7d-6cd5b21a4b78
->>> GIT_REF (none; using current working tree)
-=============================================
 
 ```
 
@@ -80,14 +65,7 @@ seed=42,1337,7331 \
 ```
 
 ```sh
-=============================================
->>> USING PARTITION H100-SLT,H100,H200,B200,A100-80GB
->>> MAX TIME 3-00:00:00
->>> SUBMITTED Wed Aug 19 03:30:52 PM CEST 2026
->>> UV_ARGS --cache-dir /netscratch/hennig/cache/uv -m kibad_llm.predict name=586_organism_trends_bestconfig_testset_rerun experiment/predict=organism_trends_with_chunking extractor/prompt_template=organism_trends_v1_with_chunking_AuO pdf_directory=/ds/text/kiba-d/test-set-AuO-WVC extractor/llm=qwen3_30b_in_process seed=42,1337,7331 --multirun
->>> JOB_NAME kiba-d_7fbd9a63-a8b9-435c-bf06-5ab38ffc8501
->>> GIT_REF (none; using current working tree)
-=============================================
+
 ```
 
 Saved to `logs/586_organism_trends_bestconfig_testset_rerun/predict/multiruns/XXX`
@@ -107,14 +85,6 @@ seed=42,1337,7331 \
 ```
 
 ```sh
-=============================================
->>> USING PARTITION H100-SLT,H100,H200,B200,A100-80GB
->>> MAX TIME 3-00:00:00
->>> SUBMITTED Wed Aug 19 03:31:16 PM CEST 2026
->>> UV_ARGS --cache-dir /netscratch/hennig/cache/uv -m kibad_llm.predict name=586_organism_trends_bestconfig_testset_rerun experiment/predict=organism_trends_with_chunking extractor/prompt_template=organism_trends_v1_with_chunking_AuO pdf_directory=/ds/text/kiba-d/test-set-AuO-WVC extractor/llm=mistral_small_3_24b_in_process seed=42,1337,7331 --multirun
->>> JOB_NAME kiba-d_5b863f29-01f9-4093-8cdd-7c992e593fe4
->>> GIT_REF (none; using current working tree)
-=============================================
 
 ```
 
@@ -139,17 +109,10 @@ seed=42 \
 ```
 
 ```sh
-=============================================
->>> USING PARTITION H100-SLT,H100,H200,B200,A100-80GB,batch
->>> MAX TIME 3-00:00:00
->>> SUBMITTED Wed Aug 19 03:31:39 PM CEST 2026
->>> UV_ARGS --cache-dir /netscratch/hennig/cache/uv -m kibad_llm.predict name=586_organism_trends_bestconfig_testset_rerun experiment/predict=organism_trends_with_chunking extractor/prompt_template=organism_trends_v1_with_chunking_AuO pdf_directory=/ds/text/kiba-d/test-set-AuO-WVC extractor/llm=gpt_5 seed=42 --multirun
->>> JOB_NAME kiba-d_77b0b4bb-75fd-432f-9996-14b53c76cefb
->>> GIT_REF (none; using current working tree)
-=============================================
+
 ```
 
-Saved to `logs/586_organism_trends_bestconfig_testset_rerun/predict/multiruns/XXX`
+Saved to `logs/586_organism_trends_bestconfig_testset_rerun/predict/multiruns/2026-08-21_19-04-25/`
 
 ## Evaluation
 
