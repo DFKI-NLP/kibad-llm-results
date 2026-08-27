@@ -23,10 +23,17 @@ seed=42,1337,7331 \
 ```
 
 ```sh
-
+=============================================
+>>> USING PARTITION H100-Trails,H100-SLT,H100,H200,B200,A100-80GB
+>>> MAX TIME 3-00:00:00
+>>> SUBMITTED Thu Aug 27 03:32:04 PM CEST 2026
+>>> UV_ARGS --cache-dir /netscratch/hennig/cache/uv -m kibad_llm.predict name=586_organism_trends_bestconfig_testset_rerun experiment/predict=organism_trends_with_chunking extractor/prompt_template=organism_trends_v1_with_chunking_AuO pdf_directory=/ds/text/kiba-d/test-set-AuO-WVC extractor/llm=gpt_oss_20b_in_process seed=42,1337,7331 --multirun
+>>> JOB_NAME kiba-d_ddf9f2db-b666-4822-b4e3-d3ae1977997b
+>>> GIT_REF (none; using current working tree)
+=============================================
 ```
 
-Saved to `logs/586_organism_trends_bestconfig_testset_rerun/predict/multiruns/2026-08-24_16-41-13`
+Saved to `logs/586_organism_trends_bestconfig_testset_rerun/predict/multiruns/`
 
 ### gemma3_27b
 
@@ -45,7 +52,14 @@ seed=42,1337,7331 \
 ```
 
 ```sh
-
+=============================================
+>>> USING PARTITION H100-Trails,H100-SLT,H100,H200,B200,A100-80GB
+>>> MAX TIME 3-00:00:00
+>>> SUBMITTED Thu Aug 27 03:32:06 PM CEST 2026
+>>> UV_ARGS --cache-dir /netscratch/hennig/cache/uv -m kibad_llm.predict name=586_organism_trends_bestconfig_testset_rerun experiment/predict=organism_trends_with_chunking extractor/prompt_template=organism_trends_v1_with_chunking_AuO pdf_directory=/ds/text/kiba-d/test-set-AuO-WVC extractor/llm=gemma3_27b_in_process seed=42,1337,7331 --multirun
+>>> JOB_NAME kiba-d_b64fba76-2527-4dd3-8a59-bd5220fd0866
+>>> GIT_REF (none; using current working tree)
+=============================================
 ```
 
 Saved to `logs/586_organism_trends_bestconfig_testset_rerun/predict/multiruns/XXX`
@@ -65,7 +79,14 @@ seed=42,1337,7331 \
 ```
 
 ```sh
-
+=============================================
+>>> USING PARTITION H100-Trails,H100-SLT,H100,H200,B200,A100-80GB
+>>> MAX TIME 3-00:00:00
+>>> SUBMITTED Thu Aug 27 03:32:08 PM CEST 2026
+>>> UV_ARGS --cache-dir /netscratch/hennig/cache/uv -m kibad_llm.predict name=586_organism_trends_bestconfig_testset_rerun experiment/predict=organism_trends_with_chunking extractor/prompt_template=organism_trends_v1_with_chunking_AuO pdf_directory=/ds/text/kiba-d/test-set-AuO-WVC extractor/llm=qwen3_30b_in_process seed=42,1337,7331 --multirun
+>>> JOB_NAME kiba-d_e9f1871e-98b7-4b61-89ae-f6beee4ad59d
+>>> GIT_REF (none; using current working tree)
+=============================================
 ```
 
 Saved to `logs/586_organism_trends_bestconfig_testset_rerun/predict/multiruns/XXX`
@@ -85,7 +106,14 @@ seed=42,1337,7331 \
 ```
 
 ```sh
-
+=============================================
+>>> USING PARTITION H100-Trails,H100-SLT,H100,H200,B200,A100-80GB
+>>> MAX TIME 3-00:00:00
+>>> SUBMITTED Thu Aug 27 03:32:10 PM CEST 2026
+>>> UV_ARGS --cache-dir /netscratch/hennig/cache/uv -m kibad_llm.predict name=586_organism_trends_bestconfig_testset_rerun experiment/predict=organism_trends_with_chunking extractor/prompt_template=organism_trends_v1_with_chunking_AuO pdf_directory=/ds/text/kiba-d/test-set-AuO-WVC extractor/llm=mistral_small_3_24b_in_process seed=42,1337,7331 --multirun
+>>> JOB_NAME kiba-d_c2b23a30-134d-4142-9e63-5e82107d9ead
+>>> GIT_REF (none; using current working tree)
+=============================================
 ```
 
 Saved to `logs/586_organism_trends_bestconfig_testset_rerun/predict/multiruns/XXX`
@@ -109,7 +137,14 @@ seed=42 \
 ```
 
 ```sh
-
+=============================================
+>>> USING PARTITION H100-SLT,H100,H200,B200,A100-80GB,batch
+>>> MAX TIME 3-00:00:00
+>>> SUBMITTED Thu Aug 27 03:32:12 PM CEST 2026
+>>> UV_ARGS --cache-dir /netscratch/hennig/cache/uv -m kibad_llm.predict name=586_organism_trends_bestconfig_testset_rerun experiment/predict=organism_trends_with_chunking extractor/prompt_template=organism_trends_v1_with_chunking_AuO pdf_directory=/ds/text/kiba-d/test-set-AuO-WVC extractor/llm=gpt_5 seed=42 --multirun
+>>> JOB_NAME kiba-d_6aa4244c-650a-4bdd-b4ef-feca28fd25c8
+>>> GIT_REF (none; using current working tree)
+=============================================
 ```
 
 Saved to `logs/586_organism_trends_bestconfig_testset_rerun/predict/multiruns/2026-08-21_19-04-25/`
