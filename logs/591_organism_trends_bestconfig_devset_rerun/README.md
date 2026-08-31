@@ -33,7 +33,7 @@ seed=42,1337,7331 \
 
 ```
 
-Saved to `logs/591_organism_trends_bestconfig_devset_rerun/predict/multiruns/`
+Saved to `logs/591_organism_trends_bestconfig_devset_rerun/predict/multiruns/2026-08-27_17-39-54`
 
 ### gemma3_27b
 
@@ -61,7 +61,7 @@ seed=42,1337,7331 \
 =============================================
 ```
 
-Saved to `logs/591_organism_trends_bestconfig_devset_rerun/predict/multiruns/XXX`
+Saved to `logs/591_organism_trends_bestconfig_devset_rerun/predict/multiruns/2026-08-27_19-19-25`
 
 ### qwen3_30b
 
@@ -87,7 +87,7 @@ seed=42,1337,7331 \
 =============================================
 ```
 
-Saved to `logs/591_organism_trends_bestconfig_devset_rerun/predict/multiruns/XXX`
+Saved to `logs/591_organism_trends_bestconfig_devset_rerun/predict/multiruns/2026-08-28_05-06-51`
 
 ### mistral_small_3_24b
 
@@ -103,17 +103,17 @@ seed=42,1337,7331 \
 ```
 
 ```sh
-=============================================
->>> USING PARTITION H100-Trails,H100-SLT,H100,H200,B200,A100-80GB
->>> MAX TIME 3-00:00:00
->>> SUBMITTED Thu Aug 27 05:19:10 PM CEST 2026
->>> UV_ARGS --cache-dir /netscratch/hennig/cache/uv -m kibad_llm.predict name=591_organism_trends_bestconfig_devset_rerun experiment/predict=organism_trends_with_chunking pdf_directory=/ds/text/kiba-d/dev-set-Wald-WVC extractor/llm=mistral_small_3_24b_in_process seed=42,1337,7331 --multirun
->>> JOB_NAME kiba-d_91e10566-d0ab-465f-8e9d-7b5c084cc61e
->>> GIT_REF (none; using current working tree)
+=============================================                                                                      
+>>> USING PARTITION H100-Trails,H100-SLT,H100,H200,B200,A100-80GB                                                  
+>>> MAX TIME 3-00:00:00                                                                                            
+>>> SUBMITTED Mon Aug 31 10:41:19 AM CEST 2026                                                                     
+>>> UV_ARGS --cache-dir /netscratch/hennig/cache/uv -m kibad_llm.predict name=591_organism_trends_bestconfig_devset_rerun experiment/predict=organism_trends_with_chunking pdf_directory=/ds/text/kiba-d/dev-set-Wald-WVC extractor/llm=mistral_small_3_24b_in_process seed=42,1337,7331 --multirun                                                      
+>>> JOB_NAME kiba-d_06088f7d-8473-4a0f-ab80-e47ed0b4ee21                                                           
+>>> GIT_REF (none; using current working tree)                                                                     
 =============================================
 ```
 
-Saved to `logs/591_organism_trends_bestconfig_devset_rerun/predict/multiruns/XXX`
+Saved to `logs/591_organism_trends_bestconfig_devset_rerun/predict/multiruns/`
 
 ### gpt_5
 
@@ -133,17 +133,10 @@ seed=42 \
 ```
 
 ```sh
-=============================================
->>> USING PARTITION H100-Trails,H100-SLT,H100,H200,B200,A100-80GB,batch
->>> MAX TIME 3-00:00:00
->>> SUBMITTED Thu Aug 27 05:19:44 PM CEST 2026
->>> UV_ARGS --cache-dir /netscratch/hennig/cache/uv -m kibad_llm.predict name=591_organism_trends_bestconfig_devset_rerun experiment/predict=organism_trends_with_chunking pdf_directory=/ds/text/kiba-d/dev-set-Wald-WVC extractor/llm=gpt_5 seed=42 --multirun
->>> JOB_NAME kiba-d_bf5097de-5bf6-4d80-852d-17efb90b5098
->>> GIT_REF (none; using current working tree)
-=============================================
+
 ```
 
-Saved to `logs/591_organism_trends_bestconfig_devset_rerun/predict/multiruns/XXX`
+Saved to `logs/591_organism_trends_bestconfig_devset_rerun/predict/multiruns/`
 
 ## Evaluation
 
