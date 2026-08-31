@@ -1,0 +1,6 @@
+- name=586_organism_trends_bestconfig_testset_rerun
+- experiment/predict=organism_trends_with_chunking
+- extractor/prompt_template=organism_trends_v1_with_chunking_AuO
+- pdf_directory=/ds/text/kiba-d/test-set-AuO-WVC
+- extractor/llm=mistral_small_3_24b_in_process
+- seed=7331

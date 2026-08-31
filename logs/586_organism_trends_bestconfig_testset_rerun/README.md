@@ -33,7 +33,7 @@ seed=42,1337,7331 \
 =============================================
 ```
 
-Saved to `logs/586_organism_trends_bestconfig_testset_rerun/predict/multiruns/`
+Saved to `logs/586_organism_trends_bestconfig_testset_rerun/predict/multiruns/2026-08-27_15-37-27`
 
 ### gemma3_27b
 
@@ -62,7 +62,7 @@ seed=42,1337,7331 \
 =============================================
 ```
 
-Saved to `logs/586_organism_trends_bestconfig_testset_rerun/predict/multiruns/XXX`
+Saved to `logs/586_organism_trends_bestconfig_testset_rerun/predict/multiruns/2026-08-27_15-41-52`
 
 ### qwen3_30b
 
@@ -89,7 +89,7 @@ seed=42,1337,7331 \
 =============================================
 ```
 
-Saved to `logs/586_organism_trends_bestconfig_testset_rerun/predict/multiruns/XXX`
+Saved to `logs/586_organism_trends_bestconfig_testset_rerun/predict/multiruns/2026-08-27_16-03-08`
 
 ### mistral_small_3_24b
 
@@ -116,7 +116,7 @@ seed=42,1337,7331 \
 =============================================
 ```
 
-Saved to `logs/586_organism_trends_bestconfig_testset_rerun/predict/multiruns/XXX`
+Saved to `logs/586_organism_trends_bestconfig_testset_rerun/predict/multiruns/2026-08-27_16-06-57`
 
 ### gpt_5
 
@@ -137,17 +137,10 @@ seed=42 \
 ```
 
 ```sh
-=============================================
->>> USING PARTITION H100-SLT,H100,H200,B200,A100-80GB,batch
->>> MAX TIME 3-00:00:00
->>> SUBMITTED Thu Aug 27 03:32:12 PM CEST 2026
->>> UV_ARGS --cache-dir /netscratch/hennig/cache/uv -m kibad_llm.predict name=586_organism_trends_bestconfig_testset_rerun experiment/predict=organism_trends_with_chunking extractor/prompt_template=organism_trends_v1_with_chunking_AuO pdf_directory=/ds/text/kiba-d/test-set-AuO-WVC extractor/llm=gpt_5 seed=42 --multirun
->>> JOB_NAME kiba-d_6aa4244c-650a-4bdd-b4ef-feca28fd25c8
->>> GIT_REF (none; using current working tree)
-=============================================
+
 ```
 
-Saved to `logs/586_organism_trends_bestconfig_testset_rerun/predict/multiruns/2026-08-21_19-04-25/`
+Saved to `logs/586_organism_trends_bestconfig_testset_rerun/predict/multiruns/XXX`
 
 ## Evaluation
 
@@ -165,7 +158,7 @@ dataset.references.file="../external/organism_trends/Weighted Vote Count Agrar- 
 --multirun
 ```
 
-Saved to `logs/586_organism_trends_bestconfig_testset_rerun/evaluate/multiruns/XXX`
+Saved to `logs/586_organism_trends_bestconfig_testset_rerun/evaluate/multiruns/`
 
 ##### full compounds
 
@@ -179,7 +172,7 @@ dataset.references.file="../external/organism_trends/Weighted Vote Count Agrar- 
 --multirun
 ```
 
-Saved to `logs/586_organism_trends_bestconfig_testset_rerun/evaluate/multiruns/XXX`
+Saved to `logs/586_organism_trends_bestconfig_testset_rerun/evaluate/multiruns/`
 
 ##### base elements
 
@@ -193,7 +186,7 @@ dataset.references.file="../external/organism_trends/Weighted Vote Count Agrar- 
 --multirun
 ```
 
-Saved to `logs/586_organism_trends_bestconfig_testset_rerun/evaluate/multiruns/XXX`
+Saved to `logs/586_organism_trends_bestconfig_testset_rerun/evaluate/multiruns/`
 
 ##### `Antwortvariable` conditioned on base elements
 
@@ -207,7 +200,7 @@ dataset.references.file="../external/organism_trends/Weighted Vote Count Agrar- 
 --multirun
 ```
 
-Saved to `logs/586_organism_trends_bestconfig_testset_rerun/evaluate/multiruns/XXX`
+Saved to `logs/586_organism_trends_bestconfig_testset_rerun/evaluate/multiruns/`
 
 ##### `Antwortvariable` & `Trend` conditioned on base elements
 
@@ -221,7 +214,7 @@ dataset.references.file="../external/organism_trends/Weighted Vote Count Agrar- 
 --multirun
 ```
 
-Saved to `logs/586_organism_trends_bestconfig_testset_rerun/evaluate/multiruns/XXX`
+Saved to `logs/586_organism_trends_bestconfig_testset_rerun/evaluate/multiruns/`
 
 ### Errors
 
@@ -236,7 +229,7 @@ logs/586_organism_trends_bestconfig_testset_rerun/predict \
 --multirun
 ```
 
-Saved to `logs/586_organism_trends_bestconfig_testset_rerun/evaluate/multiruns/XXX`
+Saved to `logs/586_organism_trends_bestconfig_testset_rerun/evaluate/multiruns/`
 
 ## Outcome
 
