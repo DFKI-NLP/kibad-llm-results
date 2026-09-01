@@ -133,7 +133,14 @@ seed=42 \
 ```
 
 ```sh
-
+=============================================                                                                      
+>>> USING PARTITION H100-Trails,H100-SLT,H100,H200,B200,A100-80GB,batch                                            
+>>> MAX TIME 3-00:00:00                                                                                            
+>>> SUBMITTED Tue Sep  1 08:19:17 AM CEST 2026                                                                     
+>>> UV_ARGS --cache-dir /netscratch/hennig/cache/uv -m kibad_llm.predict name=591_organism_trends_bestconfig_devset_rerun experiment/predict=organism_trends_with_chunking pdf_directory=/ds/text/kiba-d/dev-set-Wald-WVC extractor/llm=gpt_5 seed=42 --multirun                                                                                         
+>>> JOB_NAME kiba-d_b90fa56f-36d7-4d19-b0d2-b3f5a1b98535                                                           
+>>> GIT_REF (none; using current working tree)
+=============================================
 ```
 
 Saved to `logs/591_organism_trends_bestconfig_devset_rerun/predict/multiruns/`
