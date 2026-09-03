@@ -140,7 +140,7 @@ seed=42 \
 
 ```
 
-Saved to `logs/586_organism_trends_bestconfig_testset_rerun/predict/multiruns/XXX`
+Saved to `logs/586_organism_trends_bestconfig_testset_rerun/predict/multiruns/2026-09-02_08-11-01`
 
 ## Evaluation
 
@@ -158,7 +158,7 @@ dataset.references.file="../external/organism_trends/Weighted Vote Count Agrar- 
 --multirun
 ```
 
-Saved to `logs/586_organism_trends_bestconfig_testset_rerun/evaluate/multiruns/`
+Saved to `logs/586_organism_trends_bestconfig_testset_rerun/evaluate/multiruns/2026-09-03_14-45-55`
 
 ##### full compounds
 
@@ -172,7 +172,7 @@ dataset.references.file="../external/organism_trends/Weighted Vote Count Agrar- 
 --multirun
 ```
 
-Saved to `logs/586_organism_trends_bestconfig_testset_rerun/evaluate/multiruns/`
+Saved to `logs/586_organism_trends_bestconfig_testset_rerun/evaluate/multiruns/2026-09-03_14-46-39`
 
 ##### base elements
 
@@ -186,7 +186,7 @@ dataset.references.file="../external/organism_trends/Weighted Vote Count Agrar- 
 --multirun
 ```
 
-Saved to `logs/586_organism_trends_bestconfig_testset_rerun/evaluate/multiruns/`
+Saved to `logs/586_organism_trends_bestconfig_testset_rerun/evaluate/multiruns/2026-09-03_14-47-02`
 
 ##### `Antwortvariable` conditioned on base elements
 
@@ -200,7 +200,7 @@ dataset.references.file="../external/organism_trends/Weighted Vote Count Agrar- 
 --multirun
 ```
 
-Saved to `logs/586_organism_trends_bestconfig_testset_rerun/evaluate/multiruns/`
+Saved to `logs/586_organism_trends_bestconfig_testset_rerun/evaluate/multiruns/2026-09-03_14-47-26`
 
 ##### `Antwortvariable` & `Trend` conditioned on base elements
 
@@ -214,7 +214,7 @@ dataset.references.file="../external/organism_trends/Weighted Vote Count Agrar- 
 --multirun
 ```
 
-Saved to `logs/586_organism_trends_bestconfig_testset_rerun/evaluate/multiruns/`
+Saved to `logs/586_organism_trends_bestconfig_testset_rerun/evaluate/multiruns/2026-09-03_14-47-44`
 
 ### Errors
 
@@ -229,7 +229,7 @@ logs/586_organism_trends_bestconfig_testset_rerun/predict \
 --multirun
 ```
 
-Saved to `logs/586_organism_trends_bestconfig_testset_rerun/evaluate/multiruns/`
+Saved to `logs/586_organism_trends_bestconfig_testset_rerun/evaluate/multiruns/2026-09-03_14-48-04`
 
 ## Outcome
 
@@ -256,13 +256,10 @@ Micro-Recall (ALL.recall)
 
 ![Micro Recall, flattened evaluation](figures/organism_trends_f1_micro_flat-ALL/recall.svg)
 
-TODO Notes (to update!)
-- Micro-F1 on the flatted schema (per-field evaluation)  - Qwen best with 0.436
-- Qwen has very good precision at 0.447, all other models much lower
-- Recall is similar across models (0.53-0.56), except for Qwen (0.43)
-- Flattened results are approx 7-15% (Gemma) lower than the results on the core schema, which had a best 0.504 F1 for GPT OSS 20B and Qwen3, and a low of 0.438 for Gemma and Mistral
-- Compared to dev set results [428_organism_trends_with_chunking](../428_organism_trends_with_chunking), F1 is better for
-  GPT OSS at 0.378 (vs 0.33), worse for Qwen3 (0.436 now vs approx 0.47 then), and better for Mistral (0.308 vs 0.23) and Gemma (0.271 vs 0.24)
+Notes
+- Micro-F1 on the flatted schema (per-field evaluation)  - Qwen best with 0.489
+- Qwen has very good precision at 0.42, all other models much lower
+- Recall is similar across models (0.58-0.64)
 
 #### full compounds
 
@@ -282,9 +279,8 @@ Micro-Recall (ALL.recall)
 
 ![Figure/Table 2: "detail results - precision and recall" - same plots as above, but with recall scores instead of F1](figures/organism_trends_f1_micro-ALL/recall.svg)
 
-TODO Notes (to update)
-- F1 scores range from 0.17 (Qwen3) to 0.018 (Gemma)
-- Compared to the dev set results, results are worse by 2-7% - GPT OSS (0.111 vs 0.135), Qwen (0.172 vs 0.24), Mistral (0.06 vs 0.06), Gemma (0.018 vs 0.075)
+Notes
+- F1 scores range from 0.255 (Qwen3) to 0.134 (Mistral)
 
 #### base elements
 
@@ -304,12 +300,9 @@ Micro-Recall (ALL.recall)
 
 ![Base elements, Micro-Recall](figures/organism_trends_f1_micro_base_entries-ALL/recall.svg)
 
-TODO Notes (to update)
-- Gemma3 performs much worse than the other models on detecting base elements, not sure why this happens since in the core schema, 
-  it performs much better for the 2 variables habitat and species group (0.67 F1 for habitat, 0.57 for species group, 
-  see https://github.com/DFKI-NLP/kibad-llm/blob/main/data/prediction_results/logs/397_faktencheck_core_v1_for_chunking/f1_per_class.png)
-- Compared to the dev set results, where Gemma achieved about 0.2 F1, the 0.06 here are a 14% drop
-- For Qwen and GPT OSS, the drop from the dev set is approx 14% (Qwen) and 5% (GPT OSS)
+Notes
+- Qwen3 best at 0.496, Gemma worst at 0.323. Mostly due to much better precision, i.e. less over-prediction
+
 
 #### `Antwortvariable` conditioned on base elements
 
@@ -329,9 +322,8 @@ Recall
 
 ![Micro-Recall](figures/organism_trends_f1_micro_conditional_variable_only-ALL/recall.svg)
 
-TODO Notes (to update)
-- F1 scores are 3-5% lower than on the dev set
-- Recall is better, precision lower than on the dev set
+Notes
+- All models quite good at 0.67-0.75
 
 #### `Antwortvariable` & `Trend` conditioned on base elements
 
@@ -351,9 +343,8 @@ Recall
 
 ![Micro-Recall](figures/organism_trends_f1_micro_conditional_variable_and_trend-ALL/recall.svg)
 
-TODO Notes (to update)
-- F1 is better than on the dev set by 5-10%
-- Qwen3 is best at 0.5 F1, 0.47 precision and 0.54 recall
+Notes
+- Mistral worst at F1=0.35, GPT5 best at 0.49, Qwen3 at 0.48
 
 ### Errors
 
@@ -367,6 +358,7 @@ TODO Notes (to update)
 
 ![with_error.svg](figures/prediction_errors-total/with_error.svg)
 
-TODO Notes (to update)
-- Mistral has the most errors (approx 64), but this is still negligible compared to the approx 2600 chunks processed.
+Notes
+- GPT5 has reasoning parse errors (293, 2282 correct, so approx 10%) 
+- "ReasoningExtractionError: Could not find any ThinkingBlock content in chat response. Did you enable reasoning summaries via OpenAI Response API?"
 

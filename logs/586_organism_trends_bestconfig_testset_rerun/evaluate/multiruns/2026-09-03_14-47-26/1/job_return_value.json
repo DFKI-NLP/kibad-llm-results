@@ -1,0 +1,59 @@
+{
+  "version": 2,
+  "type": "F1MicroMultipleFieldsMetric",
+  "data": {
+    "organism_trends.Pflanzen&AgrarOffen": {
+      "precision": 0.6496350364963503,
+      "recall": 0.8811881188118812,
+      "f1": 0.7478991596638656,
+      "support": 101
+    },
+    "organism_trends.Wirbellose&AgrarOffen": {
+      "precision": 0.711864406779661,
+      "recall": 0.7636363636363637,
+      "f1": 0.736842105263158,
+      "support": 55
+    },
+    "organism_trends.Wirbeltiere&AgrarOffen": {
+      "precision": 0.8095238095238095,
+      "recall": 0.9444444444444444,
+      "f1": 0.8717948717948718,
+      "support": 18
+    },
+    "AVG": {
+      "precision": 0.7236744175999403,
+      "recall": 0.8630896422975631,
+      "f1": 0.7855120455739651,
+      "support": 58.0
+    },
+    "ALL": {
+      "precision": 0.6820276497695853,
+      "recall": 0.8505747126436781,
+      "f1": 0.7570332480818414,
+      "support": 174
+    }
+  },
+  "prediction": {
+    "job_return_value": {
+      "version": 1,
+      "output_file": "predictions/586_organism_trends_bestconfig_testset_rerun/2026-08-27_15-37-27/2026-08-27_20-09-09_992400/predictions.jsonl",
+      "output_file_absolute": "/netscratch/hennig/code/kibad-llm/predictions/586_organism_trends_bestconfig_testset_rerun/2026-08-27_15-37-27/2026-08-27_20-09-09_992400/predictions.jsonl",
+      "time_pdf_conversion": 0.006971891038119793,
+      "time_extraction": 16029.393650894053,
+      "time_start": 1787854149,
+      "time_end": 1787870260,
+      "commit_hash": "657b217e3490ea750d796a89cb68a64b939f69bc",
+      "branch": "experiment/583_rerun_organism_trend_testset",
+      "is_dirty": false,
+      "slurm_job_id": "3329489"
+    },
+    "overrides": {
+      "name": "586_organism_trends_bestconfig_testset_rerun",
+      "experiment/predict": "organism_trends_with_chunking",
+      "extractor/prompt_template": "organism_trends_v1_with_chunking_AuO",
+      "pdf_directory": "/ds/text/kiba-d/test-set-AuO-WVC",
+      "extractor/llm": "gpt_oss_20b_in_process",
+      "seed": "1337"
+    }
+  }
+}

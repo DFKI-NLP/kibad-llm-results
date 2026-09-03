@@ -1,0 +1,59 @@
+{
+  "version": 2,
+  "type": "F1MicroMultipleFieldsMetric",
+  "data": {
+    "organism_trends.Pflanzen&AgrarOffen": {
+      "precision": 0.25517241379310346,
+      "recall": 0.6271186440677966,
+      "f1": 0.36274509803921573,
+      "support": 118
+    },
+    "organism_trends.Wirbellose&AgrarOffen": {
+      "precision": 0.34306569343065696,
+      "recall": 0.6714285714285714,
+      "f1": 0.4541062801932367,
+      "support": 70
+    },
+    "organism_trends.Wirbeltiere&AgrarOffen": {
+      "precision": 0.358974358974359,
+      "recall": 0.7,
+      "f1": 0.4745762711864407,
+      "support": 20
+    },
+    "AVG": {
+      "precision": 0.3190708220660398,
+      "recall": 0.666182405165456,
+      "f1": 0.430475883139631,
+      "support": 69.33333333333333
+    },
+    "ALL": {
+      "precision": 0.28969957081545067,
+      "recall": 0.6490384615384616,
+      "f1": 0.40059347181008903,
+      "support": 208
+    }
+  },
+  "prediction": {
+    "job_return_value": {
+      "version": 1,
+      "output_file": "predictions/586_organism_trends_bestconfig_testset_rerun/2026-08-27_15-41-52/2026-08-28_00-16-17_654581/predictions.jsonl",
+      "output_file_absolute": "/netscratch/hennig/code/kibad-llm/predictions/586_organism_trends_bestconfig_testset_rerun/2026-08-27_15-41-52/2026-08-28_00-16-17_654581/predictions.jsonl",
+      "time_pdf_conversion": 0.006809571757912636,
+      "time_extraction": 31295.613221346866,
+      "time_start": 1787868977,
+      "time_end": 1787900386,
+      "commit_hash": "657b217e3490ea750d796a89cb68a64b939f69bc",
+      "branch": "experiment/583_rerun_organism_trend_testset",
+      "is_dirty": false,
+      "slurm_job_id": "3329490"
+    },
+    "overrides": {
+      "name": "586_organism_trends_bestconfig_testset_rerun",
+      "experiment/predict": "organism_trends_with_chunking",
+      "extractor/prompt_template": "organism_trends_v1_with_chunking_AuO",
+      "pdf_directory": "/ds/text/kiba-d/test-set-AuO-WVC",
+      "extractor/llm": "gemma3_27b_in_process",
+      "seed": "1337"
+    }
+  }
+}

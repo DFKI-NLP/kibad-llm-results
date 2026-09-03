@@ -1,0 +1,65 @@
+{
+  "version": 2,
+  "type": "F1MicroMultipleFieldsMetric",
+  "data": {
+    "organism_trends.Antwortvariable": {
+      "precision": 0.3318872017353579,
+      "recall": 0.612,
+      "f1": 0.430379746835443,
+      "support": 250
+    },
+    "organism_trends.Hauptgruppe_RoteListen": {
+      "precision": 0.3333333333333333,
+      "recall": 0.6222222222222222,
+      "f1": 0.43410852713178294,
+      "support": 225
+    },
+    "organism_trends.Lebensraum": {
+      "precision": 0.3789173789173789,
+      "recall": 0.6487804878048781,
+      "f1": 0.4784172661870504,
+      "support": 205
+    },
+    "organism_trends.Trend": {
+      "precision": 0.26373626373626374,
+      "recall": 0.576,
+      "f1": 0.3618090452261306,
+      "support": 250
+    },
+    "AVG": {
+      "precision": 0.3269685444305835,
+      "recall": 0.614750677506775,
+      "f1": 0.4261786463451017,
+      "support": 232.5
+    },
+    "ALL": {
+      "precision": 0.3205849268841395,
+      "recall": 0.6129032258064516,
+      "f1": 0.4209748892171344,
+      "support": 930
+    }
+  },
+  "prediction": {
+    "job_return_value": {
+      "version": 1,
+      "output_file": "predictions/586_organism_trends_bestconfig_testset_rerun/2026-08-27_15-37-27/2026-08-28_00-37-40_738693/predictions.jsonl",
+      "output_file_absolute": "/netscratch/hennig/code/kibad-llm/predictions/586_organism_trends_bestconfig_testset_rerun/2026-08-27_15-37-27/2026-08-28_00-37-40_738693/predictions.jsonl",
+      "time_pdf_conversion": 0.006340037100017071,
+      "time_extraction": 16054.48037028592,
+      "time_start": 1787870260,
+      "time_end": 1787886385,
+      "commit_hash": "657b217e3490ea750d796a89cb68a64b939f69bc",
+      "branch": "experiment/583_rerun_organism_trend_testset",
+      "is_dirty": false,
+      "slurm_job_id": "3329489"
+    },
+    "overrides": {
+      "name": "586_organism_trends_bestconfig_testset_rerun",
+      "experiment/predict": "organism_trends_with_chunking",
+      "extractor/prompt_template": "organism_trends_v1_with_chunking_AuO",
+      "pdf_directory": "/ds/text/kiba-d/test-set-AuO-WVC",
+      "extractor/llm": "gpt_oss_20b_in_process",
+      "seed": "7331"
+    }
+  }
+}
