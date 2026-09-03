@@ -1,0 +1,64 @@
+{
+  "version": 2,
+  "type": "F1MicroMultipleFieldsMetric",
+  "data": {
+    "organism_trends.Pflanzen&Wald": {
+      "precision": 0.44,
+      "recall": 0.7623762376237624,
+      "f1": 0.5579710144927537,
+      "support": 101
+    },
+    "organism_trends.Pilze_Flechten&Wald": {
+      "precision": 0.45,
+      "recall": 0.6428571428571429,
+      "f1": 0.5294117647058824,
+      "support": 14
+    },
+    "organism_trends.Wirbellose&Wald": {
+      "precision": 0.3333333333333333,
+      "recall": 0.65,
+      "f1": 0.4406779661016949,
+      "support": 40
+    },
+    "organism_trends.Wirbeltiere&Wald": {
+      "precision": 0.43902439024390244,
+      "recall": 0.7346938775510204,
+      "f1": 0.549618320610687,
+      "support": 49
+    },
+    "AVG": {
+      "precision": 0.41558943089430894,
+      "recall": 0.6974818145079814,
+      "f1": 0.5194197664777545,
+      "support": 51.0
+    },
+    "ALL": {
+      "precision": 0.4169014084507042,
+      "recall": 0.7254901960784313,
+      "f1": 0.5295169946332737,
+      "support": 204
+    }
+  },
+  "prediction": {
+    "job_return_value": {
+      "version": 1,
+      "output_file": "predictions/591_organism_trends_bestconfig_devset_rerun/2026-09-02_08-10-30/2026-09-02_08-10-31_166418/predictions.jsonl",
+      "output_file_absolute": "/netscratch/hennig/code/tmp/kibad-llm/predictions/591_organism_trends_bestconfig_devset_rerun/2026-09-02_08-10-30/2026-09-02_08-10-31_166418/predictions.jsonl",
+      "time_pdf_conversion": 0.004947378998622298,
+      "time_extraction": 74680.42462298402,
+      "time_start": 1788329431,
+      "time_end": 1788404178,
+      "commit_hash": "8bdd90b30dc7e8e125741e69516a2e6a7c317a45",
+      "branch": "experiment/591_rerun_organism_trend_devset",
+      "is_dirty": false,
+      "slurm_job_id": "3348923"
+    },
+    "overrides": {
+      "name": "591_organism_trends_bestconfig_devset_rerun",
+      "experiment/predict": "organism_trends_with_chunking",
+      "pdf_directory": "/ds/text/kiba-d/dev-set-Wald-WVC",
+      "extractor/llm": "gpt_5",
+      "seed": "42"
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "version": 2,
+  "type": "F1MicroMultipleFieldsMetric",
+  "data": {
+    "organism_trends.Pflanzen&Wald": {
+      "precision": 0.7058823529411765,
+      "recall": 0.759493670886076,
+      "f1": 0.7317073170731707,
+      "support": 79
+    },
+    "organism_trends.Pilze_Flechten&Wald": {
+      "precision": 0.7142857142857143,
+      "recall": 0.6666666666666666,
+      "f1": 0.689655172413793,
+      "support": 15
+    },
+    "organism_trends.Wirbellose&Wald": {
+      "precision": 0.7021276595744681,
+      "recall": 0.75,
+      "f1": 0.7252747252747254,
+      "support": 44
+    },
+    "organism_trends.Wirbeltiere&Wald": {
+      "precision": 0.31645569620253167,
+      "recall": 0.44642857142857145,
+      "f1": 0.37037037037037035,
+      "support": 56
+    },
+    "AVG": {
+      "precision": 0.6096878557509726,
+      "recall": 0.6556472272453285,
+      "f1": 0.6292518962830149,
+      "support": 48.5
+    },
+    "ALL": {
+      "precision": 0.5688888888888889,
+      "recall": 0.6597938144329897,
+      "f1": 0.6109785202863962,
+      "support": 194
+    }
+  },
+  "prediction": {
+    "job_return_value": {
+      "version": 1,
+      "output_file": "predictions/591_organism_trends_bestconfig_devset_rerun/2026-08-31_10-42-26/2026-09-01_22-51-16_603141/predictions.jsonl",
+      "output_file_absolute": "/netscratch/hennig/code/tmp/kibad-llm/predictions/591_organism_trends_bestconfig_devset_rerun/2026-08-31_10-42-26/2026-09-01_22-51-16_603141/predictions.jsonl",
+      "time_pdf_conversion": 0.007064014207571745,
+      "time_extraction": 63157.614449974615,
+      "time_start": 1788295876,
+      "time_end": 1788359123,
+      "commit_hash": "8bdd90b30dc7e8e125741e69516a2e6a7c317a45",
+      "branch": "experiment/591_rerun_organism_trend_devset",
+      "is_dirty": false,
+      "slurm_job_id": "3343453"
+    },
+    "overrides": {
+      "name": "591_organism_trends_bestconfig_devset_rerun",
+      "experiment/predict": "organism_trends_with_chunking",
+      "pdf_directory": "/ds/text/kiba-d/dev-set-Wald-WVC",
+      "extractor/llm": "mistral_small_3_24b_in_process",
+      "seed": "7331"
+    }
+  }
+}

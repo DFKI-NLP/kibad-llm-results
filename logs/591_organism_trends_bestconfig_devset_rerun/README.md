@@ -161,7 +161,7 @@ dataset.references.file="../external/organism_trends/Referenz_Wald_korrigiert_an
 --multirun
 ```
 
-Saved to `logs/591_organism_trends_bestconfig_devset_rerun/evaluate/multiruns/XXX`
+Saved to `logs/591_organism_trends_bestconfig_devset_rerun/evaluate/multiruns/2026-09-03_14-12-03-017455`
 
 ##### full compounds
 
@@ -175,7 +175,7 @@ dataset.references.file="../external/organism_trends/Referenz_Wald_korrigiert_an
 --multirun
 ```
 
-Saved to `logs/591_organism_trends_bestconfig_devset_rerun/evaluate/multiruns/XXX`
+Saved to `logs/591_organism_trends_bestconfig_devset_rerun/evaluate/multiruns/2026-09-03_14-12-45-176118`
 
 ##### base elements
 
@@ -189,7 +189,7 @@ dataset.references.file="../external/organism_trends/Referenz_Wald_korrigiert_an
 --multirun
 ```
 
-Saved to `logs/591_organism_trends_bestconfig_devset_rerun/evaluate/multiruns/XXX`
+Saved to `logs/591_organism_trends_bestconfig_devset_rerun/evaluate/multiruns/2026-09-03_14-13-15-837918`
 
 ##### `Antwortvariable` conditioned on base elements
 
@@ -203,7 +203,7 @@ dataset.references.file="../external/organism_trends/Referenz_Wald_korrigiert_an
 --multirun
 ```
 
-Saved to `logs/591_organism_trends_bestconfig_devset_rerun/evaluate/multiruns/XXX`
+Saved to `logs/591_organism_trends_bestconfig_devset_rerun/evaluate/multiruns/2026-09-03_14-13-42-891121`
 
 ##### `Antwortvariable` & `Trend` conditioned on base elements
 
@@ -217,7 +217,7 @@ dataset.references.file="../external/organism_trends/Referenz_Wald_korrigiert_an
 --multirun
 ```
 
-Saved to `logs/591_organism_trends_bestconfig_devset_rerun/evaluate/multiruns/XXX`
+Saved to `logs/591_organism_trends_bestconfig_devset_rerun/evaluate/multiruns/2026-09-03_14-14-04-992680`
 
 ### Errors
 
@@ -232,7 +232,7 @@ logs/591_organism_trends_bestconfig_devset_rerun/predict \
 --multirun
 ```
 
-Saved to `logs/591_organism_trends_bestconfig_devset_rerun/evaluate/multiruns/XXX`
+Saved to `logs/591_organism_trends_bestconfig_devset_rerun/evaluate/multiruns/2026-09-03_14-14-32-233894`
 
 ## Outcome
 
