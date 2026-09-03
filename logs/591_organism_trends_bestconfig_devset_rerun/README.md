@@ -113,7 +113,7 @@ seed=42,1337,7331 \
 =============================================
 ```
 
-Saved to `logs/591_organism_trends_bestconfig_devset_rerun/predict/multiruns/`
+Saved to `logs/591_organism_trends_bestconfig_devset_rerun/predict/multiruns/2026-08-31_10-42-26`
 
 ### gpt_5
 
@@ -143,7 +143,7 @@ seed=42 \
 =============================================
 ```
 
-Saved to `logs/591_organism_trends_bestconfig_devset_rerun/predict/multiruns/`
+Saved to `logs/591_organism_trends_bestconfig_devset_rerun/predict/multiruns/2026-09-02_08-10-30`
 
 ## Evaluation
 
