@@ -381,6 +381,6 @@ Notes
 ![with_error.svg](figures/prediction_errors-total/with_error.svg)
 
 Notes
-- GPT5 has reasoning parse errors (293, 2282 correct, so approx 10%) 
+- GPT5 has reasoning parse errors (293, 2282 correct, so approx 10%) - but this is the non-breaking one, so we can ignore it
 - "ReasoningExtractionError: Could not find any ThinkingBlock content in chat response. Did you enable reasoning summaries via OpenAI Response API?"
 
