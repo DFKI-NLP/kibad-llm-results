@@ -3,6 +3,16 @@
 Evaluation of the best setup (with chunking) from [549_organism_trends_bestconfig_testset](../549_organism_trends_bestconfig_testset), 
 but with a fixed prompt template `organism_trends_v1_with_chunking_AuO.yaml`. 
 
+The prediction runs in [#549](../549_organism_trends_bestconfig_testset) and [#574](../574_gpt5_organism_trends_testset) on the 
+OrganismTrend test set for the 'Agrarian and open spaces' habitat used the prompt template organism_trends_v1_with_chunking, 
+which unfortunately contains some 'Wald' habitat specific text. In addition, a total of 11 PDF files mentioned in the test reference 
+file were missing, similar to the validation set.
+
+This folder contains reruns the OrganismTrend schema experiments for the journal publication with the LLMs Gemma, Qwen, 
+GPT OSS, and Mistral, plus GPT5. It follows [#574](../574_gpt5_organism_trends_testset) for GPT5 and 
+[#549](../549_organism_trends_bestconfig_testset), but changes the prompt template to 'organism_trends_v1_with_chunking_AuO.yaml'
+and adds predictions for the 11 missing PDFs.
+
 ## Prediction
 
 Base for the commands are https://github.com/DFKI-NLP/kibad-llm/tree/main/data/prediction_results/logs/549_organism_trends_bestconfig_testset
@@ -260,6 +270,9 @@ Notes
 - Micro-F1 on the flatted schema (per-field evaluation)  - Qwen best with 0.489
 - Qwen has very good precision at 0.42, all other models much lower
 - Recall is similar across models (0.58-0.64)
+- Compared to [#574](../574_gpt5_organism_trends_testset) for GPT5 and 
+[#549](../549_organism_trends_bestconfig_testset), F1 scores improve by 4-5 points for all open-source LLMs, and 
+  about 1 point for GPT5
 
 #### full compounds
 
@@ -281,6 +294,9 @@ Micro-Recall (ALL.recall)
 
 Notes
 - F1 scores range from 0.255 (Qwen3) to 0.134 (Mistral)
+- Compared to [#574](../574_gpt5_organism_trends_testset) for GPT5 and 
+[#549](../549_organism_trends_bestconfig_testset), F1 scores improve by 7-12 points for all open-source LLMs, and 
+  about 2 points for GPT5
 
 #### base elements
 
@@ -302,7 +318,9 @@ Micro-Recall (ALL.recall)
 
 Notes
 - Qwen3 best at 0.496, Gemma worst at 0.323. Mostly due to much better precision, i.e. less over-prediction
-
+- Compared to [#574](../574_gpt5_organism_trends_testset) for GPT5 and 
+[#549](../549_organism_trends_bestconfig_testset), F1 scores improve by 15-27 points for all open-source LLMs, and 
+  about 7 points for GPT5
 
 #### `Antwortvariable` conditioned on base elements
 
@@ -324,6 +342,8 @@ Recall
 
 Notes
 - All models quite good at 0.67-0.75
+- Compared to [#574](../574_gpt5_organism_trends_testset) for GPT5 and 
+[#549](../549_organism_trends_bestconfig_testset), F1 scores is on par or up to 2-3 points lower
 
 #### `Antwortvariable` & `Trend` conditioned on base elements
 
@@ -345,6 +365,8 @@ Recall
 
 Notes
 - Mistral worst at F1=0.35, GPT5 best at 0.49, Qwen3 at 0.48
+- Compared to [#574](../574_gpt5_organism_trends_testset) for GPT5 and 
+[#549](../549_organism_trends_bestconfig_testset), F1 scores is on par or up to 2-5 points lower
 
 ### Errors
 
