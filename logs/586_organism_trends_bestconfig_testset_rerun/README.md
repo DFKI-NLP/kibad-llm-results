@@ -266,6 +266,10 @@ Micro-Recall (ALL.recall)
 
 ![Micro Recall, flattened evaluation](figures/organism_trends_f1_micro_flat-ALL/recall.svg)
 
+Support
+
+![Support, flattened evaluation](figures/organism_trends_f1_micro_flat-ALL/support.svg)
+
 Notes
 - Micro-F1 on the flatted schema (per-field evaluation)  - Qwen best with 0.489
 - Qwen has very good precision at 0.42, all other models much lower
@@ -292,6 +296,10 @@ Micro-Recall (ALL.recall)
 
 ![Figure/Table 2: "detail results - precision and recall" - same plots as above, but with recall scores instead of F1](figures/organism_trends_f1_micro-ALL/recall.svg)
 
+Support
+
+![Support, full compounds](figures/organism_trends_f1_micro-ALL/support.svg)
+
 Notes
 - F1 scores range from 0.255 (Qwen3) to 0.134 (Mistral)
 - Compared to [#574](../574_gpt5_organism_trends_testset) for GPT5 and 
@@ -315,6 +323,10 @@ Micro-Precision (ALL.precision)
 Micro-Recall (ALL.recall)
 
 ![Base elements, Micro-Recall](figures/organism_trends_f1_micro_base_entries-ALL/recall.svg)
+
+Support
+
+![Support, Base elements](figures/organism_trends_f1_micro_base_entries-ALL/support.svg)
 
 Notes
 - Qwen3 best at 0.496, Gemma worst at 0.323. Mostly due to much better precision, i.e. less over-prediction
@@ -340,8 +352,13 @@ Recall
 
 ![Micro-Recall](figures/organism_trends_f1_micro_conditional_variable_only-ALL/recall.svg)
 
+Support
+
+![Support](figures/organism_trends_f1_micro_conditional_variable_only-ALL/support.svg)
+
 Notes
 - All models quite good at 0.67-0.75
+- gpt_5 0.755 on support 173, mistral 0.669 on support 191
 - Compared to [#574](../574_gpt5_organism_trends_testset) for GPT5 and 
 [#549](../549_organism_trends_bestconfig_testset), F1 scores is on par or up to 2-3 points lower
 
@@ -363,8 +380,13 @@ Recall
 
 ![Micro-Recall](figures/organism_trends_f1_micro_conditional_variable_and_trend-ALL/recall.svg)
 
+Support
+
+![Support](figures/organism_trends_f1_micro_conditional_variable_and_trend-ALL/support.svg)
+
 Notes
 - Mistral worst at F1=0.35, GPT5 best at 0.49, Qwen3 at 0.48
+- gpt_5 0.491 on support 191, mistral 0.352 on support 210
 - Compared to [#574](../574_gpt5_organism_trends_testset) for GPT5 and 
 [#549](../549_organism_trends_bestconfig_testset), F1 scores is on par or up to 2-5 points lower
 
@@ -381,6 +403,6 @@ Notes
 ![with_error.svg](figures/prediction_errors-total/with_error.svg)
 
 Notes
-- GPT5 has reasoning parse errors (293, 2282 correct, so approx 10%) - but this is the non-breaking one, so we can ignore it
-- "ReasoningExtractionError: Could not find any ThinkingBlock content in chat response. Did you enable reasoning summaries via OpenAI Response API?"
-
+- GPT5 has reasoning parse errors (293, 2282 correct, so approx 10%) - but this is the non-breaking one (see [here](https://github.com/DFKI-NLP/kibad-llm-results/pull/5))
+- Mistral loses ~2.8% of chunks outright (JSONDecodeErrors)
+- All other models have less than 20 erroneous chunks, from the total of 2575 chunks
