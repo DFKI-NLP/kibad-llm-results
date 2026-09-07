@@ -259,6 +259,11 @@ Micro-Recall (ALL.recall)
 
 ![Micro Recall, flattened evaluation](figures/organism_trends_f1_micro_flat-ALL/recall.svg)
 
+Support
+
+![Support](figures/organism_trends_f1_micro_flat-ALL/support.svg)
+
+
 Notes
 - Micro-F1 on the flatted schema (per-field evaluation)  - Qwen best with 0.54
 - Qwen has very good precision at 0.437, all other models much lower
@@ -282,8 +287,12 @@ Micro-Recall (ALL.recall)
 
 ![Figure/Table 2: "detail results - precision and recall" - same plots as above, but with recall scores instead of F1](figures/organism_trends_f1_micro-ALL/recall.svg)
 
+Support
+
+![Support](figures/organism_trends_f1_micro-ALL/support.svg)
+
 Notes
-- F1 scores range from 0.3 (Qwen3) to 0.09 (Gemma)
+- F1 scores range from 0.3 (Qwen3) to 0.09 (Mistral)
 
 #### base elements
 
@@ -302,6 +311,10 @@ Micro-Precision (ALL.precision)
 Micro-Recall (ALL.recall)
 
 ![Base elements, Micro-Recall](figures/organism_trends_f1_micro_base_entries-ALL/recall.svg)
+
+Support
+
+![Support](figures/organism_trends_f1_micro_base_entries-ALL/support.svg)
 
 Notes
 - Gemma3 and Mistral perform much worse than the other models
@@ -325,8 +338,13 @@ Recall
 
 ![Micro-Recall](figures/organism_trends_f1_micro_conditional_variable_only-ALL/recall.svg)
 
+Support
+
+![Support](figures/organism_trends_f1_micro_conditional_variable_only-ALL/support.svg)
+
 Notes
 - All models quite good at F1=0.78-0.83, except Mistral with 0.62
+- gpt_5 0.832 on support 173, mistral 0.617 on support 192
 
 #### `Antwortvariable` & `Trend` conditioned on base elements
 
@@ -346,9 +364,14 @@ Recall
 
 ![Micro-Recall](figures/organism_trends_f1_micro_conditional_variable_and_trend-ALL/recall.svg)
 
+Support
+
+![Support](figures/organism_trends_f1_micro_conditional_variable_and_trend-ALL/support.svg)
+
 Notes
 - GPT5 best at F1 = 0.53, Qwen/GPT OSS at 0.48
 - Mistral worst at 0.32
+- gpt_5 0.530 on support 204, mistral 0.323 on support 227
 
 ### Errors
 
@@ -363,7 +386,8 @@ Notes
 ![with_error.svg](figures/prediction_errors-total/with_error.svg)
 
 Notes
-- GPT5 still has most errors (248, all are ReasoningExtractionErrors ("ReasoningExtractionError: Could not find 
-  any ThinkingBlock content in chat response. Did you enable reasoning summaries via OpenAI Responses API")
+- GPT5 still has most errors (248, all are non-critical ReasoningExtractionErrors 
+- Mistral has the most JSONDecode errors, it loses 44-54 chunks (1.9%) of the 2653 total chunks
+- Other models have very few errors (<20).
 
 
