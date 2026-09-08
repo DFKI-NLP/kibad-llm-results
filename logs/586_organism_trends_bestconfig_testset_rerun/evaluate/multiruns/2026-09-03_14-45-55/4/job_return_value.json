@@ -1,0 +1,65 @@
+{
+  "version": 2,
+  "type": "F1MicroMultipleFieldsMetric",
+  "data": {
+    "organism_trends.Antwortvariable": {
+      "precision": 0.25862068965517243,
+      "recall": 0.66,
+      "f1": 0.3716216216216216,
+      "support": 250
+    },
+    "organism_trends.Hauptgruppe_RoteListen": {
+      "precision": 0.23233908948194662,
+      "recall": 0.6577777777777778,
+      "f1": 0.34338747099767986,
+      "support": 225
+    },
+    "organism_trends.Lebensraum": {
+      "precision": 0.33489461358313816,
+      "recall": 0.697560975609756,
+      "f1": 0.4525316455696203,
+      "support": 205
+    },
+    "organism_trends.Trend": {
+      "precision": 0.17204301075268819,
+      "recall": 0.576,
+      "f1": 0.2649494020239191,
+      "support": 250
+    },
+    "AVG": {
+      "precision": 0.24947435086823636,
+      "recall": 0.6478346883468835,
+      "f1": 0.35812253505321023,
+      "support": 232.5
+    },
+    "ALL": {
+      "precision": 0.23631350925561245,
+      "recall": 0.6451612903225806,
+      "f1": 0.3459210147016431,
+      "support": 930
+    }
+  },
+  "prediction": {
+    "job_return_value": {
+      "version": 1,
+      "output_file": "predictions/586_organism_trends_bestconfig_testset_rerun/2026-08-27_15-41-52/2026-08-28_00-16-17_654581/predictions.jsonl",
+      "output_file_absolute": "/netscratch/hennig/code/kibad-llm/predictions/586_organism_trends_bestconfig_testset_rerun/2026-08-27_15-41-52/2026-08-28_00-16-17_654581/predictions.jsonl",
+      "time_pdf_conversion": 0.006809571757912636,
+      "time_extraction": 31295.613221346866,
+      "time_start": 1787868977,
+      "time_end": 1787900386,
+      "commit_hash": "657b217e3490ea750d796a89cb68a64b939f69bc",
+      "branch": "experiment/583_rerun_organism_trend_testset",
+      "is_dirty": false,
+      "slurm_job_id": "3329490"
+    },
+    "overrides": {
+      "name": "586_organism_trends_bestconfig_testset_rerun",
+      "experiment/predict": "organism_trends_with_chunking",
+      "extractor/prompt_template": "organism_trends_v1_with_chunking_AuO",
+      "pdf_directory": "/ds/text/kiba-d/test-set-AuO-WVC",
+      "extractor/llm": "gemma3_27b_in_process",
+      "seed": "1337"
+    }
+  }
+}

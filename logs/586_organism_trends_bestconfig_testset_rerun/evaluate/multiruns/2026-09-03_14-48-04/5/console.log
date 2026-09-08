@@ -1,0 +1,20 @@
+[2026-09-03 14:48:06,913][__main__][INFO] - Loading dataset with predictions and references ...
+[2026-09-03 14:48:06,913][__main__][INFO] - Dataset config: {'predictions': {'_target_': 'kibad_llm.dataset.prediction.load_with_metadata', 'log': 'logs/586_organism_trends_bestconfig_testset_rerun/predict/multiruns/2026-08-27_15-41-52/2', 'file': None, 'id_key': 'file_name', 'process_id': {'_partial_': True, '_target_': 'kibad_llm.utils.path.strip_filename_extension'}, 'preprocess': None}, '_target_': 'kibad_llm.dataset.utils.merge_references_into_predictions', 'references': {}, 'allow_missing_references': True}
+[2026-09-03 14:48:06,915][kibad_llm.dataset.json][INFO] - Loading dataset from JSON file: predictions/586_organism_trends_bestconfig_testset_rerun/2026-08-27_15-41-52/2026-08-28_08-59-46_627205/predictions.jsonl ...
+[2026-09-03 14:48:06,996][__main__][INFO] - Instantiating metric ...
+[2026-09-03 14:48:06,996][__main__][INFO] - Metric config: {'_target_': 'kibad_llm.metrics.ErrorCollector', 'type_separator': ': ', 'show_errors': True}
+[2026-09-03 14:48:06,997][__main__][INFO] - Computing metric ...
+[2026-09-03 14:48:06,998][kibad_llm.metrics.errors][INFO] - Collected error (id=62EEIN6Q): JSONDecodeError: Expecting ',' delimiter: line 658 column 42 (char 79109)
+[2026-09-03 14:48:06,998][kibad_llm.metrics.errors][INFO] - Collected error (id=GSLW6Z8Y): JSONDecodeError: Expecting ',' delimiter: line 15 column 96106 (char 96732)
+[2026-09-03 14:48:06,998][kibad_llm.metrics.errors][INFO] - Collected error (id=Heinrich1998): JSONDecodeError: Expecting ',' delimiter: line 14 column 128438 (char 129168)
+[2026-09-03 14:48:06,998][kibad_llm.metrics.errors][INFO] - Collected error (id=Heinrich1998): JSONDecodeError: Expecting ',' delimiter: line 28 column 105316 (char 106447)
+[2026-09-03 14:48:06,998][kibad_llm.metrics.errors][INFO] - Collected error (id=KAZKCZYK): JSONDecodeError: Unterminated string starting at: line 1095 column 1 (char 22405)
+[2026-09-03 14:48:06,998][kibad_llm.metrics.errors][INFO] - Collected error (id=UH4E8K9B): JSONDecodeError: Expecting ',' delimiter: line 4067 column 1 (char 36764)
+[2026-09-03 14:48:06,999][kibad_llm.metric][INFO] - Evaluation results:
+{
+  "no_error": 2569,
+  "with_error": 6,
+  "JSONDecodeError": 6
+}
+[2026-09-03 14:48:07,006][kibad_llm.hydra_callbacks.save_job_return_value.SaveJobReturnValueCallback][INFO] - Saving job_return in /home/leonhard/Dokumente/code/dfki/kiba-d/kibad-llm/logs/586_organism_trends_bestconfig_testset_rerun/evaluate/multiruns/2026-09-03_14-48-04/5/job_return_value.json
+[2026-09-03 14:48:07,007][kibad_llm.hydra_callbacks.save_job_return_value.SaveJobReturnValueCallback][INFO] - Saving job_return in /home/leonhard/Dokumente/code/dfki/kiba-d/kibad-llm/logs/586_organism_trends_bestconfig_testset_rerun/evaluate/multiruns/2026-09-03_14-48-04/5/job_return_value.md

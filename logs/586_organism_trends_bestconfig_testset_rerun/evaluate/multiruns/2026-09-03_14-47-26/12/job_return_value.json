@@ -1,0 +1,59 @@
+{
+  "version": 2,
+  "type": "F1MicroMultipleFieldsMetric",
+  "data": {
+    "organism_trends.Pflanzen&AgrarOffen": {
+      "precision": 0.6330935251798561,
+      "recall": 0.8543689320388349,
+      "f1": 0.7272727272727272,
+      "support": 103
+    },
+    "organism_trends.Wirbellose&AgrarOffen": {
+      "precision": 0.6857142857142857,
+      "recall": 0.9056603773584906,
+      "f1": 0.7804878048780488,
+      "support": 53
+    },
+    "organism_trends.Wirbeltiere&AgrarOffen": {
+      "precision": 0.8333333333333334,
+      "recall": 0.8823529411764706,
+      "f1": 0.8571428571428571,
+      "support": 17
+    },
+    "AVG": {
+      "precision": 0.7173803814091584,
+      "recall": 0.8807940835245986,
+      "f1": 0.7883011297645443,
+      "support": 57.666666666666664
+    },
+    "ALL": {
+      "precision": 0.6651982378854625,
+      "recall": 0.8728323699421965,
+      "f1": 0.755,
+      "support": 173
+    }
+  },
+  "prediction": {
+    "job_return_value": {
+      "version": 1,
+      "output_file": "predictions/586_organism_trends_bestconfig_testset_rerun/2026-09-02_08-11-01/2026-09-02_08-11-02_238501/predictions.jsonl",
+      "output_file_absolute": "/netscratch/hennig/code/kibad-llm/predictions/586_organism_trends_bestconfig_testset_rerun/2026-09-02_08-11-01/2026-09-02_08-11-02_238501/predictions.jsonl",
+      "time_pdf_conversion": 0.1841560330358334,
+      "time_extraction": 70515.05061936995,
+      "time_start": 1788329462,
+      "time_end": 1788400067,
+      "commit_hash": "657b217e3490ea750d796a89cb68a64b939f69bc",
+      "branch": "experiment/583_rerun_organism_trend_testset",
+      "is_dirty": false,
+      "slurm_job_id": "3348924"
+    },
+    "overrides": {
+      "name": "586_organism_trends_bestconfig_testset_rerun",
+      "experiment/predict": "organism_trends_with_chunking",
+      "extractor/prompt_template": "organism_trends_v1_with_chunking_AuO",
+      "pdf_directory": "/ds/text/kiba-d/test-set-AuO-WVC",
+      "extractor/llm": "gpt_5",
+      "seed": "42"
+    }
+  }
+}

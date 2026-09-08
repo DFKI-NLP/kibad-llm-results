@@ -1,0 +1,6 @@
+- dataset.predictions.log=logs/586_organism_trends_bestconfig_testset_rerun/predict/multiruns/2026-08-27_15-41-52/0
+- name=586_organism_trends_bestconfig_testset_rerun
+- experiment/evaluate=organism_trends_f1_micro_conditional_variable_and_trend
+- prediction_logs=logs/586_organism_trends_bestconfig_testset_rerun/predict
+- dataset.references.file=../external/organism_trends/Weighted\ Vote\ Count\ Agrar-\
+  und\ Offenland\ Literatur\ -\ Sheet1.csv
