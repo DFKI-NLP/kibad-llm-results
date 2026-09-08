@@ -1,0 +1,64 @@
+{
+  "version": 2,
+  "type": "F1MicroMultipleFieldsMetric",
+  "data": {
+    "organism_trends.Pflanzen&Wald": {
+      "precision": 0.5151515151515151,
+      "recall": 0.5368421052631579,
+      "f1": 0.5257731958762888,
+      "support": 95
+    },
+    "organism_trends.Pilze_Flechten&Wald": {
+      "precision": 0.46153846153846156,
+      "recall": 0.46153846153846156,
+      "f1": 0.46153846153846156,
+      "support": 13
+    },
+    "organism_trends.Wirbellose&Wald": {
+      "precision": 0.37735849056603776,
+      "recall": 0.4166666666666667,
+      "f1": 0.3960396039603961,
+      "support": 48
+    },
+    "organism_trends.Wirbeltiere&Wald": {
+      "precision": 0.4155844155844156,
+      "recall": 0.64,
+      "f1": 0.5039370078740157,
+      "support": 50
+    },
+    "AVG": {
+      "precision": 0.44240822071010755,
+      "recall": 0.5137618083670715,
+      "f1": 0.47182206731229054,
+      "support": 51.5
+    },
+    "ALL": {
+      "precision": 0.45041322314049587,
+      "recall": 0.529126213592233,
+      "f1": 0.4866071428571429,
+      "support": 206
+    }
+  },
+  "prediction": {
+    "job_return_value": {
+      "version": 1,
+      "output_file": "predictions/591_organism_trends_bestconfig_devset_rerun/2026-08-28_05-06-51/2026-08-28_13-13-33_189038/predictions.jsonl",
+      "output_file_absolute": "/netscratch/hennig/code/tmp/kibad-llm/predictions/591_organism_trends_bestconfig_devset_rerun/2026-08-28_05-06-51/2026-08-28_13-13-33_189038/predictions.jsonl",
+      "time_pdf_conversion": 0.006344158668071032,
+      "time_extraction": 28738.804847778752,
+      "time_start": 1787915613,
+      "time_end": 1787944430,
+      "commit_hash": "8bdd90b30dc7e8e125741e69516a2e6a7c317a45",
+      "branch": "experiment/591_rerun_organism_trend_devset",
+      "is_dirty": false,
+      "slurm_job_id": "3329674"
+    },
+    "overrides": {
+      "name": "591_organism_trends_bestconfig_devset_rerun",
+      "experiment/predict": "organism_trends_with_chunking",
+      "pdf_directory": "/ds/text/kiba-d/dev-set-Wald-WVC",
+      "extractor/llm": "qwen3_30b_in_process",
+      "seed": "1337"
+    }
+  }
+}

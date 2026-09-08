@@ -2,7 +2,7 @@
 
 This folder contains committed prediction and evaluation results for reproducible experiments.
 
-For instructions on naming, running, copying, evaluating, and documenting experiments, see [CONTRIBUTING_EXPERIMENTS.md](/CONTRIBUTING_EXPERIMENTS.md).
+For instructions on naming, running, copying, evaluating, and documenting experiments, see [CONTRIBUTING_EXPERIMENTS.md](https://github.com/DFKI-NLP/kibad-llm/blob/main/docs/CONTRIBUTING-EXPERIMENTS.md).
 
 ### Experiments
 
@@ -52,3 +52,4 @@ For instructions on naming, running, copying, evaluating, and documenting experi
 | [574_gpt5_organism_trends_testset](logs/574_gpt5_organism_trends_testset) | 2026-08-03 | https://github.com/DFKI-NLP/kibad-llm/pull/574 | GPT-5 on the Organism trends true test set (Agrar- und Offenland), re-filling the slot deleted from [549_organism_trends_bestconfig_testset](logs/549_organism_trends_bestconfig_testset); single seed; 265 of 2546 chunks with errors, all `ReasoningExtractionError`; ALL F1 0.194 (full compounds) |
 | [559_nemotron_lone_surrogate_repro](logs/559_nemotron_lone_surrogate_repro) | 2026-07-17 | https://github.com/DFKI-NLP/kibad-llm/pull/559 | attempts to reproduce the lone-surrogate `UnicodeEncodeError` from [issue #555](https://github.com/DFKI-NLP/kibad-llm/issues/555) live with nemotron_nano_3_30b on the fix commit; neither a single seed=7331 run nor the full 3-seed multirun (matching 251_nemotron_faktencheck_core) reproduced it; this does **not** contain any predictions or logs |
 | [586_organism_trends_bestconfig_testset_rerun](logs/586_organism_trends_bestconfig_testset_rerun) | 2026-08-19 | https://github.com/DFKI-NLP/kibad-llm/pull/586 | Rerun the OrganismTrend experiments on the test set with a fixed prompt template that does not use 'Wald', but 'Agrar- und Offenland' in the text |
+| [591_organism_trends_bestconfig_devset_rerun](logs/591_organism_trends_bestconfig_devset_rerun) | 2026-08-27 | https://github.com/DFKI-NLP/kibad-llm/pull/591 | Rerun the OrganismTrend experiments on the validation set with all input PDFs available (59 were missing) |

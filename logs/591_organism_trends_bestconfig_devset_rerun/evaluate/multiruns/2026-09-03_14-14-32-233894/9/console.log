@@ -1,0 +1,65 @@
+[2026-09-03 14:14:35,429][__main__][INFO] - Loading dataset with predictions and references ...
+[2026-09-03 14:14:35,430][__main__][INFO] - Dataset config: {'predictions': {'_target_': 'kibad_llm.dataset.prediction.load_with_metadata', 'log': 'logs/591_organism_trends_bestconfig_devset_rerun/predict/multiruns/2026-08-31_10-42-26/0', 'file': None, 'id_key': 'file_name', 'process_id': {'_partial_': True, '_target_': 'kibad_llm.utils.path.strip_filename_extension'}, 'preprocess': None}, '_target_': 'kibad_llm.dataset.utils.merge_references_into_predictions', 'references': {}, 'allow_missing_references': True}
+[2026-09-03 14:14:35,432][kibad_llm.dataset.json][INFO] - Loading dataset from JSON file: predictions/591_organism_trends_bestconfig_devset_rerun/2026-08-31_10-42-26/2026-08-31_10-42-27_779335/predictions.jsonl ...
+[2026-09-03 14:14:35,533][__main__][INFO] - Instantiating metric ...
+[2026-09-03 14:14:35,533][__main__][INFO] - Metric config: {'_target_': 'kibad_llm.metrics.ErrorCollector', 'type_separator': ': ', 'show_errors': True}
+[2026-09-03 14:14:35,534][__main__][INFO] - Computing metric ...
+[2026-09-03 14:14:35,534][kibad_llm.metrics.errors][INFO] - Collected error (id=3E8X2AK3): JSONDecodeError: Expecting property name enclosed in double quotes: line 1083 column 8 (char 28262)
+[2026-09-03 14:14:35,534][kibad_llm.metrics.errors][INFO] - Collected error (id=3QW52TTQ): JSONDecodeError: Unterminated string starting at: line 296 column 28 (char 24821)
+[2026-09-03 14:14:35,534][kibad_llm.metrics.errors][INFO] - Collected error (id=3XPIEU83): JSONDecodeError: Unterminated string starting at: line 342 column 28 (char 27660)
+[2026-09-03 14:14:35,534][kibad_llm.metrics.errors][INFO] - Collected error (id=4LCB2LPP): JSONDecodeError: Unterminated string starting at: line 1034 column 28 (char 27372)
+[2026-09-03 14:14:35,535][kibad_llm.metrics.errors][INFO] - Collected error (id=4LCB2LPP): JSONDecodeError: Unterminated string starting at: line 394 column 7 (char 23444)
+[2026-09-03 14:14:35,535][kibad_llm.metrics.errors][INFO] - Collected error (id=5J45FFAM): JSONDecodeError: Unterminated string starting at: line 688 column 9 (char 33275)
+[2026-09-03 14:14:35,535][kibad_llm.metrics.errors][INFO] - Collected error (id=5P44KFTT): JSONDecodeError: Expecting property name enclosed in double quotes: line 815 column 8 (char 34765)
+[2026-09-03 14:14:35,535][kibad_llm.metrics.errors][INFO] - Collected error (id=7F9MWKJE): JSONDecodeError: Unterminated string starting at: line 370 column 9 (char 26275)
+[2026-09-03 14:14:35,535][kibad_llm.metrics.errors][INFO] - Collected error (id=ACG4BBPP): JSONDecodeError: Unterminated string starting at: line 1044 column 9 (char 27227)
+[2026-09-03 14:14:35,535][kibad_llm.metrics.errors][INFO] - Collected error (id=AUSW4BDA): JSONDecodeError: Expecting ',' delimiter: line 1036 column 1 (char 31025)
+[2026-09-03 14:14:35,535][kibad_llm.metrics.errors][INFO] - Collected error (id=Fischer2015A): JSONDecodeError: Expecting value: line 942 column 27 (char 28076)
+[2026-09-03 14:14:35,535][kibad_llm.metrics.errors][INFO] - Collected error (id=G57HM7SI): JSONDecodeError: Unterminated string starting at: line 58 column 28 (char 5022)
+[2026-09-03 14:14:35,535][kibad_llm.metrics.errors][INFO] - Collected error (id=Günther2021): JSONDecodeError: Expecting property name enclosed in double quotes: line 989 column 1 (char 29741)
+[2026-09-03 14:14:35,535][kibad_llm.metrics.errors][INFO] - Collected error (id=IE8XQWZ7): JSONDecodeError: Unterminated string starting at: line 828 column 28 (char 25409)
+[2026-09-03 14:14:35,535][kibad_llm.metrics.errors][INFO] - Collected error (id=IE8XQWZ7): JSONDecodeError: Unterminated string starting at: line 1162 column 9 (char 28343)
+[2026-09-03 14:14:35,535][kibad_llm.metrics.errors][INFO] - Collected error (id=IGJEUQXB): JSONDecodeError: Unterminated string starting at: line 868 column 9 (char 29861)
+[2026-09-03 14:14:35,536][kibad_llm.metrics.errors][INFO] - Collected error (id=JFBVII6W): JSONDecodeError: Unterminated string starting at: line 1104 column 7 (char 30736)
+[2026-09-03 14:14:35,536][kibad_llm.metrics.errors][INFO] - Collected error (id=K84LVGID): JSONDecodeError: Unterminated string starting at: line 990 column 9 (char 27623)
+[2026-09-03 14:14:35,536][kibad_llm.metrics.errors][INFO] - Collected error (id=K84LVGID): JSONDecodeError: Unterminated string starting at: line 956 column 28 (char 27445)
+[2026-09-03 14:14:35,536][kibad_llm.metrics.errors][INFO] - Collected error (id=KT4D6MRG): JSONDecodeError: Unterminated string starting at: line 1158 column 28 (char 31159)
+[2026-09-03 14:14:35,536][kibad_llm.metrics.errors][INFO] - Collected error (id=Kudernatsch2019): JSONDecodeError: Unterminated string starting at: line 1083 column 20 (char 27896)
+[2026-09-03 14:14:35,536][kibad_llm.metrics.errors][INFO] - Collected error (id=LEJH7JUW): JSONDecodeError: Unterminated string starting at: line 164 column 28 (char 33803)
+[2026-09-03 14:14:35,536][kibad_llm.metrics.errors][INFO] - Collected error (id=LEJH7JUW): JSONDecodeError: Unterminated string starting at: line 414 column 28 (char 30751)
+[2026-09-03 14:14:35,536][kibad_llm.metrics.errors][INFO] - Collected error (id=LEJH7JUW): JSONDecodeError: Unterminated string starting at: line 248 column 28 (char 23538)
+[2026-09-03 14:14:35,536][kibad_llm.metrics.errors][INFO] - Collected error (id=LEJH7JUW): JSONDecodeError: Unterminated string starting at: line 814 column 28 (char 35549)
+[2026-09-03 14:14:35,536][kibad_llm.metrics.errors][INFO] - Collected error (id=PLHV26NE): JSONDecodeError: Unterminated string starting at: line 985 column 20 (char 27191)
+[2026-09-03 14:14:35,536][kibad_llm.metrics.errors][INFO] - Collected error (id=Pospischil1981): JSONDecodeError: Expecting ',' delimiter: line 6 column 8205 (char 8302)
+[2026-09-03 14:14:35,536][kibad_llm.metrics.errors][INFO] - Collected error (id=Pospischil1981): JSONDecodeError: Expecting ',' delimiter: line 15 column 63422 (char 64360)
+[2026-09-03 14:14:35,536][kibad_llm.metrics.errors][INFO] - Collected error (id=S6MDQRUI): JSONDecodeError: Unterminated string starting at: line 472 column 28 (char 26373)
+[2026-09-03 14:14:35,536][kibad_llm.metrics.errors][INFO] - Collected error (id=Schmidt2017): JSONDecodeError: Unterminated string starting at: line 951 column 20 (char 26284)
+[2026-09-03 14:14:35,537][kibad_llm.metrics.errors][INFO] - Collected error (id=T2GFNI8R): JSONDecodeError: Expecting property name enclosed in double quotes: line 894 column 1 (char 29606)
+[2026-09-03 14:14:35,537][kibad_llm.metrics.errors][INFO] - Collected error (id=T2GFNI8R): JSONDecodeError: Unterminated string starting at: line 571 column 20 (char 28747)
+[2026-09-03 14:14:35,537][kibad_llm.metrics.errors][INFO] - Collected error (id=Thomas1983): JSONDecodeError: Unterminated string starting at: line 530 column 28 (char 29820)
+[2026-09-03 14:14:35,537][kibad_llm.metrics.errors][INFO] - Collected error (id=UGVWR582): JSONDecodeError: Unterminated string starting at: line 907 column 20 (char 25224)
+[2026-09-03 14:14:35,537][kibad_llm.metrics.errors][INFO] - Collected error (id=UGVWR582): JSONDecodeError: Unterminated string starting at: line 908 column 28 (char 25114)
+[2026-09-03 14:14:35,537][kibad_llm.metrics.errors][INFO] - Collected error (id=UGVWR582): JSONDecodeError: Expecting ',' delimiter: line 745 column 1 (char 23741)
+[2026-09-03 14:14:35,537][kibad_llm.metrics.errors][INFO] - Collected error (id=UGVWR582): JSONDecodeError: Unterminated string starting at: line 891 column 9 (char 24967)
+[2026-09-03 14:14:35,537][kibad_llm.metrics.errors][INFO] - Collected error (id=UGVWR582): JSONDecodeError: Unterminated string starting at: line 187 column 28 (char 16474)
+[2026-09-03 14:14:35,537][kibad_llm.metrics.errors][INFO] - Collected error (id=UGVWR582): JSONDecodeError: Unterminated string starting at: line 14 column 28 (char 2870)
+[2026-09-03 14:14:35,537][kibad_llm.metrics.errors][INFO] - Collected error (id=UGVWR582): JSONDecodeError: Unterminated string starting at: line 54 column 28 (char 13903)
+[2026-09-03 14:14:35,537][kibad_llm.metrics.errors][INFO] - Collected error (id=UGVWR582): JSONDecodeError: Unterminated string starting at: line 674 column 28 (char 23941)
+[2026-09-03 14:14:35,537][kibad_llm.metrics.errors][INFO] - Collected error (id=UGVWR582): JSONDecodeError: Unterminated string starting at: line 1018 column 28 (char 26824)
+[2026-09-03 14:14:35,537][kibad_llm.metrics.errors][INFO] - Collected error (id=UGVWR582): JSONDecodeError: Expecting value: line 1163 column 27 (char 28955)
+[2026-09-03 14:14:35,537][kibad_llm.metrics.errors][INFO] - Collected error (id=UGVWR582): JSONDecodeError: Unterminated string starting at: line 594 column 28 (char 24705)
+[2026-09-03 14:14:35,537][kibad_llm.metrics.errors][INFO] - Collected error (id=UGVWR582): JSONDecodeError: Unterminated string starting at: line 1022 column 9 (char 26591)
+[2026-09-03 14:14:35,537][kibad_llm.metrics.errors][INFO] - Collected error (id=UGVWR582): JSONDecodeError: Unterminated string starting at: line 1016 column 7 (char 26745)
+[2026-09-03 14:14:35,537][kibad_llm.metrics.errors][INFO] - Collected error (id=VCEF5KSL): JSONDecodeError: Unterminated string starting at: line 520 column 28 (char 25977)
+[2026-09-03 14:14:35,538][kibad_llm.metrics.errors][INFO] - Collected error (id=VHT6BWPH): JSONDecodeError: Unterminated string starting at: line 666 column 28 (char 32391)
+[2026-09-03 14:14:35,538][kibad_llm.metrics.errors][INFO] - Collected error (id=VHT6BWPH): JSONDecodeError: Unterminated string starting at: line 537 column 20 (char 34412)
+[2026-09-03 14:14:35,538][kibad_llm.metrics.errors][INFO] - Collected error (id=XM8JRZLP): JSONDecodeError: Unterminated string starting at: line 1068 column 9 (char 29061)
+[2026-09-03 14:14:35,538][kibad_llm.metrics.errors][INFO] - Collected error (id=ZD5RUSL7): JSONDecodeError: Unterminated string starting at: line 775 column 20 (char 37701)
+[2026-09-03 14:14:35,538][kibad_llm.metric][INFO] - Evaluation results:
+{
+  "no_error": 2602,
+  "with_error": 51,
+  "JSONDecodeError": 51
+}
+[2026-09-03 14:14:35,549][kibad_llm.hydra_callbacks.save_job_return_value.SaveJobReturnValueCallback][INFO] - Saving job_return in /home/leonhard/Dokumente/code/dfki/kiba-d/kibad-llm/logs/591_organism_trends_bestconfig_devset_rerun/evaluate/multiruns/2026-09-03_14-14-32-233894/9/job_return_value.json
+[2026-09-03 14:14:35,549][kibad_llm.hydra_callbacks.save_job_return_value.SaveJobReturnValueCallback][INFO] - Saving job_return in /home/leonhard/Dokumente/code/dfki/kiba-d/kibad-llm/logs/591_organism_trends_bestconfig_devset_rerun/evaluate/multiruns/2026-09-03_14-14-32-233894/9/job_return_value.md
