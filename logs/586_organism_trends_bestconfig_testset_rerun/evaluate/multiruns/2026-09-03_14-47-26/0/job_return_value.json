@@ -1,0 +1,59 @@
+{
+  "version": 2,
+  "type": "F1MicroMultipleFieldsMetric",
+  "data": {
+    "organism_trends.Pflanzen&AgrarOffen": {
+      "precision": 0.6171875,
+      "recall": 0.8144329896907216,
+      "f1": 0.7022222222222223,
+      "support": 97
+    },
+    "organism_trends.Wirbellose&AgrarOffen": {
+      "precision": 0.7192982456140351,
+      "recall": 0.8367346938775511,
+      "f1": 0.7735849056603773,
+      "support": 49
+    },
+    "organism_trends.Wirbeltiere&AgrarOffen": {
+      "precision": 0.7619047619047619,
+      "recall": 0.9411764705882353,
+      "f1": 0.8421052631578947,
+      "support": 17
+    },
+    "AVG": {
+      "precision": 0.6994635025062657,
+      "recall": 0.8641147180521692,
+      "f1": 0.7726374636801648,
+      "support": 54.333333333333336
+    },
+    "ALL": {
+      "precision": 0.6601941747572816,
+      "recall": 0.8343558282208589,
+      "f1": 0.7371273712737128,
+      "support": 163
+    }
+  },
+  "prediction": {
+    "job_return_value": {
+      "version": 1,
+      "output_file": "predictions/586_organism_trends_bestconfig_testset_rerun/2026-08-27_15-37-27/2026-08-27_15-37-28_746887/predictions.jsonl",
+      "output_file_absolute": "/netscratch/hennig/code/kibad-llm/predictions/586_organism_trends_bestconfig_testset_rerun/2026-08-27_15-37-27/2026-08-27_15-37-28_746887/predictions.jsonl",
+      "time_pdf_conversion": 0.014382545836269855,
+      "time_extraction": 15762.737117690966,
+      "time_start": 1787837848,
+      "time_end": 1787854149,
+      "commit_hash": "657b217e3490ea750d796a89cb68a64b939f69bc",
+      "branch": "experiment/583_rerun_organism_trend_testset",
+      "is_dirty": false,
+      "slurm_job_id": "3329489"
+    },
+    "overrides": {
+      "name": "586_organism_trends_bestconfig_testset_rerun",
+      "experiment/predict": "organism_trends_with_chunking",
+      "extractor/prompt_template": "organism_trends_v1_with_chunking_AuO",
+      "pdf_directory": "/ds/text/kiba-d/test-set-AuO-WVC",
+      "extractor/llm": "gpt_oss_20b_in_process",
+      "seed": "42"
+    }
+  }
+}

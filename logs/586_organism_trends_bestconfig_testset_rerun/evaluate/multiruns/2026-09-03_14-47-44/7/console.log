@@ -1,0 +1,17 @@
+[2026-09-03 14:47:48,531][__main__][INFO] - Loading dataset with predictions and references ...
+[2026-09-03 14:47:48,532][__main__][INFO] - Dataset config: {'predictions': {'_target_': 'kibad_llm.dataset.prediction.load_with_metadata', 'log': 'logs/586_organism_trends_bestconfig_testset_rerun/predict/multiruns/2026-08-27_16-03-08/1', 'file': None, 'id_key': 'file_name', 'process_id': {'_partial_': True, '_target_': 'kibad_llm.utils.path.strip_filename_extension'}, 'preprocess': {'_target_': 'kibad_llm.utils.dictionary.get', '_partial_': True, 'key': 'structured'}}, 'references': {'_target_': 'kibad_llm.dataset.csv.read_organism_trends', 'file': '../external/organism_trends/Weighted Vote Count Agrar- und Offenland Literatur - Sheet1.csv', 'columns': ['Hauptgruppe_RoteListen', 'Untergruppe_RoteListen', 'Lebensraum', 'Antwortvariable', 'Trend']}, '_target_': 'kibad_llm.dataset.utils.merge_references_into_predictions', 'allow_missing_references': True}
+[2026-09-03 14:47:48,535][kibad_llm.dataset.json][INFO] - Loading dataset from JSON file: predictions/586_organism_trends_bestconfig_testset_rerun/2026-08-27_16-03-08/2026-08-28_00-51-21_102508/predictions.jsonl ...
+[2026-09-03 14:47:48,638][kibad_llm.dataset.json][INFO] - Apply preprocessing function to dataset: functools.partial(<function get at 0x7af8ce6718a0>, key='structured') ...
+[2026-09-03 14:47:48,761][__main__][INFO] - Instantiating metric ...
+[2026-09-03 14:47:48,761][__main__][INFO] - Metric config: {'_target_': 'kibad_llm.metrics.F1MicroMultipleFieldsMetric', 'fields': ['organism_trends'], 'format_as_markdown': True, 'sort_fields': True, 'subfield_keys': {'organism_trends': ['Hauptgruppe_RoteListen', 'Lebensraum']}, 'subfield_values': {'organism_trends': ['Antwortvariable', 'Trend']}, 'ignore_missing_entries': True}
+[2026-09-03 14:47:48,763][__main__][INFO] - Computing metric ...
+[2026-09-03 14:47:48,781][kibad_llm.metric][INFO] - Evaluation results:
+| field                                  |   precision |   recall |    f1 |   support |
+|:---------------------------------------|------------:|---------:|------:|----------:|
+| organism_trends.Pflanzen&AgrarOffen    |       0.386 |    0.571 | 0.46  |       112 |
+| organism_trends.Wirbellose&AgrarOffen  |       0.5   |    0.621 | 0.554 |        66 |
+| organism_trends.Wirbeltiere&AgrarOffen |       0.414 |    0.706 | 0.522 |        17 |
+| AVG                                    |       0.433 |    0.633 | 0.512 |        65 |
+| ALL                                    |       0.422 |    0.6   | 0.496 |       195 |
+[2026-09-03 14:47:48,782][kibad_llm.hydra_callbacks.save_job_return_value.SaveJobReturnValueCallback][INFO] - Saving job_return in /home/leonhard/Dokumente/code/dfki/kiba-d/kibad-llm/logs/586_organism_trends_bestconfig_testset_rerun/evaluate/multiruns/2026-09-03_14-47-44/7/job_return_value.json
+[2026-09-03 14:47:48,782][kibad_llm.hydra_callbacks.save_job_return_value.SaveJobReturnValueCallback][INFO] - Saving job_return in /home/leonhard/Dokumente/code/dfki/kiba-d/kibad-llm/logs/586_organism_trends_bestconfig_testset_rerun/evaluate/multiruns/2026-09-03_14-47-44/7/job_return_value.md
