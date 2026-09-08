@@ -1,0 +1,17 @@
+[2026-09-03 14:14:33,621][__main__][INFO] - Loading dataset with predictions and references ...
+[2026-09-03 14:14:33,622][__main__][INFO] - Dataset config: {'predictions': {'_target_': 'kibad_llm.dataset.prediction.load_with_metadata', 'log': 'logs/591_organism_trends_bestconfig_devset_rerun/predict/multiruns/2026-08-27_17-39-54/1', 'file': None, 'id_key': 'file_name', 'process_id': {'_partial_': True, '_target_': 'kibad_llm.utils.path.strip_filename_extension'}, 'preprocess': None}, '_target_': 'kibad_llm.dataset.utils.merge_references_into_predictions', 'references': {}, 'allow_missing_references': True}
+[2026-09-03 14:14:33,624][kibad_llm.dataset.json][INFO] - Loading dataset from JSON file: predictions/591_organism_trends_bestconfig_devset_rerun/2026-08-27_17-39-54/2026-08-27_23-16-30_251193/predictions.jsonl ...
+[2026-09-03 14:14:33,697][__main__][INFO] - Instantiating metric ...
+[2026-09-03 14:14:33,698][__main__][INFO] - Metric config: {'_target_': 'kibad_llm.metrics.ErrorCollector', 'type_separator': ': ', 'show_errors': True}
+[2026-09-03 14:14:33,699][__main__][INFO] - Computing metric ...
+[2026-09-03 14:14:33,699][kibad_llm.metrics.errors][INFO] - Collected error (id=G57HM7SI): MissingResponseContentError: LLM response is missing content.
+[2026-09-03 14:14:33,699][kibad_llm.metrics.errors][INFO] - Collected error (id=S2PSP8DJ): JSONDecodeError: Unterminated string starting at: line 1 column 15621 (char 15620)
+[2026-09-03 14:14:33,700][kibad_llm.metric][INFO] - Evaluation results:
+{
+  "no_error": 2651,
+  "with_error": 2,
+  "MissingResponseContentError": 1,
+  "JSONDecodeError": 1
+}
+[2026-09-03 14:14:33,705][kibad_llm.hydra_callbacks.save_job_return_value.SaveJobReturnValueCallback][INFO] - Saving job_return in /home/leonhard/Dokumente/code/dfki/kiba-d/kibad-llm/logs/591_organism_trends_bestconfig_devset_rerun/evaluate/multiruns/2026-09-03_14-14-32-233894/1/job_return_value.json
+[2026-09-03 14:14:33,705][kibad_llm.hydra_callbacks.save_job_return_value.SaveJobReturnValueCallback][INFO] - Saving job_return in /home/leonhard/Dokumente/code/dfki/kiba-d/kibad-llm/logs/591_organism_trends_bestconfig_devset_rerun/evaluate/multiruns/2026-09-03_14-14-32-233894/1/job_return_value.md

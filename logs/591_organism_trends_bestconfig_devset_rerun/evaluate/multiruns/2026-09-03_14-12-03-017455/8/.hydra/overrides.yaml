@@ -1,0 +1,5 @@
+- dataset.predictions.log=logs/591_organism_trends_bestconfig_devset_rerun/predict/multiruns/2026-08-28_05-06-51/2
+- name=591_organism_trends_bestconfig_devset_rerun
+- experiment/evaluate=organism_trends_f1_micro_flat
+- prediction_logs=logs/591_organism_trends_bestconfig_devset_rerun/predict
+- dataset.references.file=../external/organism_trends/Referenz_Wald_korrigiert_angepasst.csv

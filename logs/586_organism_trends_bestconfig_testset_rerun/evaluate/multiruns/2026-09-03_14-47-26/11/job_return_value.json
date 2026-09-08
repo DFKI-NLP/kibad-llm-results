@@ -1,0 +1,59 @@
+{
+  "version": 2,
+  "type": "F1MicroMultipleFieldsMetric",
+  "data": {
+    "organism_trends.Pflanzen&AgrarOffen": {
+      "precision": 0.5789473684210527,
+      "recall": 0.719626168224299,
+      "f1": 0.6416666666666667,
+      "support": 107
+    },
+    "organism_trends.Wirbellose&AgrarOffen": {
+      "precision": 0.6363636363636364,
+      "recall": 0.7777777777777778,
+      "f1": 0.7000000000000001,
+      "support": 63
+    },
+    "organism_trends.Wirbeltiere&AgrarOffen": {
+      "precision": 0.5161290322580645,
+      "recall": 0.7619047619047619,
+      "f1": 0.6153846153846153,
+      "support": 21
+    },
+    "AVG": {
+      "precision": 0.5771466790142511,
+      "recall": 0.753102902635613,
+      "f1": 0.6523504273504274,
+      "support": 63.666666666666664
+    },
+    "ALL": {
+      "precision": 0.5892116182572614,
+      "recall": 0.743455497382199,
+      "f1": 0.6574074074074074,
+      "support": 191
+    }
+  },
+  "prediction": {
+    "job_return_value": {
+      "version": 1,
+      "output_file": "predictions/586_organism_trends_bestconfig_testset_rerun/2026-08-27_16-06-57/2026-08-28_14-45-54_822068/predictions.jsonl",
+      "output_file_absolute": "/netscratch/hennig/code/kibad-llm/predictions/586_organism_trends_bestconfig_testset_rerun/2026-08-27_16-06-57/2026-08-28_14-45-54_822068/predictions.jsonl",
+      "time_pdf_conversion": 0.007126691751182079,
+      "time_extraction": 38833.13669281313,
+      "time_start": 1787921154,
+      "time_end": 1787960091,
+      "commit_hash": "657b217e3490ea750d796a89cb68a64b939f69bc",
+      "branch": "experiment/583_rerun_organism_trend_testset",
+      "is_dirty": false,
+      "slurm_job_id": "3329492"
+    },
+    "overrides": {
+      "name": "586_organism_trends_bestconfig_testset_rerun",
+      "experiment/predict": "organism_trends_with_chunking",
+      "extractor/prompt_template": "organism_trends_v1_with_chunking_AuO",
+      "pdf_directory": "/ds/text/kiba-d/test-set-AuO-WVC",
+      "extractor/llm": "mistral_small_3_24b_in_process",
+      "seed": "7331"
+    }
+  }
+}

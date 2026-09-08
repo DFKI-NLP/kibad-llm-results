@@ -1,0 +1,19 @@
+[2026-09-03 14:14:34,541][__main__][INFO] - Loading dataset with predictions and references ...
+[2026-09-03 14:14:34,541][__main__][INFO] - Dataset config: {'predictions': {'_target_': 'kibad_llm.dataset.prediction.load_with_metadata', 'log': 'logs/591_organism_trends_bestconfig_devset_rerun/predict/multiruns/2026-08-27_19-19-25/2', 'file': None, 'id_key': 'file_name', 'process_id': {'_partial_': True, '_target_': 'kibad_llm.utils.path.strip_filename_extension'}, 'preprocess': None}, '_target_': 'kibad_llm.dataset.utils.merge_references_into_predictions', 'references': {}, 'allow_missing_references': True}
+[2026-09-03 14:14:34,543][kibad_llm.dataset.json][INFO] - Loading dataset from JSON file: predictions/591_organism_trends_bestconfig_devset_rerun/2026-08-27_19-19-25/2026-08-28_12-40-10_057298/predictions.jsonl ...
+[2026-09-03 14:14:34,634][__main__][INFO] - Instantiating metric ...
+[2026-09-03 14:14:34,634][__main__][INFO] - Metric config: {'_target_': 'kibad_llm.metrics.ErrorCollector', 'type_separator': ': ', 'show_errors': True}
+[2026-09-03 14:14:34,635][__main__][INFO] - Computing metric ...
+[2026-09-03 14:14:34,636][kibad_llm.metrics.errors][INFO] - Collected error (id=CIWE47NB): JSONDecodeError: Expecting ',' delimiter: line 6 column 37013 (char 37111)
+[2026-09-03 14:14:34,636][kibad_llm.metrics.errors][INFO] - Collected error (id=Kudernatsch2019): JSONDecodeError: Unterminated string starting at: line 1141 column 1 (char 22151)
+[2026-09-03 14:14:34,636][kibad_llm.metrics.errors][INFO] - Collected error (id=UT6UBAEI): JSONDecodeError: Expecting ',' delimiter: line 670 column 638 (char 206117)
+[2026-09-03 14:14:34,636][kibad_llm.metrics.errors][INFO] - Collected error (id=VHT6BWPH): JSONDecodeError: Unterminated string starting at: line 1 column 2047 (char 2046)
+[2026-09-03 14:14:34,636][kibad_llm.metrics.errors][INFO] - Collected error (id=XFVXGIKT): JSONDecodeError: Invalid \uXXXX escape: line 6 column 8180 (char 8275)
+[2026-09-03 14:14:34,637][kibad_llm.metric][INFO] - Evaluation results:
+{
+  "no_error": 2648,
+  "with_error": 5,
+  "JSONDecodeError": 5
+}
+[2026-09-03 14:14:34,646][kibad_llm.hydra_callbacks.save_job_return_value.SaveJobReturnValueCallback][INFO] - Saving job_return in /home/leonhard/Dokumente/code/dfki/kiba-d/kibad-llm/logs/591_organism_trends_bestconfig_devset_rerun/evaluate/multiruns/2026-09-03_14-14-32-233894/5/job_return_value.json
+[2026-09-03 14:14:34,646][kibad_llm.hydra_callbacks.save_job_return_value.SaveJobReturnValueCallback][INFO] - Saving job_return in /home/leonhard/Dokumente/code/dfki/kiba-d/kibad-llm/logs/591_organism_trends_bestconfig_devset_rerun/evaluate/multiruns/2026-09-03_14-14-32-233894/5/job_return_value.md

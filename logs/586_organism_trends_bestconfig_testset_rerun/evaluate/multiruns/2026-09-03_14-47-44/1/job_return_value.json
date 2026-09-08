@@ -1,0 +1,59 @@
+{
+  "version": 2,
+  "type": "F1MicroMultipleFieldsMetric",
+  "data": {
+    "organism_trends.Pflanzen&AgrarOffen": {
+      "precision": 0.30991735537190085,
+      "recall": 0.6637168141592921,
+      "f1": 0.4225352112676056,
+      "support": 113
+    },
+    "organism_trends.Wirbellose&AgrarOffen": {
+      "precision": 0.46987951807228917,
+      "recall": 0.6290322580645161,
+      "f1": 0.5379310344827586,
+      "support": 62
+    },
+    "organism_trends.Wirbeltiere&AgrarOffen": {
+      "precision": 0.5,
+      "recall": 0.8333333333333334,
+      "f1": 0.625,
+      "support": 18
+    },
+    "AVG": {
+      "precision": 0.42659895781473,
+      "recall": 0.7086941351857138,
+      "f1": 0.5284887485834547,
+      "support": 64.33333333333333
+    },
+    "ALL": {
+      "precision": 0.36338028169014086,
+      "recall": 0.6683937823834197,
+      "f1": 0.47080291970802923,
+      "support": 193
+    }
+  },
+  "prediction": {
+    "job_return_value": {
+      "version": 1,
+      "output_file": "predictions/586_organism_trends_bestconfig_testset_rerun/2026-08-27_15-37-27/2026-08-27_20-09-09_992400/predictions.jsonl",
+      "output_file_absolute": "/netscratch/hennig/code/kibad-llm/predictions/586_organism_trends_bestconfig_testset_rerun/2026-08-27_15-37-27/2026-08-27_20-09-09_992400/predictions.jsonl",
+      "time_pdf_conversion": 0.006971891038119793,
+      "time_extraction": 16029.393650894053,
+      "time_start": 1787854149,
+      "time_end": 1787870260,
+      "commit_hash": "657b217e3490ea750d796a89cb68a64b939f69bc",
+      "branch": "experiment/583_rerun_organism_trend_testset",
+      "is_dirty": false,
+      "slurm_job_id": "3329489"
+    },
+    "overrides": {
+      "name": "586_organism_trends_bestconfig_testset_rerun",
+      "experiment/predict": "organism_trends_with_chunking",
+      "extractor/prompt_template": "organism_trends_v1_with_chunking_AuO",
+      "pdf_directory": "/ds/text/kiba-d/test-set-AuO-WVC",
+      "extractor/llm": "gpt_oss_20b_in_process",
+      "seed": "1337"
+    }
+  }
+}
