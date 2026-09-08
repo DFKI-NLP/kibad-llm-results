@@ -1,0 +1,32 @@
+[2026-09-08 09:50:00,629][__main__][INFO] - Loading dataset with predictions and references ...
+[2026-09-08 09:50:00,629][__main__][INFO] - Dataset config: {'predictions': {'_target_': 'kibad_llm.dataset.prediction.load_with_metadata', 'log': 'logs/591_organism_trends_bestconfig_devset_rerun/predict/multiruns/2026-08-28_05-06-51/0', 'file': None, 'id_key': 'file_name', 'process_id': {'_partial_': True, '_target_': 'kibad_llm.utils.path.strip_filename_extension'}, 'preprocess': None}, '_target_': 'kibad_llm.dataset.utils.merge_references_into_predictions', 'references': {}, 'allow_missing_references': True}
+[2026-09-08 09:50:00,632][kibad_llm.dataset.json][INFO] - Loading dataset from JSON file: predictions/591_organism_trends_bestconfig_devset_rerun/2026-08-28_05-06-51/2026-08-28_05-06-52_341905/predictions.jsonl ...
+[2026-09-08 09:50:00,777][__main__][INFO] - Instantiating metric ...
+[2026-09-08 09:50:00,777][__main__][INFO] - Metric config: {'_target_': 'kibad_llm.metrics.ErrorCollector', 'type_separator': ': ', 'show_errors': True}
+[2026-09-08 09:50:00,779][__main__][INFO] - Computing metric ...
+[2026-09-08 09:50:00,779][kibad_llm.metrics.errors][INFO] - Collected error (id=4LCB2LPP): MissingResponseContentError: LLM response is missing content.
+[2026-09-08 09:50:00,779][kibad_llm.metrics.errors][INFO] - Collected error (id=4PX89Z47): JSONDecodeError: Expecting ',' delimiter: line 38 column 1 (char 924)
+[2026-09-08 09:50:00,779][kibad_llm.metrics.errors][INFO] - Collected error (id=782ED3TN): JSONDecodeError: Expecting property name enclosed in double quotes: line 44 column 1 (char 1863)
+[2026-09-08 09:50:00,780][kibad_llm.metrics.errors][INFO] - Collected error (id=Dierschke2013): MissingResponseContentError: LLM response is missing content.
+[2026-09-08 09:50:00,780][kibad_llm.metrics.errors][INFO] - Collected error (id=F34S7C4I): JSONDecodeError: Expecting property name enclosed in double quotes: line 23 column 6 (char 313)
+[2026-09-08 09:50:00,780][kibad_llm.metrics.errors][INFO] - Collected error (id=G57HM7SI): JSONDecodeError: Unterminated string starting at: line 28 column 1 (char 614)
+[2026-09-08 09:50:00,780][kibad_llm.metrics.errors][INFO] - Collected error (id=Günther2021): MissingResponseContentError: LLM response is missing content.
+[2026-09-08 09:50:00,780][kibad_llm.metrics.errors][INFO] - Collected error (id=IE8XQWZ7): JSONDecodeError: Unterminated string starting at: line 129 column 7 (char 2874)
+[2026-09-08 09:50:00,780][kibad_llm.metrics.errors][INFO] - Collected error (id=IE8XQWZ7): MissingResponseContentError: LLM response is missing content.
+[2026-09-08 09:50:00,781][kibad_llm.metrics.errors][INFO] - Collected error (id=Kudernatsch2019): MissingResponseContentError: LLM response is missing content.
+[2026-09-08 09:50:00,781][kibad_llm.metrics.errors][INFO] - Collected error (id=Q9YAA7WE): MissingResponseContentError: LLM response is missing content.
+[2026-09-08 09:50:00,781][kibad_llm.metrics.errors][INFO] - Collected error (id=QFEXQ3B3): MissingResponseContentError: LLM response is missing content.
+[2026-09-08 09:50:00,781][kibad_llm.metrics.errors][INFO] - Collected error (id=S2PSP8DJ): JSONDecodeError: Unterminated string starting at: line 33 column 28 (char 1222)
+[2026-09-08 09:50:00,781][kibad_llm.metrics.errors][INFO] - Collected error (id=SVXF36H4): JSONDecodeError: Expecting property name enclosed in double quotes: line 337 column 8 (char 9005)
+[2026-09-08 09:50:00,781][kibad_llm.metrics.errors][INFO] - Collected error (id=SVXF36H4): JSONDecodeError: Unterminated string starting at: line 245 column 1 (char 2423)
+[2026-09-08 09:50:00,782][kibad_llm.metrics.errors][INFO] - Collected error (id=WMZN8WDF): JSONDecodeError: Unterminated string starting at: line 89 column 28 (char 2330)
+[2026-09-08 09:50:00,782][kibad_llm.metrics.errors][INFO] - Collected error (id=ZU6JDWYE): MissingResponseContentError: LLM response is missing content.
+[2026-09-08 09:50:00,782][kibad_llm.metric][INFO] - Evaluation results:
+{
+  "no_error": 2636,
+  "with_error": 17,
+  "MissingResponseContentError": 8,
+  "JSONDecodeError": 9
+}
+[2026-09-08 09:50:00,786][kibad_llm.hydra_callbacks.save_job_return_value.SaveJobReturnValueCallback][INFO] - Saving job_return in /home/leonhard/Dokumente/code/dfki/kiba-d/kibad-llm/logs/593_organism_trends_bestconfig_devset_rerun_uncorrected_refs/evaluate/multiruns/2026-09-08_09-49-58-118920/6/job_return_value.json
+[2026-09-08 09:50:00,787][kibad_llm.hydra_callbacks.save_job_return_value.SaveJobReturnValueCallback][INFO] - Saving job_return in /home/leonhard/Dokumente/code/dfki/kiba-d/kibad-llm/logs/593_organism_trends_bestconfig_devset_rerun_uncorrected_refs/evaluate/multiruns/2026-09-08_09-49-58-118920/6/job_return_value.md

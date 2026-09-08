@@ -1,0 +1,6 @@
+- dataset.predictions.log=logs/591_organism_trends_bestconfig_devset_rerun/predict/multiruns/2026-08-27_19-19-25/1
+- name=593_organism_trends_bestconfig_devset_rerun_uncorrected_refs
+- experiment/evaluate=organism_trends_f1_micro
+- prediction_logs=logs/591_organism_trends_bestconfig_devset_rerun/predict
+- dataset.references.file=../external/organism_trends/Weighted\ Vote\ Count\ Wald\
+  Literatur\ -\ Sheet1.csv

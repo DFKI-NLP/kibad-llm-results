@@ -1,0 +1,30 @@
+[2026-09-08 09:50:01,121][__main__][INFO] - Loading dataset with predictions and references ...
+[2026-09-08 09:50:01,121][__main__][INFO] - Dataset config: {'predictions': {'_target_': 'kibad_llm.dataset.prediction.load_with_metadata', 'log': 'logs/591_organism_trends_bestconfig_devset_rerun/predict/multiruns/2026-08-28_05-06-51/2', 'file': None, 'id_key': 'file_name', 'process_id': {'_partial_': True, '_target_': 'kibad_llm.utils.path.strip_filename_extension'}, 'preprocess': None}, '_target_': 'kibad_llm.dataset.utils.merge_references_into_predictions', 'references': {}, 'allow_missing_references': True}
+[2026-09-08 09:50:01,124][kibad_llm.dataset.json][INFO] - Loading dataset from JSON file: predictions/591_organism_trends_bestconfig_devset_rerun/2026-08-28_05-06-51/2026-08-28_21-13-50_731669/predictions.jsonl ...
+[2026-09-08 09:50:01,210][__main__][INFO] - Instantiating metric ...
+[2026-09-08 09:50:01,211][__main__][INFO] - Metric config: {'_target_': 'kibad_llm.metrics.ErrorCollector', 'type_separator': ': ', 'show_errors': True}
+[2026-09-08 09:50:01,212][__main__][INFO] - Computing metric ...
+[2026-09-08 09:50:01,212][kibad_llm.metrics.errors][INFO] - Collected error (id=4DT9UXEK): JSONDecodeError: Unterminated string starting at: line 195 column 9 (char 2530)
+[2026-09-08 09:50:01,212][kibad_llm.metrics.errors][INFO] - Collected error (id=4PX89Z47): JSONDecodeError: Unterminated string starting at: line 27 column 7 (char 596)
+[2026-09-08 09:50:01,212][kibad_llm.metrics.errors][INFO] - Collected error (id=Dierschke2013): JSONDecodeError: Unterminated string starting at: line 37 column 28 (char 1561)
+[2026-09-08 09:50:01,212][kibad_llm.metrics.errors][INFO] - Collected error (id=Dierschke2013): JSONDecodeError: Unterminated string starting at: line 131 column 20 (char 1413)
+[2026-09-08 09:50:01,212][kibad_llm.metrics.errors][INFO] - Collected error (id=Günther2021): JSONDecodeError: Expecting value: line 21 column 19 (char 209)
+[2026-09-08 09:50:01,213][kibad_llm.metrics.errors][INFO] - Collected error (id=Günther2021): MissingResponseContentError: LLM response is missing content.
+[2026-09-08 09:50:01,213][kibad_llm.metrics.errors][INFO] - Collected error (id=Günther2021): MissingResponseContentError: LLM response is missing content.
+[2026-09-08 09:50:01,213][kibad_llm.metrics.errors][INFO] - Collected error (id=IE8XQWZ7): JSONDecodeError: Unterminated string starting at: line 87 column 1 (char 862)
+[2026-09-08 09:50:01,213][kibad_llm.metrics.errors][INFO] - Collected error (id=IE8XQWZ7): MissingResponseContentError: LLM response is missing content.
+[2026-09-08 09:50:01,213][kibad_llm.metrics.errors][INFO] - Collected error (id=Q9YAA7WE): MissingResponseContentError: LLM response is missing content.
+[2026-09-08 09:50:01,213][kibad_llm.metrics.errors][INFO] - Collected error (id=SVXF36H4): JSONDecodeError: Unterminated string starting at: line 77 column 7 (char 2101)
+[2026-09-08 09:50:01,213][kibad_llm.metrics.errors][INFO] - Collected error (id=VCEF5KSL): MissingResponseContentError: LLM response is missing content.
+[2026-09-08 09:50:01,213][kibad_llm.metrics.errors][INFO] - Collected error (id=WMZN8WDF): MissingResponseContentError: LLM response is missing content.
+[2026-09-08 09:50:01,213][kibad_llm.metrics.errors][INFO] - Collected error (id=WMZN8WDF): MissingResponseContentError: LLM response is missing content.
+[2026-09-08 09:50:01,213][kibad_llm.metrics.errors][INFO] - Collected error (id=WRS986YY): MissingResponseContentError: LLM response is missing content.
+[2026-09-08 09:50:01,214][kibad_llm.metric][INFO] - Evaluation results:
+{
+  "no_error": 2638,
+  "with_error": 15,
+  "JSONDecodeError": 7,
+  "MissingResponseContentError": 8
+}
+[2026-09-08 09:50:01,217][kibad_llm.hydra_callbacks.save_job_return_value.SaveJobReturnValueCallback][INFO] - Saving job_return in /home/leonhard/Dokumente/code/dfki/kiba-d/kibad-llm/logs/593_organism_trends_bestconfig_devset_rerun_uncorrected_refs/evaluate/multiruns/2026-09-08_09-49-58-118920/8/job_return_value.json
+[2026-09-08 09:50:01,218][kibad_llm.hydra_callbacks.save_job_return_value.SaveJobReturnValueCallback][INFO] - Saving job_return in /home/leonhard/Dokumente/code/dfki/kiba-d/kibad-llm/logs/593_organism_trends_bestconfig_devset_rerun_uncorrected_refs/evaluate/multiruns/2026-09-08_09-49-58-118920/8/job_return_value.md

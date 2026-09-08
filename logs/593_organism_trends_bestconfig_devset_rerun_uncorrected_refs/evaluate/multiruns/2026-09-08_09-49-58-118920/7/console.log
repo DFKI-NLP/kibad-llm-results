@@ -1,0 +1,27 @@
+[2026-09-08 09:50:00,912][__main__][INFO] - Loading dataset with predictions and references ...
+[2026-09-08 09:50:00,912][__main__][INFO] - Dataset config: {'predictions': {'_target_': 'kibad_llm.dataset.prediction.load_with_metadata', 'log': 'logs/591_organism_trends_bestconfig_devset_rerun/predict/multiruns/2026-08-28_05-06-51/1', 'file': None, 'id_key': 'file_name', 'process_id': {'_partial_': True, '_target_': 'kibad_llm.utils.path.strip_filename_extension'}, 'preprocess': None}, '_target_': 'kibad_llm.dataset.utils.merge_references_into_predictions', 'references': {}, 'allow_missing_references': True}
+[2026-09-08 09:50:00,915][kibad_llm.dataset.json][INFO] - Loading dataset from JSON file: predictions/591_organism_trends_bestconfig_devset_rerun/2026-08-28_05-06-51/2026-08-28_13-13-33_189038/predictions.jsonl ...
+[2026-09-08 09:50:00,999][__main__][INFO] - Instantiating metric ...
+[2026-09-08 09:50:01,000][__main__][INFO] - Metric config: {'_target_': 'kibad_llm.metrics.ErrorCollector', 'type_separator': ': ', 'show_errors': True}
+[2026-09-08 09:50:01,001][__main__][INFO] - Computing metric ...
+[2026-09-08 09:50:01,001][kibad_llm.metrics.errors][INFO] - Collected error (id=8CTA6CG3): JSONDecodeError: Expecting ',' delimiter: line 2714 column 1 (char 13858)
+[2026-09-08 09:50:01,001][kibad_llm.metrics.errors][INFO] - Collected error (id=Dierschke2013): JSONDecodeError: Unterminated string starting at: line 81 column 28 (char 4130)
+[2026-09-08 09:50:01,001][kibad_llm.metrics.errors][INFO] - Collected error (id=Günther2021): MissingResponseContentError: LLM response is missing content.
+[2026-09-08 09:50:01,001][kibad_llm.metrics.errors][INFO] - Collected error (id=IE8XQWZ7): JSONDecodeError: Unterminated string starting at: line 102 column 7 (char 2291)
+[2026-09-08 09:50:01,001][kibad_llm.metrics.errors][INFO] - Collected error (id=IE8XQWZ7): JSONDecodeError: Expecting ',' delimiter: line 46 column 1 (char 1102)
+[2026-09-08 09:50:01,002][kibad_llm.metrics.errors][INFO] - Collected error (id=PUJAPGWQ): MissingResponseContentError: LLM response is missing content.
+[2026-09-08 09:50:01,002][kibad_llm.metrics.errors][INFO] - Collected error (id=Q9YAA7WE): MissingResponseContentError: LLM response is missing content.
+[2026-09-08 09:50:01,002][kibad_llm.metrics.errors][INFO] - Collected error (id=S2PSP8DJ): JSONDecodeError: Unterminated string starting at: line 50 column 13 (char 1319)
+[2026-09-08 09:50:01,002][kibad_llm.metrics.errors][INFO] - Collected error (id=SVXF36H4): JSONDecodeError: Unterminated string starting at: line 297 column 9 (char 7932)
+[2026-09-08 09:50:01,002][kibad_llm.metrics.errors][INFO] - Collected error (id=Schmidt2015): JSONDecodeError: Unterminated string starting at: line 131 column 20 (char 2030)
+[2026-09-08 09:50:01,002][kibad_llm.metrics.errors][INFO] - Collected error (id=T2GFNI8R): MissingResponseContentError: LLM response is missing content.
+[2026-09-08 09:50:01,002][kibad_llm.metrics.errors][INFO] - Collected error (id=WRS986YY): MissingResponseContentError: LLM response is missing content.
+[2026-09-08 09:50:01,003][kibad_llm.metric][INFO] - Evaluation results:
+{
+  "no_error": 2641,
+  "with_error": 12,
+  "JSONDecodeError": 7,
+  "MissingResponseContentError": 5
+}
+[2026-09-08 09:50:01,006][kibad_llm.hydra_callbacks.save_job_return_value.SaveJobReturnValueCallback][INFO] - Saving job_return in /home/leonhard/Dokumente/code/dfki/kiba-d/kibad-llm/logs/593_organism_trends_bestconfig_devset_rerun_uncorrected_refs/evaluate/multiruns/2026-09-08_09-49-58-118920/7/job_return_value.json
+[2026-09-08 09:50:01,006][kibad_llm.hydra_callbacks.save_job_return_value.SaveJobReturnValueCallback][INFO] - Saving job_return in /home/leonhard/Dokumente/code/dfki/kiba-d/kibad-llm/logs/593_organism_trends_bestconfig_devset_rerun_uncorrected_refs/evaluate/multiruns/2026-09-08_09-49-58-118920/7/job_return_value.md

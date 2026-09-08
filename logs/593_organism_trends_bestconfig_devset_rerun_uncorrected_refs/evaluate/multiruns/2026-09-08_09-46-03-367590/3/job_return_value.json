@@ -1,0 +1,64 @@
+{
+  "version": 2,
+  "type": "F1MicroMultipleFieldsMetric",
+  "data": {
+    "organism_trends.Antwortvariable": {
+      "precision": 0.2398884239888424,
+      "recall": 0.8472906403940886,
+      "f1": 0.3739130434782608,
+      "support": 203
+    },
+    "organism_trends.Hauptgruppe_RoteListen": {
+      "precision": 0.20512820512820512,
+      "recall": 0.903954802259887,
+      "f1": 0.3343782654127482,
+      "support": 177
+    },
+    "organism_trends.Lebensraum": {
+      "precision": 0.2544861337683524,
+      "recall": 0.9176470588235294,
+      "f1": 0.39846743295019166,
+      "support": 170
+    },
+    "organism_trends.Trend": {
+      "precision": 0.1363203050524309,
+      "recall": 0.7044334975369458,
+      "f1": 0.2284345047923323,
+      "support": 203
+    },
+    "AVG": {
+      "precision": 0.2089557669844577,
+      "recall": 0.8433314997536128,
+      "f1": 0.33379831165838325,
+      "support": 188.25
+    },
+    "ALL": {
+      "precision": 0.19974675530231087,
+      "recall": 0.8379814077025233,
+      "f1": 0.32259713701431497,
+      "support": 753
+    }
+  },
+  "prediction": {
+    "job_return_value": {
+      "version": 1,
+      "output_file": "predictions/591_organism_trends_bestconfig_devset_rerun/2026-08-27_19-19-25/2026-08-27_19-19-26_559526/predictions.jsonl",
+      "output_file_absolute": "/netscratch/hennig/code/tmp/kibad-llm/predictions/591_organism_trends_bestconfig_devset_rerun/2026-08-27_19-19-25/2026-08-27_19-19-26_559526/predictions.jsonl",
+      "time_pdf_conversion": 0.006546155083924532,
+      "time_extraction": 30690.808163118083,
+      "time_start": 1787851166,
+      "time_end": 1787882028,
+      "commit_hash": "8bdd90b30dc7e8e125741e69516a2e6a7c317a45",
+      "branch": "experiment/591_rerun_organism_trend_devset",
+      "is_dirty": false,
+      "slurm_job_id": "3329673"
+    },
+    "overrides": {
+      "name": "591_organism_trends_bestconfig_devset_rerun",
+      "experiment/predict": "organism_trends_with_chunking",
+      "pdf_directory": "/ds/text/kiba-d/dev-set-Wald-WVC",
+      "extractor/llm": "gemma3_27b_in_process",
+      "seed": "42"
+    }
+  }
+}

@@ -1,6 +1,6 @@
 # 593_organism_trends_bestconfig_devset_rerun_uncorred_refs
 
-Evaluation of the best setup (with chunking) from [593_organism_trends_bestconfig_devset_rerun_uncorrected_refs](../593_organism_trends_bestconfig_devset_rerun_uncorrected_refs), 
+Evaluation of the best setup (with chunking) from [428_organism_trends_with_chunking](../428_organism_trends_with_chunking), 
 but with the full set of input PDFs (59 files were missing) and the uncorrected (!) reference file.
 
 ## Evaluation
@@ -13,13 +13,13 @@ Base for the command is https://github.com/DFKI-NLP/kibad-llm/tree/main/data/pre
 uv run -m kibad_llm.evaluate \
 name=593_organism_trends_bestconfig_devset_rerun_uncorrected_refs \
 experiment/evaluate=organism_trends_f1_micro_flat \
-prediction_logs=logs/593_organism_trends_bestconfig_devset_rerun_uncorrected_refs/predict \
+prediction_logs=logs/591_organism_trends_bestconfig_devset_rerun/predict \
 hydra.callbacks.save_job_return.multirun_show_file_contents=null \
 dataset.references.file="../external/organism_trends/Weighted Vote Count Wald Literatur - Sheet1.csv" \
 --multirun
 ```
 
-Saved to `logs/593_organism_trends_bestconfig_devset_rerun_uncorrected_refs/evaluate/multiruns/XXX`
+Saved to `logs/593_organism_trends_bestconfig_devset_rerun_uncorrected_refs/evaluate/multiruns/2026-09-08_09-46-03-367590`
 
 ##### full compounds
 
@@ -27,13 +27,13 @@ Saved to `logs/593_organism_trends_bestconfig_devset_rerun_uncorrected_refs/eval
 uv run -m kibad_llm.evaluate \
 name=593_organism_trends_bestconfig_devset_rerun_uncorrected_refs \
 experiment/evaluate=organism_trends_f1_micro \
-prediction_logs=logs/593_organism_trends_bestconfig_devset_rerun_uncorrected_refs/predict \
+prediction_logs=logs/591_organism_trends_bestconfig_devset_rerun/predict \
 hydra.callbacks.save_job_return.multirun_show_file_contents=null \
 dataset.references.file="../external/organism_trends/Weighted Vote Count Wald Literatur - Sheet1.csv" \
 --multirun
 ```
 
-Saved to `logs/593_organism_trends_bestconfig_devset_rerun_uncorrected_refs/evaluate/multiruns/XXX`
+Saved to `logs/593_organism_trends_bestconfig_devset_rerun_uncorrected_refs/evaluate/multiruns/2026-09-08_09-46-39-788873`
 
 ##### base elements
 
@@ -41,13 +41,13 @@ Saved to `logs/593_organism_trends_bestconfig_devset_rerun_uncorrected_refs/eval
 uv run -m kibad_llm.evaluate \
 name=593_organism_trends_bestconfig_devset_rerun_uncorrected_refs \
 experiment/evaluate=organism_trends_f1_micro_base_entries \
-prediction_logs=logs/593_organism_trends_bestconfig_devset_rerun_uncorrected_refs/predict \
+prediction_logs=logs/591_organism_trends_bestconfig_devset_rerun/predict \
 hydra.callbacks.save_job_return.multirun_show_file_contents=null \
 dataset.references.file="../external/organism_trends/Weighted Vote Count Wald Literatur - Sheet1.csv" \
 --multirun
 ```
 
-Saved to `logs/593_organism_trends_bestconfig_devset_rerun_uncorrected_refs/evaluate/multiruns/XXX`
+Saved to `logs/593_organism_trends_bestconfig_devset_rerun_uncorrected_refs/evaluate/multiruns/2026-09-08_09-47-21-670244`
 
 ##### `Antwortvariable` conditioned on base elements
 
@@ -55,13 +55,13 @@ Saved to `logs/593_organism_trends_bestconfig_devset_rerun_uncorrected_refs/eval
 uv run -m kibad_llm.evaluate \
 name=593_organism_trends_bestconfig_devset_rerun_uncorrected_refs \
 experiment/evaluate=organism_trends_f1_micro_conditional_variable_only \
-prediction_logs=logs/593_organism_trends_bestconfig_devset_rerun_uncorrected_refs/predict \
+prediction_logs=logs/591_organism_trends_bestconfig_devset_rerun/predict \
 hydra.callbacks.save_job_return.multirun_show_file_contents=null \
 dataset.references.file="../external/organism_trends/Weighted Vote Count Wald Literatur - Sheet1.csv" \
 --multirun
 ```
 
-Saved to `logs/593_organism_trends_bestconfig_devset_rerun_uncorrected_refs/evaluate/multiruns/XXX`
+Saved to `logs/593_organism_trends_bestconfig_devset_rerun_uncorrected_refs/evaluate/multiruns/2026-09-08_09-49-14-795492`
 
 ##### `Antwortvariable` & `Trend` conditioned on base elements
 
@@ -69,13 +69,13 @@ Saved to `logs/593_organism_trends_bestconfig_devset_rerun_uncorrected_refs/eval
 uv run -m kibad_llm.evaluate \
 name=593_organism_trends_bestconfig_devset_rerun_uncorrected_refs \
 experiment/evaluate=organism_trends_f1_micro_conditional_variable_and_trend \
-prediction_logs=logs/593_organism_trends_bestconfig_devset_rerun_uncorrected_refs/predict \
+prediction_logs=logs/591_organism_trends_bestconfig_devset_rerun/predict \
 hydra.callbacks.save_job_return.multirun_show_file_contents=null \
 dataset.references.file="../external/organism_trends/Weighted Vote Count Wald Literatur - Sheet1.csv" \
 --multirun
 ```
 
-Saved to `logs/593_organism_trends_bestconfig_devset_rerun_uncorrected_refs/evaluate/multiruns/XXX`
+Saved to `logs/593_organism_trends_bestconfig_devset_rerun_uncorrected_refs/evaluate/multiruns/2026-09-08_09-49-36-794485`
 
 ### Errors
 
@@ -85,12 +85,12 @@ name=593_organism_trends_bestconfig_devset_rerun_uncorrected_refs \
 experiment/evaluate=prediction_errors \
 hydra.callbacks.save_job_return.multirun_show_file_contents=null \
 prediction_logs=[\
-logs/593_organism_trends_bestconfig_devset_rerun_uncorrected_refs/predict \
+logs/591_organism_trends_bestconfig_devset_rerun/predict \
 ] \
 --multirun
 ```
 
-Saved to `logs/593_organism_trends_bestconfig_devset_rerun_uncorrected_refs/evaluate/multiruns/XXX`
+Saved to `logs/593_organism_trends_bestconfig_devset_rerun_uncorrected_refs/evaluate/multiruns//2026-09-08_09-49-58-118920`
 
 ## Outcome
 
@@ -117,13 +117,15 @@ Micro-Recall (ALL.recall)
 
 ![Micro Recall, flattened evaluation](figures/organism_trends_f1_micro_flat-ALL/recall.svg)
 
-TODO Notes (to update!)
-- Micro-F1 on the flatted schema (per-field evaluation)  - Qwen best with 0.436
-- Qwen has very good precision at 0.447, all other models much lower
-- Recall is similar across models (0.53-0.56), except for Qwen (0.43)
-- Flattened results are approx 7-15% (Gemma) lower than the results on the core schema, which had a best 0.504 F1 for GPT OSS 20B and Qwen3, and a low of 0.438 for Gemma and Mistral
-- Compared to dev set results [428_organism_trends_with_chunking](../428_organism_trends_with_chunking), F1 is better for
-  GPT OSS at 0.378 (vs 0.33), worse for Qwen3 (0.436 now vs approx 0.47 then), and better for Mistral (0.308 vs 0.23) and Gemma (0.271 vs 0.24)
+Support
+
+![Support](figures/organism_trends_f1_micro_flat-ALL/support.svg)
+
+Notes
+- Micro-F1 - Qwen best with 0.545
+- Qwen has very good precision at 0.444, all other models much lower
+- Recall is similar across models (0.71-0.82)
+- The results are nearly identical / slightly lower to the results on the corrected dev set
 
 #### full compounds
 
@@ -143,9 +145,13 @@ Micro-Recall (ALL.recall)
 
 ![Figure/Table 2: "detail results - precision and recall" - same plots as above, but with recall scores instead of F1](figures/organism_trends_f1_micro-ALL/recall.svg)
 
-TODO Notes (to update)
-- F1 scores range from 0.17 (Qwen3) to 0.018 (Gemma)
-- Compared to the dev set results, results are worse by 2-7% - GPT OSS (0.111 vs 0.135), Qwen (0.172 vs 0.24), Mistral (0.06 vs 0.06), Gemma (0.018 vs 0.075)
+Support
+
+![Support](figures/organism_trends_f1_micro-ALL/support.svg)
+
+Notes
+- F1 scores range from 0.28 (Qwen3) to 0.08 (Mistral)
+- Scores are slightly lower (0.5-3 points) than on the corrected dev set
 
 #### base elements
 
@@ -165,12 +171,14 @@ Micro-Recall (ALL.recall)
 
 ![Base elements, Micro-Recall](figures/organism_trends_f1_micro_base_entries-ALL/recall.svg)
 
-TODO Notes (to update)
-- Gemma3 performs much worse than the other models on detecting base elements, not sure why this happens since in the core schema, 
-  it performs much better for the 2 variables habitat and species group (0.67 F1 for habitat, 0.57 for species group, 
-  see https://github.com/DFKI-NLP/kibad-llm/blob/main/data/prediction_results/logs/397_faktencheck_core_v1_for_chunking/f1_per_class.png)
-- Compared to the dev set results, where Gemma achieved about 0.2 F1, the 0.06 here are a 14% drop
-- For Qwen and GPT OSS, the drop from the dev set is approx 14% (Qwen) and 5% (GPT OSS)
+Support
+
+![Support](figures/organism_trends_f1_micro_base_entries-ALL/support.svg)
+
+Notes
+- Gemma3 and Mistral perform much worse than the other models
+- Qwen3 best at 0.58
+- Scores are slightly higher than on the corrected dev set
 
 #### `Antwortvariable` conditioned on base elements
 
@@ -190,9 +198,14 @@ Recall
 
 ![Micro-Recall](figures/organism_trends_f1_micro_conditional_variable_only-ALL/recall.svg)
 
-TODO Notes (to update)
-- F1 scores are 3-5% lower than on the dev set
-- Recall is better, precision lower than on the dev set
+Support
+
+![Support](figures/organism_trends_f1_micro_conditional_variable_only-ALL/support.svg)
+
+Notes
+- All models quite good at F1=0.77-0.80, except Mistral with 0.59
+- gpt_5 0.80 on support 172, mistral 0.59 on support 192
+- Scores are slightly lower than on the corrected dev set
 
 #### `Antwortvariable` & `Trend` conditioned on base elements
 
@@ -212,9 +225,15 @@ Recall
 
 ![Micro-Recall](figures/organism_trends_f1_micro_conditional_variable_and_trend-ALL/recall.svg)
 
-TODO Notes (to update)
-- F1 is better than on the dev set by 5-10%
-- Qwen3 is best at 0.5 F1, 0.47 precision and 0.54 recall
+Support
+
+![Support](figures/organism_trends_f1_micro_conditional_variable_and_trend-ALL/support.svg)
+
+Notes
+- GPT5 best at F1 = 0.457, Qwen3 at 0.45
+- Mistral worst at 0.298
+- gpt_5 0.457 on support 198, mistral 0.298 on support 222
+- Scores are lower than on the corrected dev set (4-6 points)
 
 ### Errors
 
@@ -228,7 +247,10 @@ TODO Notes (to update)
 
 ![with_error.svg](figures/prediction_errors-total/with_error.svg)
 
-TODO Notes (to update)
-- Mistral has the most errors (approx 64), but this is still negligible compared to the approx 2600 chunks processed.
+Notes
+- GPT5 still has most errors (248, all are non-critical ReasoningExtractionErrors 
+- Mistral has the most JSONDecode errors, it loses 44-54 chunks (1.9%) of the 2653 total chunks
+- Other models have very few errors (<20).
+- Note: Errors are obviously identical to the corrected reference run in [591_organism_trends_bestconfig_devset_rerun](../591_organism_trends_bestconfig_devset_rerun)
 
 
