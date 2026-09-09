@@ -1,4 +1,4 @@
-# 593_organism_trends_bestconfig_devset_rerun_uncorred_refs
+# 593_organism_trends_bestconfig_devset_rerun_uncorrected_refs
 
 Evaluation of the best setup (with chunking) from [428_organism_trends_with_chunking](../428_organism_trends_with_chunking), 
 but with the full set of input PDFs (59 files were missing) and the uncorrected (!) reference file.
@@ -125,7 +125,7 @@ Notes
 - Micro-F1 - Qwen best with 0.545
 - Qwen has very good precision at 0.444, all other models much lower
 - Recall is similar across models (0.71-0.82)
-- The results are nearly identical / slightly lower to the results on the corrected dev set
+- The results are nearly identical / slightly higher to the results on the corrected dev set
 
 #### full compounds
 
@@ -233,7 +233,7 @@ Notes
 - GPT5 best at F1 = 0.457, Qwen3 at 0.45
 - Mistral worst at 0.298
 - gpt_5 0.457 on support 198, mistral 0.298 on support 222
-- Scores are lower than on the corrected dev set (4-6 points)
+- Scores are lower than on the corrected dev set (3-7 points)
 
 ### Errors
 
