@@ -1,0 +1,64 @@
+{
+  "version": 2,
+  "type": "F1MicroMultipleFieldsMetric",
+  "data": {
+    "organism_trends.Antwortvariable": {
+      "precision": 0.3065843621399177,
+      "recall": 0.7339901477832512,
+      "f1": 0.432510885341074,
+      "support": 203
+    },
+    "organism_trends.Hauptgruppe_RoteListen": {
+      "precision": 0.30353430353430355,
+      "recall": 0.8248587570621468,
+      "f1": 0.4437689969604863,
+      "support": 177
+    },
+    "organism_trends.Lebensraum": {
+      "precision": 0.31363636363636366,
+      "recall": 0.8117647058823529,
+      "f1": 0.45245901639344266,
+      "support": 170
+    },
+    "organism_trends.Trend": {
+      "precision": 0.19669421487603306,
+      "recall": 0.5862068965517241,
+      "f1": 0.29455445544554454,
+      "support": 203
+    },
+    "AVG": {
+      "precision": 0.28011231104665446,
+      "recall": 0.7392051268198687,
+      "f1": 0.40582333853513686,
+      "support": 188.25
+    },
+    "ALL": {
+      "precision": 0.27435387673956263,
+      "recall": 0.7330677290836654,
+      "f1": 0.3992766726943942,
+      "support": 753
+    }
+  },
+  "prediction": {
+    "job_return_value": {
+      "version": 1,
+      "output_file": "predictions/591_organism_trends_bestconfig_devset_rerun/2026-08-27_17-39-54/2026-08-27_17-39-55_325188/predictions.jsonl",
+      "output_file_absolute": "/netscratch/hennig/code/tmp/kibad-llm/predictions/591_organism_trends_bestconfig_devset_rerun/2026-08-27_17-39-54/2026-08-27_17-39-55_325188/predictions.jsonl",
+      "time_pdf_conversion": 4376.739540351089,
+      "time_extraction": 15603.846481563058,
+      "time_start": 1787845195,
+      "time_end": 1787865389,
+      "commit_hash": "8bdd90b30dc7e8e125741e69516a2e6a7c317a45",
+      "branch": "experiment/591_rerun_organism_trend_devset",
+      "is_dirty": false,
+      "slurm_job_id": "3329671"
+    },
+    "overrides": {
+      "name": "591_organism_trends_bestconfig_devset_rerun",
+      "experiment/predict": "organism_trends_with_chunking",
+      "pdf_directory": "/ds/text/kiba-d/dev-set-Wald-WVC",
+      "extractor/llm": "gpt_oss_20b_in_process",
+      "seed": "42"
+    }
+  }
+}

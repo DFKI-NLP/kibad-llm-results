@@ -1,0 +1,64 @@
+{
+  "version": 2,
+  "type": "F1MicroMultipleFieldsMetric",
+  "data": {
+    "organism_trends.Pflanzen&Wald": {
+      "precision": 0.6767676767676768,
+      "recall": 0.8481012658227848,
+      "f1": 0.752808988764045,
+      "support": 79
+    },
+    "organism_trends.Pilze_Flechten&Wald": {
+      "precision": 0.5555555555555556,
+      "recall": 0.8333333333333334,
+      "f1": 0.6666666666666667,
+      "support": 12
+    },
+    "organism_trends.Wirbellose&Wald": {
+      "precision": 0.625,
+      "recall": 0.875,
+      "f1": 0.7291666666666666,
+      "support": 40
+    },
+    "organism_trends.Wirbeltiere&Wald": {
+      "precision": 0.7,
+      "recall": 0.9824561403508771,
+      "f1": 0.8175182481751825,
+      "support": 57
+    },
+    "AVG": {
+      "precision": 0.6393308080808081,
+      "recall": 0.8847226848767489,
+      "f1": 0.7415401425681403,
+      "support": 47.0
+    },
+    "ALL": {
+      "precision": 0.6640316205533597,
+      "recall": 0.8936170212765957,
+      "f1": 0.761904761904762,
+      "support": 188
+    }
+  },
+  "prediction": {
+    "job_return_value": {
+      "version": 1,
+      "output_file": "predictions/591_organism_trends_bestconfig_devset_rerun/2026-08-27_19-19-25/2026-08-28_12-40-10_057298/predictions.jsonl",
+      "output_file_absolute": "/netscratch/hennig/code/tmp/kibad-llm/predictions/591_organism_trends_bestconfig_devset_rerun/2026-08-27_19-19-25/2026-08-28_12-40-10_057298/predictions.jsonl",
+      "time_pdf_conversion": 0.00455546984449029,
+      "time_extraction": 31185.141428552102,
+      "time_start": 1787913610,
+      "time_end": 1787944891,
+      "commit_hash": "8bdd90b30dc7e8e125741e69516a2e6a7c317a45",
+      "branch": "experiment/591_rerun_organism_trend_devset",
+      "is_dirty": false,
+      "slurm_job_id": "3329673"
+    },
+    "overrides": {
+      "name": "591_organism_trends_bestconfig_devset_rerun",
+      "experiment/predict": "organism_trends_with_chunking",
+      "pdf_directory": "/ds/text/kiba-d/dev-set-Wald-WVC",
+      "extractor/llm": "gemma3_27b_in_process",
+      "seed": "7331"
+    }
+  }
+}

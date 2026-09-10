@@ -1,0 +1,64 @@
+{
+  "version": 2,
+  "type": "F1MicroMultipleFieldsMetric",
+  "data": {
+    "organism_trends.Pflanzen&Wald": {
+      "precision": 0.7282608695652174,
+      "recall": 0.8933333333333333,
+      "f1": 0.8023952095808383,
+      "support": 75
+    },
+    "organism_trends.Pilze_Flechten&Wald": {
+      "precision": 0.5,
+      "recall": 0.75,
+      "f1": 0.6,
+      "support": 12
+    },
+    "organism_trends.Wirbellose&Wald": {
+      "precision": 0.673469387755102,
+      "recall": 0.8918918918918919,
+      "f1": 0.7674418604651163,
+      "support": 37
+    },
+    "organism_trends.Wirbeltiere&Wald": {
+      "precision": 0.8490566037735849,
+      "recall": 0.9375,
+      "f1": 0.8910891089108911,
+      "support": 48
+    },
+    "AVG": {
+      "precision": 0.6876967152734761,
+      "recall": 0.8681813063063063,
+      "f1": 0.7652315447392114,
+      "support": 43.0
+    },
+    "ALL": {
+      "precision": 0.7264150943396226,
+      "recall": 0.8953488372093024,
+      "f1": 0.8020833333333334,
+      "support": 172
+    }
+  },
+  "prediction": {
+    "job_return_value": {
+      "version": 1,
+      "output_file": "predictions/591_organism_trends_bestconfig_devset_rerun/2026-09-02_08-10-30/2026-09-02_08-10-31_166418/predictions.jsonl",
+      "output_file_absolute": "/netscratch/hennig/code/tmp/kibad-llm/predictions/591_organism_trends_bestconfig_devset_rerun/2026-09-02_08-10-30/2026-09-02_08-10-31_166418/predictions.jsonl",
+      "time_pdf_conversion": 0.004947378998622298,
+      "time_extraction": 74680.42462298402,
+      "time_start": 1788329431,
+      "time_end": 1788404178,
+      "commit_hash": "8bdd90b30dc7e8e125741e69516a2e6a7c317a45",
+      "branch": "experiment/591_rerun_organism_trend_devset",
+      "is_dirty": false,
+      "slurm_job_id": "3348923"
+    },
+    "overrides": {
+      "name": "591_organism_trends_bestconfig_devset_rerun",
+      "experiment/predict": "organism_trends_with_chunking",
+      "pdf_directory": "/ds/text/kiba-d/dev-set-Wald-WVC",
+      "extractor/llm": "gpt_5",
+      "seed": "42"
+    }
+  }
+}
