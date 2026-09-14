@@ -21,6 +21,48 @@ In the future, the MultiPassExtractor is not supposed to do the same extractions
   --multirun"
 ```
 
+The commit hash that is pinned in this run command is the final state of PR [#587_MultiPassExtractor](https://github.com/DFKI-NLP/kibad-llm/pull/587). This commit hash is destroyed as part of the mandatory squash when merging PRs.
+
+The `exctractor.overrides` line of the run command is an inline equivalent to the usual yaml way of pointing to schemas.
+
+The inline hydra config in a more readable format:
+```sh
+extractor.overrides=
+  {
+    habitat:{
+      schema:{
+        _target_:kibad_llm.schema.types.EcosystemStudyFeaturesHabitat.model_json_schema,
+        by_alias:false
+      }
+    },
+    taxa:{schema:{_target_:kibad_llm.schema.types.EcosystemStudyFeaturesTaxa.model_json_schema,by_alias:false}},
+    biodiversity_level:{schema:{_target_:kibad_llm.schema.types.EcosystemStudyFeaturesBiodiversityLevel.model_json_schema,by_alias:false}},
+    ecosystem_type:{schema:{_target_:kibad_llm.schema.types.EcosystemStudyFeaturesEcosystemType.model_json_schema,by_alias:false}}
+  }
+```
+This yaml hydra config is equivalent to the inline config above:
+```yaml
+extractor:
+  overrides:
+    habitat:
+      schema:
+        _target_: kibad_llm.schema.types.EcosystemStudyFeaturesCoreFieldsHabitat.model_json_schema
+        by_alias: false
+    taxa:
+      schema:
+        _target_: kibad_llm.schema.types.EcosystemStudyFeaturesCoreFieldsTaxa.model_json_schema
+        by_alias: false
+    biodiversity_level:
+      schema:
+        _target_: kibad_llm.schema.types.EcosystemStudyFeaturesCoreFieldsBiodiversityLevel.model_json_schema
+        by_alias: false
+    ecosystem_type:
+      schema:
+        _target_: kibad_llm.schema.types.EcosystemStudyFeaturesCoreFieldsEcosystemType.model_json_schema
+        by_alias: false
+```
+
+
 result location: `logs/587_MultiPassExtractor/predict/multiruns/2026-09-10_13-11-55-547617`
 
 ## Evaluation
