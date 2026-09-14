@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "output_file": "predictions/587_MultiPassExtractor/2026-09-10_13-11-55-547617/2026-09-11_01-11-42_112140/predictions.jsonl",
+  "output_file_absolute": "/netscratch/hmeinhof/tmp/kiba-d_de1295ad-e2e3-4115-8309-58ad7f7a6312/repo/predictions/587_MultiPassExtractor/2026-09-10_13-11-55-547617/2026-09-11_01-11-42_112140/predictions.jsonl",
+  "time_pdf_conversion": 0.008897344581782818,
+  "time_extraction": 49046.86835088581,
+  "time_start": 1789081902,
+  "time_end": 1789131047,
+  "commit_hash": "65d5ae263f1b8ba7e9a57bff7d5f4a0aa093e537",
+  "branch": "commit/65d5ae263f1b",
+  "is_dirty": false,
+  "slurm_job_id": "3376114"
+}

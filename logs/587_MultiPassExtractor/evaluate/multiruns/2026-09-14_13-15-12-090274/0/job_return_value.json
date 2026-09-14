@@ -1,0 +1,34 @@
+{
+  "version": 2,
+  "type": "ErrorCollector",
+  "data": {
+    "no_error": 6606,
+    "with_error": 14,
+    "JSONDecodeError": 13,
+    "MissingResponseContentError": 1
+  },
+  "prediction": {
+    "job_return_value": {
+      "version": 1,
+      "output_file": "predictions/587_MultiPassExtractor/2026-09-10_13-11-55-547617/2026-09-10_13-11-56_360544/predictions.jsonl",
+      "output_file_absolute": "/netscratch/hmeinhof/tmp/kiba-d_de1295ad-e2e3-4115-8309-58ad7f7a6312/repo/predictions/587_MultiPassExtractor/2026-09-10_13-11-55-547617/2026-09-10_13-11-56_360544/predictions.jsonl",
+      "time_pdf_conversion": 0.0448118019849062,
+      "time_extraction": 42935.136165009346,
+      "time_start": 1789038716,
+      "time_end": 1789081901,
+      "commit_hash": "65d5ae263f1b8ba7e9a57bff7d5f4a0aa093e537",
+      "branch": "commit/65d5ae263f1b",
+      "is_dirty": false,
+      "slurm_job_id": "3376114"
+    },
+    "overrides": {
+      "name": "587_MultiPassExtractor",
+      "extractor": "multi_pass",
+      "extractor/prompt_template": "faktencheck_core_v1_with_chunking",
+      "extractor.overrides": "{habitat:{schema:{_target_:kibad_llm.schema.types.EcosystemStudyFeaturesHabitat.model_json_schema,by_alias:False}},taxa:{schema:{_target_:kibad_llm.schema.types.EcosystemStudyFeaturesTaxa.model_json_schema,by_alias:False}},biodiversity_level:{schema:{_target_:kibad_llm.schema.types.EcosystemStudyFeaturesBiodiversityLevel.model_json_schema,by_alias:False}},ecosystem_type:{schema:{_target_:kibad_llm.schema.types.EcosystemStudyFeaturesEcosystemType.model_json_schema,by_alias:False}}}",
+      "pdf_directory": "/ds/text/kiba-d/dev-set-100/",
+      "extractor/llm": "gpt_oss_20b_in_process",
+      "seed": "42"
+    }
+  }
+}
