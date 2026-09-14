@@ -1,0 +1,6 @@
+- dataset.predictions.log=logs/587_MultiPassExtractor/predict/multiruns/2026-09-10_13-11-55-547617/1
+- name=587_MultiPassExtractor
+- experiment/evaluate=faktencheck_core_f1_micro_flat
+- dataset.references.file=../interim/faktencheck-db/faktenscheck_core_corrected.jsonl
+- metric.fields=[habitat,biodiversity_level,ecosystem_type.term,ecosystem_type.category,taxa.species_group]
+- prediction_logs=logs/587_MultiPassExtractor/predict

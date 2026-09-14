@@ -1,0 +1,29 @@
+[2026-09-14 13:15:12,223][__main__][INFO] - Loading dataset with predictions and references ...
+[2026-09-14 13:15:12,224][__main__][INFO] - Dataset config: {'predictions': {'_target_': 'kibad_llm.dataset.prediction.load_with_metadata', 'log': 'logs/587_MultiPassExtractor/predict/multiruns/2026-09-10_13-11-55-547617/0', 'file': None, 'id_key': 'file_name', 'process_id': {'_partial_': True, '_target_': 'kibad_llm.utils.path.strip_filename_extension'}, 'preprocess': None}, '_target_': 'kibad_llm.dataset.utils.merge_references_into_predictions', 'references': {}, 'allow_missing_references': True}
+[2026-09-14 13:15:12,225][kibad_llm.dataset.json][INFO] - Loading dataset from JSON file: predictions/587_MultiPassExtractor/2026-09-10_13-11-55-547617/2026-09-10_13-11-56_360544/predictions.jsonl ...
+[2026-09-14 13:15:12,321][__main__][INFO] - Instantiating metric ...
+[2026-09-14 13:15:12,321][__main__][INFO] - Metric config: {'_target_': 'kibad_llm.metrics.ErrorCollector', 'type_separator': ': ', 'show_errors': True}
+[2026-09-14 13:15:12,322][__main__][INFO] - Computing metric ...
+[2026-09-14 13:15:12,323][kibad_llm.metrics.errors][INFO] - Collected error (id=2RXMDX8I): JSONDecodeError: Unterminated string starting at: line 1 column 10232 (char 10231)
+[2026-09-14 13:15:12,323][kibad_llm.metrics.errors][INFO] - Collected error (id=2RXMDX8I): JSONDecodeError: Unterminated string starting at: line 567 column 20 (char 17474)
+[2026-09-14 13:15:12,323][kibad_llm.metrics.errors][INFO] - Collected error (id=2RXMDX8I): JSONDecodeError: Unterminated string starting at: line 1 column 9577 (char 9576)
+[2026-09-14 13:15:12,323][kibad_llm.metrics.errors][INFO] - Collected error (id=3E8X2AK3): JSONDecodeError: Expecting property name enclosed in double quotes: line 542 column 1 (char 16147)
+[2026-09-14 13:15:12,323][kibad_llm.metrics.errors][INFO] - Collected error (id=3LGPK6BL): JSONDecodeError: Expecting ',' delimiter: line 1 column 16035 (char 16034)
+[2026-09-14 13:15:12,323][kibad_llm.metrics.errors][INFO] - Collected error (id=3LGPK6BL): JSONDecodeError: Unterminated string starting at: line 610 column 28 (char 19282)
+[2026-09-14 13:15:12,323][kibad_llm.metrics.errors][INFO] - Collected error (id=3WEEGFGW): JSONDecodeError: Expecting value: line 7446 column 3 (char 22873)
+[2026-09-14 13:15:12,323][kibad_llm.metrics.errors][INFO] - Collected error (id=5SIYLM9W): JSONDecodeError: Unterminated string starting at: line 1 column 1281 (char 1280)
+[2026-09-14 13:15:12,323][kibad_llm.metrics.errors][INFO] - Collected error (id=5SIYLM9W): MissingResponseContentError: LLM response is missing content.
+[2026-09-14 13:15:12,323][kibad_llm.metrics.errors][INFO] - Collected error (id=5SIYLM9W): JSONDecodeError: Unterminated string starting at: line 1 column 4286 (char 4285)
+[2026-09-14 13:15:12,323][kibad_llm.metrics.errors][INFO] - Collected error (id=6792YBL7): JSONDecodeError: Unterminated string starting at: line 518 column 28 (char 17958)
+[2026-09-14 13:15:12,323][kibad_llm.metrics.errors][INFO] - Collected error (id=6G2THNDX): JSONDecodeError: Unterminated string starting at: line 1 column 7561 (char 7560)
+[2026-09-14 13:15:12,323][kibad_llm.metrics.errors][INFO] - Collected error (id=885FDL5Z): JSONDecodeError: Expecting value: line 4427 column 3 (char 17591)
+[2026-09-14 13:15:12,323][kibad_llm.metrics.errors][INFO] - Collected error (id=885FDL5Z): JSONDecodeError: Unterminated string starting at: line 1 column 11209 (char 11208)
+[2026-09-14 13:15:12,323][kibad_llm.metric][INFO] - Evaluation results:
+{
+  "no_error": 6606,
+  "with_error": 14,
+  "JSONDecodeError": 13,
+  "MissingResponseContentError": 1
+}
+[2026-09-14 13:15:12,326][kibad_llm.hydra_callbacks.save_job_return_value.SaveJobReturnValueCallback][INFO] - Saving job_return in /home/hugo/programming/kiba/UniChuEx/logs/587_MultiPassExtractor/evaluate/multiruns/2026-09-14_13-15-12-090274/0/job_return_value.json
+[2026-09-14 13:15:12,327][kibad_llm.hydra_callbacks.save_job_return_value.SaveJobReturnValueCallback][INFO] - Saving job_return in /home/hugo/programming/kiba/UniChuEx/logs/587_MultiPassExtractor/evaluate/multiruns/2026-09-14_13-15-12-090274/0/job_return_value.md

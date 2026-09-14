@@ -40,7 +40,7 @@ uv run -m kibad_llm.evaluate \
 
 result location: `logs/587_UnionChunkingExtractor/evaluate/multiruns/2026-09-14_13-09-00-808991/`
 
-![legend.svg](figures/faktencheck_core_f1_micro_flat-ALL/legend.svg)
+<!-- ![legend.svg](figures/faktencheck_core_f1_micro_flat-ALL/legend.svg) -->
 
 ### F1
 
@@ -87,7 +87,7 @@ uv run -m kibad_llm.evaluate \
 
 result location: `logs/587_UnionChunkingExtractor/evaluate/multiruns/2026-09-14_13-15-12-090274`
 
-![legend.svg](figures/prediction_errors-total/legend.svg)
+<!-- ![legend.svg](figures/prediction_errors-total/legend.svg) -->
 
 ### no error
 
@@ -107,5 +107,4 @@ result location: `logs/587_UnionChunkingExtractor/evaluate/multiruns/2026-09-14_
 
 ## Outcome
 
-TODO: Checkme
 The performance is about the same as the ChunkingExtractor, which points towards the code being correct.

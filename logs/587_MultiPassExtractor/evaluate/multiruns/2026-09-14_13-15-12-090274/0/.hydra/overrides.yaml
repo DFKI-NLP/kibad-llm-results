@@ -1,0 +1,4 @@
+- dataset.predictions.log=logs/587_MultiPassExtractor/predict/multiruns/2026-09-10_13-11-55-547617/0
+- name=587_MultiPassExtractor
+- experiment/evaluate=prediction_errors
+- prediction_logs=logs/587_MultiPassExtractor/predict

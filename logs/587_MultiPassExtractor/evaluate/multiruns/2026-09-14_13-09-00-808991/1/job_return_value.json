@@ -1,0 +1,72 @@
+{
+  "version": 2,
+  "type": "F1MicroMultipleFieldsMetric",
+  "data": {
+    "biodiversity_level": {
+      "precision": 0.4928909952606635,
+      "recall": 0.7878787878787878,
+      "f1": 0.6064139941690961,
+      "support": 132
+    },
+    "ecosystem_type.category": {
+      "precision": 0.5925925925925926,
+      "recall": 0.6857142857142857,
+      "f1": 0.6357615894039735,
+      "support": 140
+    },
+    "ecosystem_type.term": {
+      "precision": 0.41785714285714287,
+      "recall": 0.4875,
+      "f1": 0.45,
+      "support": 240
+    },
+    "habitat": {
+      "precision": 0.6629213483146067,
+      "recall": 0.9365079365079365,
+      "f1": 0.7763157894736842,
+      "support": 189
+    },
+    "taxa.species_group": {
+      "precision": 0.5149501661129569,
+      "recall": 0.7276995305164319,
+      "f1": 0.603112840466926,
+      "support": 213
+    },
+    "AVG": {
+      "precision": 0.5362424490275924,
+      "recall": 0.7250601081234884,
+      "f1": 0.614320842702736,
+      "support": 182.8
+    },
+    "ALL": {
+      "precision": 0.5315315315315315,
+      "recall": 0.7100656455142232,
+      "f1": 0.6079625292740046,
+      "support": 914
+    }
+  },
+  "prediction": {
+    "job_return_value": {
+      "version": 1,
+      "output_file": "predictions/587_MultiPassExtractor/2026-09-10_13-11-55-547617/2026-09-11_01-11-42_112140/predictions.jsonl",
+      "output_file_absolute": "/netscratch/hmeinhof/tmp/kiba-d_de1295ad-e2e3-4115-8309-58ad7f7a6312/repo/predictions/587_MultiPassExtractor/2026-09-10_13-11-55-547617/2026-09-11_01-11-42_112140/predictions.jsonl",
+      "time_pdf_conversion": 0.008897344581782818,
+      "time_extraction": 49046.86835088581,
+      "time_start": 1789081902,
+      "time_end": 1789131047,
+      "commit_hash": "65d5ae263f1b8ba7e9a57bff7d5f4a0aa093e537",
+      "branch": "commit/65d5ae263f1b",
+      "is_dirty": false,
+      "slurm_job_id": "3376114"
+    },
+    "overrides": {
+      "name": "587_MultiPassExtractor",
+      "extractor": "multi_pass",
+      "extractor/prompt_template": "faktencheck_core_v1_with_chunking",
+      "extractor.overrides": "{habitat:{schema:{_target_:kibad_llm.schema.types.EcosystemStudyFeaturesHabitat.model_json_schema,by_alias:False}},taxa:{schema:{_target_:kibad_llm.schema.types.EcosystemStudyFeaturesTaxa.model_json_schema,by_alias:False}},biodiversity_level:{schema:{_target_:kibad_llm.schema.types.EcosystemStudyFeaturesBiodiversityLevel.model_json_schema,by_alias:False}},ecosystem_type:{schema:{_target_:kibad_llm.schema.types.EcosystemStudyFeaturesEcosystemType.model_json_schema,by_alias:False}}}",
+      "pdf_directory": "/ds/text/kiba-d/dev-set-100/",
+      "extractor/llm": "gpt_oss_20b_in_process",
+      "seed": "1337"
+    }
+  }
+}
