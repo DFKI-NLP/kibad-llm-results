@@ -25,7 +25,9 @@ The commit hash that is pinned in this run command is the final state of PR [#58
 
 The `exctractor.overrides` line of the run command is an inline equivalent to the usual yaml way of pointing to schemas.
 
-The inline hydra config in a more readable format:
+<details>
+    <summary>The inline hydra config in a more readable format:</summary>
+
 ```sh
 extractor.overrides=
   {
@@ -40,7 +42,10 @@ extractor.overrides=
     ecosystem_type:{schema:{_target_:kibad_llm.schema.types.EcosystemStudyFeaturesEcosystemType.model_json_schema,by_alias:false}}
   }
 ```
+</details>
+
 This yaml hydra config is equivalent to the inline config above:
+
 ```yaml
 extractor:
   overrides:
