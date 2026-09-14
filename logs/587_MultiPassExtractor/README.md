@@ -40,38 +40,45 @@ uv run -m kibad_llm.evaluate \
 
 result location: `logs/587_MultiPassExtractor/evaluate/multiruns/2026-09-14_13-09-00-808991/`
 
-<!-- ![legend.svg](figures/faktencheck_core_f1_micro_flat-ALL/legend.svg) -->
 
 ### F1
 
+![legend.svg](figures/faktencheck_core_f1_micro_flat-ALL/legend.svg)
 ![f1.svg](figures/faktencheck_core_f1_micro_flat-ALL/f1.svg)
 
 ### Precision
 
+![legend.svg](figures/faktencheck_core_f1_micro_flat-ALL/legend.svg)
 ![precision.svg](figures/faktencheck_core_f1_micro_flat-ALL/precision.svg)
 
 ### Recall
 
+![legend.svg](figures/faktencheck_core_f1_micro_flat-ALL/legend.svg)
 ![recall.svg](figures/faktencheck_core_f1_micro_flat-ALL/recall.svg)
 
 ### F1 - biodiversity level
 
+![legend.svg](figures/faktencheck_core_f1_micro_flat-f1/legend.svg)
 ![biodiversity_level.svg](figures/faktencheck_core_f1_micro_flat-f1/biodiversity_level.svg)
 
 ### F1 - ecosystem type - category
 
+![legend.svg](figures/faktencheck_core_f1_micro_flat-f1/legend.svg)
 ![ecosystem_type.category.svg](figures/faktencheck_core_f1_micro_flat-f1/ecosystem_type.category.svg)
 
 ### F1 - ecosystem type - term
 
+![legend.svg](figures/faktencheck_core_f1_micro_flat-f1/legend.svg)
 ![ecosystem_type.term.svg](figures/faktencheck_core_f1_micro_flat-f1/ecosystem_type.term.svg)
 
 ### F1 - habitat
 
+![legend.svg](figures/faktencheck_core_f1_micro_flat-f1/legend.svg)
 ![habitat.svg](figures/faktencheck_core_f1_micro_flat-f1/habitat.svg)
 
 ### F1 - taxa - species group
 
+![legend.svg](figures/faktencheck_core_f1_micro_flat-f1/legend.svg)
 ![taxa.species_group.svg](figures/faktencheck_core_f1_micro_flat-f1/taxa.species_group.svg)
 
 ### Errors
@@ -87,22 +94,25 @@ uv run -m kibad_llm.evaluate \
 
 result location: `logs/587_MultiPassExtractor/evaluate/multiruns/2026-09-14_13-15-12-090274`
 
-<!-- ![legend.svg](figures/prediction_errors-total/legend.svg) -->
 
 ### no error
 
+![legend.svg](figures/prediction_errors-total/legend.svg)
 ![no_error.svg](figures/prediction_errors-total/no_error.svg)
 
 ### with error
 
+![legend.svg](figures/prediction_errors-total/legend.svg)
 ![with_error.svg](figures/prediction_errors-total/with_error.svg)
 
 ### details - JSONDecodeError
 
+![legend.svg](figures/prediction_errors-details/legend.svg)
 ![JSONDecodeError.svg](figures/prediction_errors-details/JSONDecodeError.svg)
 
 ### details - MissingResponseContentError
 
+![legend.svg](figures/prediction_errors-details/legend.svg)
 ![MissingResponseContentError.svg](figures/prediction_errors-details/MissingResponseContentError.svg)
 
 ## Outcome
