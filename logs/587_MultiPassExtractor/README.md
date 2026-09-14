@@ -1,4 +1,4 @@
-# 587_UnionChunkingExtractor
+# 587_MultiPassExtractor
 
 This is the evaluation of the newly introduced MultiPassExtractor. 
 The schema used is a split version of faktencheck_core_v1, to make the evaluation comparable to previous evaluations, with focus on the introduction of the ChunkingExtractor.
@@ -21,7 +21,7 @@ In the future, the MultiPassExtractor is not supposed to do the same extractions
   --multirun"
 ```
 
-result location: `logs/587_UnionChunkingExtractor/predict/multiruns/2026-09-10_13-11-55-547617`
+result location: `logs/587_MultiPassExtractor/predict/multiruns/2026-09-10_13-11-55-547617`
 
 ## Evaluation
 
@@ -38,7 +38,7 @@ uv run -m kibad_llm.evaluate \
   --multirun
 ```
 
-result location: `logs/587_UnionChunkingExtractor/evaluate/multiruns/2026-09-14_13-09-00-808991/`
+result location: `logs/587_MultiPassExtractor/evaluate/multiruns/2026-09-14_13-09-00-808991/`
 
 <!-- ![legend.svg](figures/faktencheck_core_f1_micro_flat-ALL/legend.svg) -->
 
@@ -85,7 +85,7 @@ uv run -m kibad_llm.evaluate \
   --multirun
 ```
 
-result location: `logs/587_UnionChunkingExtractor/evaluate/multiruns/2026-09-14_13-15-12-090274`
+result location: `logs/587_MultiPassExtractor/evaluate/multiruns/2026-09-14_13-15-12-090274`
 
 <!-- ![legend.svg](figures/prediction_errors-total/legend.svg) -->
 
